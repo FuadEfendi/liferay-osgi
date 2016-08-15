@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="ca.efendi.datafeeds.model.CJProduct">
+		<field name="uuid" type="String" />
+		<field name="productId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="urlTitle" type="String" />
+		<field name="programName" type="String" />
+		<field name="catalogName" type="String" />
+		<field name="sku" type="String" />
+		<field name="programUrl" type="String" />
+		<field name="lastUpdated" type="String" />
+		<field name="name" type="String" />
+		<field name="keywords" type="String" />
+		<field name="description" type="String" />
+		<field name="manufacturer" type="String" />
+		<field name="manufacturerId" type="String" />
+		<field name="currency" type="String" />
+		<field name="price" type="String" />
+		<field name="buyUrl" type="String" />
+		<field name="impressionUrl" type="String" />
+		<field name="imageUrl" type="String" />
+		<field name="inStock" type="String" />
+		<field name="viewCount" type="int" />
+	</model>
+	<model name="ca.efendi.datafeeds.model.FtpSubscription">
+		<field name="ftpSubscriptionId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="ftpHost" type="String" />
+		<field name="ftpUser" type="String" />
+		<field name="ftpPassword" type="String" />
+		<field name="ftpFolder" type="String" />
+		<field name="ftpFile" type="String" />
+		<field name="ftpDatafeedName" type="String" />
+		<field name="ftpDatafeedDescription" type="String" />
+	</model>
+</model-hints>

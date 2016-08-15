@@ -1,0 +1,2622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="75a15473-50c2-47b2-8d14-530ee01582d3" name="Default" comment="" />
+    <ignored path="liferay-osgi.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service/.gradle/" />
+    <ignored path="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service/build/" />
+    <ignored path="/java/lp7/liferay-osgi/.gradle/" />
+    <ignored path="/java/lp7/liferay-osgi/build/" />
+    <ignored path="/java/lp7/liferay-osgi/modules/datafeeds/.gradle/" />
+    <ignored path="/java/lp7/liferay-osgi/modules/datafeeds/build/" />
+    <ignored path="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-api/.gradle/" />
+    <ignored path="/java/lp7/liferay-osgi/modules/.gradle/" />
+    <ignored path="/java/lp7/liferay-osgi/modules/build/" />
+    <ignored path="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-api/build/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="ExternalProjectsData">
+    <projectState path="/java/lp7/liferay-osgi/modules/datafeeds">
+      <ProjectState />
+    </projectState>
+    <projectState path="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="liferay-osgi" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="service.xml" pinned="false" current-in-tab="true">
+        <entry file="file:///java/lp7/liferay-osgi/modules/ca-efendi-datafeeds/datafeeds-service/service.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file:///java/lp7/liferay-osgi/modules/ca-efendi-datafeeds/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.gradle" pinned="false" current-in-tab="false">
+        <entry file="file:///java/lp7/liferay-osgi/settings.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gradle.properties" pinned="false" current-in-tab="false">
+        <entry file="file:///java/lp7/liferay-osgi/gradle.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file:///java/lp7/liferay-osgi/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file:///java/lp7/liferay-osgi/modules/ca-efendi-datafeeds/datafeeds-api/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bnd.bnd" pinned="false" current-in-tab="false">
+        <entry file="file:///java/lp7/liferay-osgi/modules/ca-efendi-datafeeds/datafeeds-api/bnd.bnd">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file:///java/lp7/liferay-osgi/modules/ca-efendi-datafeeds/datafeeds-service/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="myGradleHomes">
+      <map>
+        <entry key="/java/lp7/liferay-osgi/modules/datafeeds" value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.14.1-bin/2r579t5wehc7ew5kc8vfqezww/gradle-2.14.1" />
+        <entry key="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.14.1-bin/2r579t5wehc7ew5kc8vfqezww/gradle-2.14.1" />
+      </map>
+    </option>
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="datafeeds" />
+              <option name="path" value="/java/lp7/liferay-osgi/modules/datafeeds" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="datafeeds" />
+                <option name="path" value="/java/lp7/liferay-osgi/modules/datafeeds" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="liferay-osgi" />
+              <option name="path" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value=":modules:datafeeds:datafeeds-service" />
+                <option name="path" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="liferay-osgi" />
+                <option name="path" value="/java/lp7/liferay-osgi" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value=":modules:datafeeds" />
+                <option name="path" value="/java/lp7/liferay-osgi/modules/datafeeds" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value=":modules:datafeeds:datafeeds-api" />
+                <option name="path" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-api" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value=":modules" />
+                <option name="path" value="/java/lp7/liferay-osgi/modules" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="availableTasks">
+      <map>
+        <entry key="/java/lp7/liferay-osgi">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'liferay-osgi'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by root project 'liferay-osgi'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in root project 'liferay-osgi'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in root project 'liferay-osgi'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the Liferay bundle and zips it up into 'build/liferay-osgi.tar.gz'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":distBundleTar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the Liferay bundle and zips it up into 'build/liferay-osgi.zip'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":distBundleZip" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Downloads the Liferay bundle zip file." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":downloadBundle" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Initializes a new Gradle build. [incubating]" />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":init" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Downloads and unzips the bundle into 'bundles'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":initBundle" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of root project 'liferay-osgi'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of root project 'liferay-osgi'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of root project 'liferay-osgi'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":properties" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from root project 'liferay-osgi' (some of the displayed tasks may belong to subprojects)." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Gradle wrapper files. [incubating]" />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":wrapper" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the outputs of this project." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="autoUpdateXml" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Build CSS files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="buildCSS" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay Lang Builder to translate language property files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="buildLang" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles Closure Templates into JavaScript functions." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="buildSoy" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Checks the source formatting of this project." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="checkSourceFormatting" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles main classes." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="classes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compile JSP files to check for errors." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="compileJSP" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles main Java source." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="compileJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test integration Java source." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="compileTestIntegrationJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test Java source." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates the config file needed to load AMD files via combo loader in Liferay." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="configJSModules" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Copies Tag Library documentation resources." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="copyTLDDocResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the project and deploys it to Liferay." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="deploy" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="downloadLfrAmdLoader" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="downloadLiferayModuleConfigGenerator" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="downloadMetalCli" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Downloads Node.js in the project build directory." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="downloadNode" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Evaluate the console output errors." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="evaluatePoshiConsole" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="expandPoshiRunner" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay Javadoc Formatter to format files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="formatJavadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay Source Formatter to format the project files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="formatSource" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay TLD Formatter to format files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="formatTLD" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay XML Formatter to format the project files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="formatXML" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles JSP files to Java source files to check for errors." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="generateJSPJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="jar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Install Node packages from package.json." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="npmInstall" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes main resources." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test integration resources." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="processTestIntegrationResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test resources." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="processTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Execute tests using Poshi Runner." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="runPoshi" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Configures the local Liferay Tomcat bundle to run integration tests." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="setUpTestableTomcat" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Starts the local Liferay Tomcat bundle." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="startTestableTomcat" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Stops the local Liferay Tomcat bundle." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="stopTestableTomcat" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test classes." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="testClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the integration tests." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="testIntegration" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test integration classes." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="testIntegrationClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Tag Library documentation." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="tlddoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Transpiles JS files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="transpileJS" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="unzipJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Validates the Poshi files syntax." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="validatePoshi" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Validates TLD files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="validateTLD" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Write the Poshi properties files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="writePoshiProperties" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Builds database SQL scripts from the generic SQL scripts." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="buildDB" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay Service Builder." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="buildService" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+        <entry key="/java/lp7/liferay-osgi/modules">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in project ':modules'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by project ':modules'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in project ':modules'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in project ':modules'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of project ':modules'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of project ':modules'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of project ':modules'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:properties" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from project ':modules' (some of the displayed tasks may belong to subprojects)." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the outputs of this project." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="autoUpdateXml" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Build CSS files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="buildCSS" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay Lang Builder to translate language property files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="buildLang" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles Closure Templates into JavaScript functions." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="buildSoy" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Checks the source formatting of this project." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="checkSourceFormatting" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles main classes." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="classes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compile JSP files to check for errors." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="compileJSP" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles main Java source." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="compileJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test integration Java source." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="compileTestIntegrationJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test Java source." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates the config file needed to load AMD files via combo loader in Liferay." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="configJSModules" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Copies Tag Library documentation resources." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="copyTLDDocResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the project and deploys it to Liferay." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="deploy" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="downloadLfrAmdLoader" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="downloadLiferayModuleConfigGenerator" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="downloadMetalCli" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Downloads Node.js in the project build directory." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="downloadNode" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Evaluate the console output errors." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="evaluatePoshiConsole" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="expandPoshiRunner" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay Javadoc Formatter to format files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="formatJavadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay Source Formatter to format the project files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="formatSource" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay TLD Formatter to format files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="formatTLD" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay XML Formatter to format the project files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="formatXML" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles JSP files to Java source files to check for errors." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="generateJSPJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="jar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Install Node packages from package.json." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="npmInstall" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes main resources." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test integration resources." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="processTestIntegrationResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test resources." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="processTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Execute tests using Poshi Runner." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="runPoshi" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Configures the local Liferay Tomcat bundle to run integration tests." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="setUpTestableTomcat" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Starts the local Liferay Tomcat bundle." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="startTestableTomcat" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Stops the local Liferay Tomcat bundle." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="stopTestableTomcat" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test classes." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="testClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the integration tests." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="testIntegration" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test integration classes." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="testIntegrationClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Tag Library documentation." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="tlddoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Transpiles JS files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="transpileJS" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="unzipJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Validates the Poshi files syntax." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="validatePoshi" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Validates TLD files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="validateTLD" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Write the Poshi properties files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="writePoshiProperties" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Builds database SQL scripts from the generic SQL scripts." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="buildDB" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay Service Builder." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="buildService" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+        <entry key="/java/lp7/liferay-osgi/modules/datafeeds">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Initializes a new Gradle build. [incubating]" />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds" />
+                <option name="name" value="init" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by root project 'datafeeds'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of root project 'datafeeds'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds" />
+                <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'datafeeds'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds" />
+                <option name="name" value="buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the Liferay bundle and zips it up into 'build/datafeeds.zip'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds" />
+                <option name="name" value="distBundleZip" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in root project 'datafeeds'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds" />
+                <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Gradle wrapper files. [incubating]" />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds" />
+                <option name="name" value="wrapper" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Downloads and unzips the bundle into 'bundles'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds" />
+                <option name="name" value="initBundle" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the Liferay bundle and zips it up into 'build/datafeeds.tar.gz'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds" />
+                <option name="name" value="distBundleTar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in root project 'datafeeds'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds" />
+                <option name="name" value="help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Downloads the Liferay bundle zip file." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds" />
+                <option name="name" value="downloadBundle" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of root project 'datafeeds'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of root project 'datafeeds'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds" />
+                <option name="name" value="properties" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from root project 'datafeeds'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds" />
+                <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+        <entry key="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-api">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the outputs of this project." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:autoUpdateXml" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Build CSS files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:buildCSS" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in project ':modules:datafeeds:datafeeds-api'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay Lang Builder to translate language property files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:buildLang" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles Closure Templates into JavaScript functions." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:buildSoy" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Checks the source formatting of this project." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:checkSourceFormatting" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles main classes." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:classes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compile JSP files to check for errors." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:compileJSP" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles main Java source." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:compileJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test integration Java source." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:compileTestIntegrationJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test Java source." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by project ':modules:datafeeds:datafeeds-api'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates the config file needed to load AMD files via combo loader in Liferay." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:configJSModules" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Copies Tag Library documentation resources." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:copyTLDDocResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in project ':modules:datafeeds:datafeeds-api'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in project ':modules:datafeeds:datafeeds-api'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the project and deploys it to Liferay." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:deploy" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:downloadLfrAmdLoader" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:downloadLiferayModuleConfigGenerator" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:downloadMetalCli" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Downloads Node.js in the project build directory." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:downloadNode" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Evaluate the console output errors." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:evaluatePoshiConsole" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:expandPoshiRunner" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay Javadoc Formatter to format files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:formatJavadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay Source Formatter to format the project files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:formatSource" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay TLD Formatter to format files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:formatTLD" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay XML Formatter to format the project files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:formatXML" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles JSP files to Java source files to check for errors." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:generateJSPJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:jar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of project ':modules:datafeeds:datafeeds-api'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Install Node packages from package.json." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:npmInstall" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes main resources." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test integration resources." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:processTestIntegrationResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test resources." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:processTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of project ':modules:datafeeds:datafeeds-api'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of project ':modules:datafeeds:datafeeds-api'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:properties" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Execute tests using Poshi Runner." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:runPoshi" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Configures the local Liferay Tomcat bundle to run integration tests." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:setUpTestableTomcat" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Starts the local Liferay Tomcat bundle." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:startTestableTomcat" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Stops the local Liferay Tomcat bundle." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:stopTestableTomcat" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from project ':modules:datafeeds:datafeeds-api'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test classes." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:testClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the integration tests." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:testIntegration" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test integration classes." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:testIntegrationClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Tag Library documentation." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:tlddoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Transpiles JS files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:transpileJS" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:unzipJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Validates the Poshi files syntax." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:validatePoshi" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Validates TLD files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:validateTLD" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Write the Poshi properties files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value=":modules:datafeeds:datafeeds-api:writePoshiProperties" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+        <entry key="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of project ':modules:datafeeds:datafeeds-service'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay Lang Builder to translate language property files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="buildLang" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Validates TLD files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="validateTLD" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Build CSS files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="buildCSS" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="autoUpdateXml" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test integration Java source." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="compileTestIntegrationJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the project and deploys it to Liferay." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="deploy" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay TLD Formatter to format files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="formatTLD" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay Service Builder." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="buildService" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay Source Formatter to format the project files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="formatSource" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="unzipJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="jar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of project ':modules:datafeeds:datafeeds-service'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Starts the local Liferay Tomcat bundle." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="startTestableTomcat" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes main resources." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from project ':modules:datafeeds:datafeeds-service'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test integration classes." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="testIntegrationClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles main Java source." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="compileJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Configures the local Liferay Tomcat bundle to run integration tests." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="setUpTestableTomcat" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Transpiles JS files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="transpileJS" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Write the Poshi properties files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="writePoshiProperties" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Builds database SQL scripts from the generic SQL scripts." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="buildDB" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Copies Tag Library documentation resources." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="copyTLDDocResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in project ':modules:datafeeds:datafeeds-service'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test resources." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="processTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Downloads Node.js in the project build directory." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="downloadNode" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles JSP files to Java source files to check for errors." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="generateJSPJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="downloadLfrAmdLoader" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by project ':modules:datafeeds:datafeeds-service'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Execute tests using Poshi Runner." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="runPoshi" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles main classes." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="classes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in project ':modules:datafeeds:datafeeds-service'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="expandPoshiRunner" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test classes." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="testClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Checks the source formatting of this project." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="checkSourceFormatting" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay Javadoc Formatter to format files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="formatJavadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Stops the local Liferay Tomcat bundle." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="stopTestableTomcat" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="downloadLiferayModuleConfigGenerator" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs Liferay XML Formatter to format the project files." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="formatXML" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Tag Library documentation." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="tlddoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates the config file needed to load AMD files via combo loader in Liferay." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="configJSModules" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test integration resources." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="processTestIntegrationResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in project ':modules:datafeeds:datafeeds-service'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the outputs of this project." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test Java source." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compile JSP files to check for errors." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="compileJSP" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Evaluate the console output errors." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="evaluatePoshiConsole" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles Closure Templates into JavaScript functions." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="buildSoy" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Install Node packages from package.json." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="npmInstall" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="downloadMetalCli" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Validates the Poshi files syntax." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="validatePoshi" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of project ':modules:datafeeds:datafeeds-service'." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="properties" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the integration tests." />
+                <option name="linkedExternalProjectPath" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                <option name="name" value="testIntegration" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="projectBuildClasspath">
+      <map>
+        <entry key="/java/lp7/liferay-osgi/modules/datafeeds">
+          <value>
+            <ExternalProjectBuildClasspathPojo>
+              <option name="modulesBuildClasspath">
+                <map>
+                  <entry key="/java/lp7/liferay-osgi/modules/datafeeds">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="path" value="/java/lp7/liferay-osgi/modules/datafeeds" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="name" value="datafeeds" />
+              <option name="projectBuildClasspath">
+                <list>
+                  <option value="/java/tools/gradle-2.14.1/src/announce" />
+                  <option value="/java/tools/gradle-2.14.1/src/antlr" />
+                  <option value="/java/tools/gradle-2.14.1/src/base-services" />
+                  <option value="/java/tools/gradle-2.14.1/src/base-services-groovy" />
+                  <option value="/java/tools/gradle-2.14.1/src/build-comparison" />
+                  <option value="/java/tools/gradle-2.14.1/src/build-init" />
+                  <option value="/java/tools/gradle-2.14.1/src/cli" />
+                  <option value="/java/tools/gradle-2.14.1/src/code-quality" />
+                  <option value="/java/tools/gradle-2.14.1/src/core" />
+                  <option value="/java/tools/gradle-2.14.1/src/dependency-management" />
+                  <option value="/java/tools/gradle-2.14.1/src/diagnostics" />
+                  <option value="/java/tools/gradle-2.14.1/src/ear" />
+                  <option value="/java/tools/gradle-2.14.1/src/ide" />
+                  <option value="/java/tools/gradle-2.14.1/src/ide-native" />
+                  <option value="/java/tools/gradle-2.14.1/src/ide-play" />
+                  <option value="/java/tools/gradle-2.14.1/src/installation-beacon" />
+                  <option value="/java/tools/gradle-2.14.1/src/internal-integ-testing" />
+                  <option value="/java/tools/gradle-2.14.1/src/internal-testing" />
+                  <option value="/java/tools/gradle-2.14.1/src/ivy" />
+                  <option value="/java/tools/gradle-2.14.1/src/jacoco" />
+                  <option value="/java/tools/gradle-2.14.1/src/javascript" />
+                  <option value="/java/tools/gradle-2.14.1/src/jetty" />
+                  <option value="/java/tools/gradle-2.14.1/src/jvm-services" />
+                  <option value="/java/tools/gradle-2.14.1/src/language-groovy" />
+                  <option value="/java/tools/gradle-2.14.1/src/language-java" />
+                  <option value="/java/tools/gradle-2.14.1/src/language-jvm" />
+                  <option value="/java/tools/gradle-2.14.1/src/language-native" />
+                  <option value="/java/tools/gradle-2.14.1/src/language-scala" />
+                  <option value="/java/tools/gradle-2.14.1/src/launcher" />
+                  <option value="/java/tools/gradle-2.14.1/src/logging" />
+                  <option value="/java/tools/gradle-2.14.1/src/maven" />
+                  <option value="/java/tools/gradle-2.14.1/src/messaging" />
+                  <option value="/java/tools/gradle-2.14.1/src/model-core" />
+                  <option value="/java/tools/gradle-2.14.1/src/model-groovy" />
+                  <option value="/java/tools/gradle-2.14.1/src/native" />
+                  <option value="/java/tools/gradle-2.14.1/src/open-api" />
+                  <option value="/java/tools/gradle-2.14.1/src/osgi" />
+                  <option value="/java/tools/gradle-2.14.1/src/platform-base" />
+                  <option value="/java/tools/gradle-2.14.1/src/platform-jvm" />
+                  <option value="/java/tools/gradle-2.14.1/src/platform-native" />
+                  <option value="/java/tools/gradle-2.14.1/src/platform-play" />
+                  <option value="/java/tools/gradle-2.14.1/src/plugin-development" />
+                  <option value="/java/tools/gradle-2.14.1/src/plugin-use" />
+                  <option value="/java/tools/gradle-2.14.1/src/plugins" />
+                  <option value="/java/tools/gradle-2.14.1/src/process-services" />
+                  <option value="/java/tools/gradle-2.14.1/src/publish" />
+                  <option value="/java/tools/gradle-2.14.1/src/reporting" />
+                  <option value="/java/tools/gradle-2.14.1/src/resources" />
+                  <option value="/java/tools/gradle-2.14.1/src/resources-http" />
+                  <option value="/java/tools/gradle-2.14.1/src/resources-s3" />
+                  <option value="/java/tools/gradle-2.14.1/src/resources-sftp" />
+                  <option value="/java/tools/gradle-2.14.1/src/scala" />
+                  <option value="/java/tools/gradle-2.14.1/src/signing" />
+                  <option value="/java/tools/gradle-2.14.1/src/sonar" />
+                  <option value="/java/tools/gradle-2.14.1/src/test-kit" />
+                  <option value="/java/tools/gradle-2.14.1/src/testing-base" />
+                  <option value="/java/tools/gradle-2.14.1/src/testing-jvm" />
+                  <option value="/java/tools/gradle-2.14.1/src/testing-native" />
+                  <option value="/java/tools/gradle-2.14.1/src/tooling-api" />
+                  <option value="/java/tools/gradle-2.14.1/src/tooling-api-builders" />
+                  <option value="/java/tools/gradle-2.14.1/src/ui" />
+                  <option value="/java/tools/gradle-2.14.1/src/wrapper" />
+                  <option value="/java/tools/gradle-2.14.1/lib/ant-1.9.6.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/ant-launcher-1.9.6.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-base-services-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-base-services-groovy-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-cli-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-core-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-docs-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-installation-beacon-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-jvm-services-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-launcher-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-logging-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-messaging-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-model-core-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-model-groovy-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-native-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-open-api-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-process-services-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-resources-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-tooling-api-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-ui-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-wrapper-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/groovy-all-2.4.4.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-announce-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-antlr-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-build-comparison-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-build-init-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-code-quality-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-dependency-management-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-diagnostics-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-ear-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-ide-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-ide-native-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-ide-play-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-ivy-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-jacoco-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-javascript-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-jetty-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-language-groovy-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-language-java-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-language-jvm-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-language-native-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-language-scala-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-maven-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-osgi-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-platform-base-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-platform-jvm-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-platform-native-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-platform-play-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-plugin-development-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-plugin-use-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-plugins-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-publish-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-reporting-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-resources-http-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-resources-s3-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-resources-sftp-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-scala-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-signing-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-sonar-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-test-kit-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-testing-base-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-testing-jvm-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-testing-native-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-tooling-api-builders-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/ivy-2.2.0.jar" />
+                  <option value="/java/lp7/liferay-osgi/modules/datafeeds/buildSrc/src/main/java" />
+                  <option value="/java/lp7/liferay-osgi/modules/datafeeds/buildSrc/src/main/groovy" />
+                </list>
+              </option>
+            </ExternalProjectBuildClasspathPojo>
+          </value>
+        </entry>
+        <entry key="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service">
+          <value>
+            <ExternalProjectBuildClasspathPojo>
+              <option name="modulesBuildClasspath">
+                <map>
+                  <entry key="/java/lp7/liferay-osgi">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="path" value="/java/lp7/liferay-osgi" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                  <entry key="/java/lp7/liferay-osgi/modules">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="path" value="/java/lp7/liferay-osgi/modules" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                  <entry key="/java/lp7/liferay-osgi/modules/datafeeds">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="path" value="/java/lp7/liferay-osgi/modules/datafeeds" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                  <entry key="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-api">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="path" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-api" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                  <entry key="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="path" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="name" value="datafeeds-service" />
+              <option name="projectBuildClasspath">
+                <list>
+                  <option value="/java/tools/gradle-2.14.1/src/announce" />
+                  <option value="/java/tools/gradle-2.14.1/src/antlr" />
+                  <option value="/java/tools/gradle-2.14.1/src/base-services" />
+                  <option value="/java/tools/gradle-2.14.1/src/base-services-groovy" />
+                  <option value="/java/tools/gradle-2.14.1/src/build-comparison" />
+                  <option value="/java/tools/gradle-2.14.1/src/build-init" />
+                  <option value="/java/tools/gradle-2.14.1/src/cli" />
+                  <option value="/java/tools/gradle-2.14.1/src/code-quality" />
+                  <option value="/java/tools/gradle-2.14.1/src/core" />
+                  <option value="/java/tools/gradle-2.14.1/src/dependency-management" />
+                  <option value="/java/tools/gradle-2.14.1/src/diagnostics" />
+                  <option value="/java/tools/gradle-2.14.1/src/ear" />
+                  <option value="/java/tools/gradle-2.14.1/src/ide" />
+                  <option value="/java/tools/gradle-2.14.1/src/ide-native" />
+                  <option value="/java/tools/gradle-2.14.1/src/ide-play" />
+                  <option value="/java/tools/gradle-2.14.1/src/installation-beacon" />
+                  <option value="/java/tools/gradle-2.14.1/src/internal-integ-testing" />
+                  <option value="/java/tools/gradle-2.14.1/src/internal-testing" />
+                  <option value="/java/tools/gradle-2.14.1/src/ivy" />
+                  <option value="/java/tools/gradle-2.14.1/src/jacoco" />
+                  <option value="/java/tools/gradle-2.14.1/src/javascript" />
+                  <option value="/java/tools/gradle-2.14.1/src/jetty" />
+                  <option value="/java/tools/gradle-2.14.1/src/jvm-services" />
+                  <option value="/java/tools/gradle-2.14.1/src/language-groovy" />
+                  <option value="/java/tools/gradle-2.14.1/src/language-java" />
+                  <option value="/java/tools/gradle-2.14.1/src/language-jvm" />
+                  <option value="/java/tools/gradle-2.14.1/src/language-native" />
+                  <option value="/java/tools/gradle-2.14.1/src/language-scala" />
+                  <option value="/java/tools/gradle-2.14.1/src/launcher" />
+                  <option value="/java/tools/gradle-2.14.1/src/logging" />
+                  <option value="/java/tools/gradle-2.14.1/src/maven" />
+                  <option value="/java/tools/gradle-2.14.1/src/messaging" />
+                  <option value="/java/tools/gradle-2.14.1/src/model-core" />
+                  <option value="/java/tools/gradle-2.14.1/src/model-groovy" />
+                  <option value="/java/tools/gradle-2.14.1/src/native" />
+                  <option value="/java/tools/gradle-2.14.1/src/open-api" />
+                  <option value="/java/tools/gradle-2.14.1/src/osgi" />
+                  <option value="/java/tools/gradle-2.14.1/src/platform-base" />
+                  <option value="/java/tools/gradle-2.14.1/src/platform-jvm" />
+                  <option value="/java/tools/gradle-2.14.1/src/platform-native" />
+                  <option value="/java/tools/gradle-2.14.1/src/platform-play" />
+                  <option value="/java/tools/gradle-2.14.1/src/plugin-development" />
+                  <option value="/java/tools/gradle-2.14.1/src/plugin-use" />
+                  <option value="/java/tools/gradle-2.14.1/src/plugins" />
+                  <option value="/java/tools/gradle-2.14.1/src/process-services" />
+                  <option value="/java/tools/gradle-2.14.1/src/publish" />
+                  <option value="/java/tools/gradle-2.14.1/src/reporting" />
+                  <option value="/java/tools/gradle-2.14.1/src/resources" />
+                  <option value="/java/tools/gradle-2.14.1/src/resources-http" />
+                  <option value="/java/tools/gradle-2.14.1/src/resources-s3" />
+                  <option value="/java/tools/gradle-2.14.1/src/resources-sftp" />
+                  <option value="/java/tools/gradle-2.14.1/src/scala" />
+                  <option value="/java/tools/gradle-2.14.1/src/signing" />
+                  <option value="/java/tools/gradle-2.14.1/src/sonar" />
+                  <option value="/java/tools/gradle-2.14.1/src/test-kit" />
+                  <option value="/java/tools/gradle-2.14.1/src/testing-base" />
+                  <option value="/java/tools/gradle-2.14.1/src/testing-jvm" />
+                  <option value="/java/tools/gradle-2.14.1/src/testing-native" />
+                  <option value="/java/tools/gradle-2.14.1/src/tooling-api" />
+                  <option value="/java/tools/gradle-2.14.1/src/tooling-api-builders" />
+                  <option value="/java/tools/gradle-2.14.1/src/ui" />
+                  <option value="/java/tools/gradle-2.14.1/src/wrapper" />
+                  <option value="/java/tools/gradle-2.14.1/lib/ant-1.9.6.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/ant-launcher-1.9.6.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-base-services-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-base-services-groovy-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-cli-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-core-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-docs-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-installation-beacon-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-jvm-services-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-launcher-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-logging-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-messaging-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-model-core-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-model-groovy-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-native-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-open-api-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-process-services-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-resources-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-tooling-api-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-ui-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/gradle-wrapper-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/groovy-all-2.4.4.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-announce-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-antlr-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-build-comparison-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-build-init-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-code-quality-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-dependency-management-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-diagnostics-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-ear-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-ide-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-ide-native-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-ide-play-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-ivy-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-jacoco-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-javascript-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-jetty-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-language-groovy-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-language-java-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-language-jvm-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-language-native-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-language-scala-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-maven-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-osgi-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-platform-base-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-platform-jvm-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-platform-native-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-platform-play-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-plugin-development-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-plugin-use-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-plugins-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-publish-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-reporting-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-resources-http-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-resources-s3-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-resources-sftp-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-scala-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-signing-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-sonar-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-test-kit-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-testing-base-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-testing-jvm-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-testing-native-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/gradle-tooling-api-builders-2.14.1.jar" />
+                  <option value="/java/tools/gradle-2.14.1/lib/plugins/ivy-2.2.0.jar" />
+                  <option value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service/buildSrc/src/main/java" />
+                  <option value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service/buildSrc/src/main/groovy" />
+                </list>
+              </option>
+            </ExternalProjectBuildClasspathPojo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service/service.xml" />
+        <option value="/java/lp7/liferay-osgi/modules/ca-efendi-datafeeds/ca-efendi-datafeeds-service/build.gradle" />
+        <option value="/java/lp7/liferay-osgi/modules/ca-efendi-datafeeds/datafeeds-service/service.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="435" />
+    <option name="y" value="23" />
+    <option name="width" value="1701" />
+    <option name="height" value="1257" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liferay-osgi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liferay-osgi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liferay-osgi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liferay-osgi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liferay-osgi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liferay-osgi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ca-efendi-datafeeds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liferay-osgi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liferay-osgi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ca-efendi-datafeeds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datafeeds-service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liferay-osgi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liferay-osgi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ca-efendi-datafeeds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datafeeds-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+      </Profilers>
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="/java/lp7/liferay-osgi/modules/datafeeds/datafeeds-service" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="datafeeds-service" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="executeSpecs" factoryName="Gauge Execution">
+      <setting name="environment" value="" />
+      <setting name="specsToExecute" value="" />
+      <setting name="tags" value="" />
+      <setting name="parallelNodes" value="" />
+      <setting name="execInParallel" value="false" />
+      <setting name="programParameters" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="moduleName" value="" />
+      <envMap />
+      <setting name="rowsRange" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="lastUpdateTimestamp" value="1471201891140" />
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="75a15473-50c2-47b2-8d14-530ee01582d3" name="Default" comment="" />
+      <created>1471196187764</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1471196187764</updated>
+      <workItem from="1471196206245" duration="1655000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1655000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="435" y="23" width="1701" height="1257" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24171187" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file:///java/lp7/liferay-osgi/modules/ca-efendi-datafeeds/datafeeds-api/bnd.bnd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///java/lp7/liferay-osgi/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///java/lp7/liferay-osgi/gradle.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///java/lp7/liferay-osgi/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///java/lp7/liferay-osgi/modules/ca-efendi-datafeeds/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///java/lp7/liferay-osgi/modules/ca-efendi-datafeeds/datafeeds-api/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///java/lp7/liferay-osgi/modules/ca-efendi-datafeeds/datafeeds-service/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///java/lp7/liferay-osgi/modules/ca-efendi-datafeeds/datafeeds-service/service.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

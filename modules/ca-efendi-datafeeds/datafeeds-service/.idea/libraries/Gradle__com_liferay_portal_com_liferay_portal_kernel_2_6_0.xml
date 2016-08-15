@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.liferay.portal:com.liferay.portal.kernel:2.6.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.liferay.portal/com.liferay.portal.kernel/2.6.0/a12d1ba010fe17f937dddf05f70560f037ee59d0/com.liferay.portal.kernel-2.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.liferay.portal/com.liferay.portal.kernel/2.6.0/5523c86003f9aeacf5db03d74d10d70bf9a8d4b5/com.liferay.portal.kernel-2.6.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="ca.efendi.datafeeds.service.impl.CJProductLocalServiceImpl" id="ca.efendi.datafeeds.service.CJProductLocalService" />
+	<bean class="ca.efendi.datafeeds.service.impl.CJProductServiceImpl" id="ca.efendi.datafeeds.service.CJProductService" />
+	<bean class="ca.efendi.datafeeds.service.persistence.impl.CJProductPersistenceImpl" id="ca.efendi.datafeeds.service.persistence.CJProductPersistence" parent="basePersistence" />
+	<bean class="ca.efendi.datafeeds.service.impl.FtpSubscriptionLocalServiceImpl" id="ca.efendi.datafeeds.service.FtpSubscriptionLocalService" />
+	<bean class="ca.efendi.datafeeds.service.persistence.impl.FtpSubscriptionPersistenceImpl" id="ca.efendi.datafeeds.service.persistence.FtpSubscriptionPersistence" parent="basePersistence" />
+</beans>
