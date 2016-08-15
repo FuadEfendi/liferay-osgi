@@ -15,8 +15,11 @@
 package ca.efendi.datafeeds.service.impl;
 
 import aQute.bnd.annotation.ProviderType;
-
+import ca.efendi.datafeeds.model.CJProduct;
 import ca.efendi.datafeeds.service.base.CJProductServiceBaseImpl;
+import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.exception.SystemException;
+import com.liferay.portal.kernel.service.ServiceContext;
 
 /**
  * The implementation of the c j product remote service.
@@ -39,4 +42,33 @@ public class CJProductServiceImpl extends CJProductServiceBaseImpl {
 	 *
 	 * Never reference this class directly. Always use {@link ca.efendi.datafeeds.service.CJProductServiceUtil} to access the c j product remote service.
 	 */
+
+
+    @Override
+    public CJProduct refresh(final CJProduct newCJProduct, final ServiceContext serviceContext) throws SystemException, PortalException
+    {
+        //BlogsPermission.check(
+        //        getPermissionChecker(), serviceContext.getScopeGroupId(),
+        //        ActionKeys.ADD_ENTRY);
+
+        return cjProductLocalService.refresh(
+                20176, //getUserId(),
+                newCJProduct,
+                serviceContext);
+
+    }
+
+    @Override
+    public CJProduct getCJProduct(final long groupId, final String urlTitle)
+            throws PortalException
+    {
+
+        final CJProduct entry = cjProductLocalService.getCJProduct(groupId, urlTitle);
+
+        //        BlogsEntryPermission.check(
+        //            getPermissionChecker(), entry.getEntryId(), ActionKeys.VIEW);
+
+        return entry;
+    }
+
 }

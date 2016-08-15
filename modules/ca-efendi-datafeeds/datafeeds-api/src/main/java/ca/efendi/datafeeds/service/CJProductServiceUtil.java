@@ -41,6 +41,19 @@ public class CJProductServiceUtil {
 	 *
 	 * Never modify this class directly. Add custom service methods to {@link ca.efendi.datafeeds.service.impl.CJProductServiceImpl} and rerun ServiceBuilder to regenerate this class.
 	 */
+	public static ca.efendi.datafeeds.model.CJProduct getCJProduct(
+		long groupId, java.lang.String urlTitle)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		return getService().getCJProduct(groupId, urlTitle);
+	}
+
+	public static ca.efendi.datafeeds.model.CJProduct refresh(
+		ca.efendi.datafeeds.model.CJProduct newCJProduct,
+		com.liferay.portal.kernel.service.ServiceContext serviceContext)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return getService().refresh(newCJProduct, serviceContext);
+	}
 
 	/**
 	* Returns the OSGi service identifier.

@@ -16,6 +16,7 @@ package ca.efendi.datafeeds.service;
 
 import aQute.bnd.annotation.ProviderType;
 
+import ca.efendi.datafeeds.exception.NoSuchCJProductException;
 import ca.efendi.datafeeds.model.CJProduct;
 
 import com.liferay.exportimport.kernel.lar.PortletDataContext;
@@ -32,6 +33,7 @@ import com.liferay.portal.kernel.search.Indexable;
 import com.liferay.portal.kernel.search.IndexableType;
 import com.liferay.portal.kernel.service.BaseLocalService;
 import com.liferay.portal.kernel.service.PersistedModelLocalService;
+import com.liferay.portal.kernel.service.ServiceContext;
 import com.liferay.portal.kernel.transaction.Isolation;
 import com.liferay.portal.kernel.transaction.Propagation;
 import com.liferay.portal.kernel.transaction.Transactional;
@@ -114,6 +116,10 @@ public interface CJProductLocalService extends BaseLocalService,
 	public CJProduct fetchCJProductByUuidAndGroupId(java.lang.String uuid,
 		long groupId);
 
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public CJProduct getCJProduct(long groupId, java.lang.String urlTitle)
+		throws NoSuchCJProductException;
+
 	/**
 	* Returns the c j product with the primary key.
 	*
@@ -135,6 +141,10 @@ public interface CJProductLocalService extends BaseLocalService,
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public CJProduct getCJProductByUuidAndGroupId(java.lang.String uuid,
 		long groupId) throws PortalException;
+
+	@Indexable(type = IndexableType.REINDEX)
+	public CJProduct refresh(long userId, CJProduct newCJProduct,
+		ServiceContext serviceContext) throws PortalException;
 
 	/**
 	* Updates the c j product in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.

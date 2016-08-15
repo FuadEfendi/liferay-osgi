@@ -16,9 +16,16 @@ package ca.efendi.datafeeds.service.http;
 
 import aQute.bnd.annotation.ProviderType;
 
+import ca.efendi.datafeeds.service.CJProductServiceUtil;
+
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+
+import java.rmi.RemoteException;
+
 /**
  * Provides the SOAP utility for the
- * {@link ca.efendi.datafeeds.service.CJProductServiceUtil} service utility. The
+ * {@link CJProductServiceUtil} service utility. The
  * static methods of this class calls the same methods of the service utility.
  * However, the signatures are different because it is difficult for SOAP to
  * support certain types.
@@ -53,9 +60,42 @@ import aQute.bnd.annotation.ProviderType;
  * @author fefendi
  * @see CJProductServiceHttp
  * @see ca.efendi.datafeeds.model.CJProductSoap
- * @see ca.efendi.datafeeds.service.CJProductServiceUtil
+ * @see CJProductServiceUtil
  * @generated
  */
 @ProviderType
 public class CJProductServiceSoap {
+	public static ca.efendi.datafeeds.model.CJProductSoap refresh(
+		ca.efendi.datafeeds.model.CJProductSoap newCJProduct,
+		com.liferay.portal.kernel.service.ServiceContext serviceContext)
+		throws RemoteException {
+		try {
+			ca.efendi.datafeeds.model.CJProduct returnValue = CJProductServiceUtil.refresh(ca.efendi.datafeeds.model.impl.CJProductModelImpl.toModel(
+						newCJProduct), serviceContext);
+
+			return ca.efendi.datafeeds.model.CJProductSoap.toSoapModel(returnValue);
+		}
+		catch (Exception e) {
+			_log.error(e, e);
+
+			throw new RemoteException(e.getMessage());
+		}
+	}
+
+	public static ca.efendi.datafeeds.model.CJProductSoap getCJProduct(
+		long groupId, java.lang.String urlTitle) throws RemoteException {
+		try {
+			ca.efendi.datafeeds.model.CJProduct returnValue = CJProductServiceUtil.getCJProduct(groupId,
+					urlTitle);
+
+			return ca.efendi.datafeeds.model.CJProductSoap.toSoapModel(returnValue);
+		}
+		catch (Exception e) {
+			_log.error(e, e);
+
+			throw new RemoteException(e.getMessage());
+		}
+	}
+
+	private static Log _log = LogFactoryUtil.getLog(CJProductServiceSoap.class);
 }

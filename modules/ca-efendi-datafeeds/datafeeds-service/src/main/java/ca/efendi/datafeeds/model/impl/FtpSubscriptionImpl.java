@@ -17,7 +17,7 @@ package ca.efendi.datafeeds.model.impl;
 import aQute.bnd.annotation.ProviderType;
 
 /**
- * The extended model implementation for the FtpSubscription service. Represents a row in the &quot;cafe_FtpSubscription&quot; database table, with each column mapped to a property of this class.
+ * The extended model implementation for the FtpSubscription service. Represents a row in the &quot;FE_FtpSubscription&quot; database table, with each column mapped to a property of this class.
  *
  * <p>
  * Helper methods and all application logic should be put in this class. Whenever methods are added, rerun ServiceBuilder to copy their definitions into the {@link ca.efendi.datafeeds.model.FtpSubscription} interface.

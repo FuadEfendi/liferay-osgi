@@ -53,6 +53,15 @@ public class FtpSubscriptionLocalServiceUtil {
 		return getService().addFtpSubscription(ftpSubscription);
 	}
 
+	public static ca.efendi.datafeeds.model.FtpSubscription addFtpSubscription(
+		ca.efendi.datafeeds.model.FtpSubscription newFtpSubscription,
+		long userId,
+		com.liferay.portal.kernel.service.ServiceContext serviceContext) {
+		return getService()
+				   .addFtpSubscription(newFtpSubscription, userId,
+			serviceContext);
+	}
+
 	/**
 	* Creates a new ftp subscription with the primary key. Does not add the ftp subscription to the database.
 	*
@@ -210,6 +219,15 @@ public class FtpSubscriptionLocalServiceUtil {
 		com.liferay.portal.kernel.util.OrderByComparator<T> orderByComparator) {
 		return getService()
 				   .dynamicQuery(dynamicQuery, start, end, orderByComparator);
+	}
+
+	public static java.util.List<ca.efendi.datafeeds.model.FtpSubscription> getAllFtpSubscriptions() {
+		return getService().getAllFtpSubscriptions();
+	}
+
+	public static java.util.List<ca.efendi.datafeeds.model.FtpSubscription> getAllFtpSubscriptions(
+		long groupId) {
+		return getService().getAllFtpSubscriptions(groupId);
 	}
 
 	/**

@@ -32,6 +32,22 @@ public class CJProductServiceWrapper implements CJProductService,
 		_cjProductService = cjProductService;
 	}
 
+	@Override
+	public ca.efendi.datafeeds.model.CJProduct getCJProduct(long groupId,
+		java.lang.String urlTitle)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		return _cjProductService.getCJProduct(groupId, urlTitle);
+	}
+
+	@Override
+	public ca.efendi.datafeeds.model.CJProduct refresh(
+		ca.efendi.datafeeds.model.CJProduct newCJProduct,
+		com.liferay.portal.kernel.service.ServiceContext serviceContext)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return _cjProductService.refresh(newCJProduct, serviceContext);
+	}
+
 	/**
 	* Returns the OSGi service identifier.
 	*

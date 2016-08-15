@@ -16,13 +16,17 @@ package ca.efendi.datafeeds.service;
 
 import aQute.bnd.annotation.ProviderType;
 
+import ca.efendi.datafeeds.model.CJProduct;
+
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.jsonwebservice.JSONWebService;
 import com.liferay.portal.kernel.security.access.control.AccessControlled;
 import com.liferay.portal.kernel.service.BaseService;
+import com.liferay.portal.kernel.service.ServiceContext;
 import com.liferay.portal.kernel.spring.osgi.OSGiBeanProperties;
 import com.liferay.portal.kernel.transaction.Isolation;
+import com.liferay.portal.kernel.transaction.Propagation;
 import com.liferay.portal.kernel.transaction.Transactional;
 
 /**
@@ -39,7 +43,7 @@ import com.liferay.portal.kernel.transaction.Transactional;
 @AccessControlled
 @JSONWebService
 @OSGiBeanProperties(property =  {
-	"json.web.service.context.name=cafe", "json.web.service.context.path=CJProduct"}, service = CJProductService.class)
+	"json.web.service.context.name=fe", "json.web.service.context.path=CJProduct"}, service = CJProductService.class)
 @ProviderType
 @Transactional(isolation = Isolation.PORTAL, rollbackFor =  {
 	PortalException.class, SystemException.class})
@@ -49,6 +53,12 @@ public interface CJProductService extends BaseService {
 	 *
 	 * Never modify or reference this interface directly. Always use {@link CJProductServiceUtil} to access the c j product remote service. Add custom service methods to {@link ca.efendi.datafeeds.service.impl.CJProductServiceImpl} and rerun ServiceBuilder to automatically copy the method declarations to this interface.
 	 */
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public CJProduct getCJProduct(long groupId, java.lang.String urlTitle)
+		throws PortalException;
+
+	public CJProduct refresh(CJProduct newCJProduct,
+		ServiceContext serviceContext) throws PortalException, SystemException;
 
 	/**
 	* Returns the OSGi service identifier.

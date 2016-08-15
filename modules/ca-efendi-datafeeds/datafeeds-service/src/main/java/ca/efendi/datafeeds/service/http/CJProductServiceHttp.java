@@ -16,12 +16,21 @@ package ca.efendi.datafeeds.service.http;
 
 import aQute.bnd.annotation.ProviderType;
 
+import ca.efendi.datafeeds.service.CJProductServiceUtil;
+
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.security.auth.HttpPrincipal;
+import com.liferay.portal.kernel.service.http.TunnelUtil;
+import com.liferay.portal.kernel.util.MethodHandler;
+import com.liferay.portal.kernel.util.MethodKey;
+
 /**
  * Provides the HTTP utility for the
- * {@link ca.efendi.datafeeds.service.CJProductServiceUtil} service utility. The
+ * {@link CJProductServiceUtil} service utility. The
  * static methods of this class calls the same methods of the service utility.
  * However, the signatures are different because it requires an additional
- * {@link com.liferay.portal.kernel.security.auth.HttpPrincipal} parameter.
+ * {@link HttpPrincipal} parameter.
  *
  * <p>
  * The benefits of using the HTTP utility is that it is fast and allows for
@@ -40,10 +49,89 @@ import aQute.bnd.annotation.ProviderType;
  *
  * @author fefendi
  * @see CJProductServiceSoap
- * @see com.liferay.portal.kernel.security.auth.HttpPrincipal
- * @see ca.efendi.datafeeds.service.CJProductServiceUtil
+ * @see HttpPrincipal
+ * @see CJProductServiceUtil
  * @generated
  */
 @ProviderType
 public class CJProductServiceHttp {
+	public static ca.efendi.datafeeds.model.CJProduct refresh(
+		HttpPrincipal httpPrincipal,
+		ca.efendi.datafeeds.model.CJProduct newCJProduct,
+		com.liferay.portal.kernel.service.ServiceContext serviceContext)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		try {
+			MethodKey methodKey = new MethodKey(CJProductServiceUtil.class,
+					"refresh", _refreshParameterTypes0);
+
+			MethodHandler methodHandler = new MethodHandler(methodKey,
+					newCJProduct, serviceContext);
+
+			Object returnObj = null;
+
+			try {
+				returnObj = TunnelUtil.invoke(httpPrincipal, methodHandler);
+			}
+			catch (Exception e) {
+				if (e instanceof com.liferay.portal.kernel.exception.PortalException) {
+					throw (com.liferay.portal.kernel.exception.PortalException)e;
+				}
+
+				if (e instanceof com.liferay.portal.kernel.exception.SystemException) {
+					throw (com.liferay.portal.kernel.exception.SystemException)e;
+				}
+
+				throw new com.liferay.portal.kernel.exception.SystemException(e);
+			}
+
+			return (ca.efendi.datafeeds.model.CJProduct)returnObj;
+		}
+		catch (com.liferay.portal.kernel.exception.SystemException se) {
+			_log.error(se, se);
+
+			throw se;
+		}
+	}
+
+	public static ca.efendi.datafeeds.model.CJProduct getCJProduct(
+		HttpPrincipal httpPrincipal, long groupId, java.lang.String urlTitle)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		try {
+			MethodKey methodKey = new MethodKey(CJProductServiceUtil.class,
+					"getCJProduct", _getCJProductParameterTypes1);
+
+			MethodHandler methodHandler = new MethodHandler(methodKey, groupId,
+					urlTitle);
+
+			Object returnObj = null;
+
+			try {
+				returnObj = TunnelUtil.invoke(httpPrincipal, methodHandler);
+			}
+			catch (Exception e) {
+				if (e instanceof com.liferay.portal.kernel.exception.PortalException) {
+					throw (com.liferay.portal.kernel.exception.PortalException)e;
+				}
+
+				throw new com.liferay.portal.kernel.exception.SystemException(e);
+			}
+
+			return (ca.efendi.datafeeds.model.CJProduct)returnObj;
+		}
+		catch (com.liferay.portal.kernel.exception.SystemException se) {
+			_log.error(se, se);
+
+			throw se;
+		}
+	}
+
+	private static Log _log = LogFactoryUtil.getLog(CJProductServiceHttp.class);
+	private static final Class<?>[] _refreshParameterTypes0 = new Class[] {
+			ca.efendi.datafeeds.model.CJProduct.class,
+			com.liferay.portal.kernel.service.ServiceContext.class
+		};
+	private static final Class<?>[] _getCJProductParameterTypes1 = new Class[] {
+			long.class, java.lang.String.class
+		};
 }

@@ -15,8 +15,11 @@
 package ca.efendi.datafeeds.service.impl;
 
 import aQute.bnd.annotation.ProviderType;
-
+import ca.efendi.datafeeds.model.FtpSubscription;
 import ca.efendi.datafeeds.service.base.FtpSubscriptionLocalServiceBaseImpl;
+import com.liferay.portal.kernel.service.ServiceContext;
+
+import java.util.List;
 
 /**
  * The implementation of the ftp subscription local service.
@@ -40,4 +43,53 @@ public class FtpSubscriptionLocalServiceImpl
 	 *
 	 * Never reference this class directly. Always use {@link ca.efendi.datafeeds.service.FtpSubscriptionLocalServiceUtil} to access the ftp subscription local service.
 	 */
+
+	@Override
+	public FtpSubscription addFtpSubscription(final FtpSubscription newFtpSubscription, final long userId,
+											  final ServiceContext serviceContext)
+
+	{
+
+		final FtpSubscription ftpSubscription = ftpSubscriptionPersistence.create(
+				counterLocalService.increment(FtpSubscription.class.getName()));
+
+		ftpSubscription.setCompanyId(newFtpSubscription.getCompanyId());
+		ftpSubscription.setGroupId(newFtpSubscription.getGroupId());
+		ftpSubscription.setUserId(newFtpSubscription.getUserId());
+		ftpSubscription.setUserName(newFtpSubscription.getUserName());
+		ftpSubscription.setCreateDate(newFtpSubscription.getCreateDate());
+		ftpSubscription.setModifiedDate(newFtpSubscription.getModifiedDate());
+
+		ftpSubscription.setFtpHost(newFtpSubscription.getFtpHost());
+		ftpSubscription.setFtpUser(newFtpSubscription.getFtpUser());
+		ftpSubscription.setFtpPassword(newFtpSubscription.getFtpPassword());
+		ftpSubscription.setFtpFolder(newFtpSubscription.getFtpFolder());
+		ftpSubscription.setFtpFile(newFtpSubscription.getFtpFile());
+		ftpSubscription.setFtpDatafeedName(newFtpSubscription.getFtpDatafeedName());
+		ftpSubscription.setFtpDatafeedDescription(newFtpSubscription.getFtpDatafeedDescription());
+
+		// ftpSubscription.setStatus(WorkflowConstants.STATUS_DRAFT);
+
+		return ftpSubscriptionPersistence.update(ftpSubscription);
+	}
+
+	@Override
+	public List<FtpSubscription> getAllFtpSubscriptions(final long groupId)
+
+	{
+		final List<FtpSubscription> products = ftpSubscriptionPersistence.findByGroupId(groupId);
+		return products;
+	}
+
+	@Override
+	public List<FtpSubscription> getAllFtpSubscriptions()
+
+	{
+		final List<FtpSubscription> products = ftpSubscriptionPersistence.findAll();
+		return products;
+	}
+
+
+
 }
+

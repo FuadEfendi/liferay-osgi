@@ -105,6 +105,12 @@ public class CJProductLocalServiceUtil {
 		return getService().fetchCJProductByUuidAndGroupId(uuid, groupId);
 	}
 
+	public static ca.efendi.datafeeds.model.CJProduct getCJProduct(
+		long groupId, java.lang.String urlTitle)
+		throws ca.efendi.datafeeds.exception.NoSuchCJProductException {
+		return getService().getCJProduct(groupId, urlTitle);
+	}
+
 	/**
 	* Returns the c j product with the primary key.
 	*
@@ -130,6 +136,13 @@ public class CJProductLocalServiceUtil {
 		java.lang.String uuid, long groupId)
 		throws com.liferay.portal.kernel.exception.PortalException {
 		return getService().getCJProductByUuidAndGroupId(uuid, groupId);
+	}
+
+	public static ca.efendi.datafeeds.model.CJProduct refresh(long userId,
+		ca.efendi.datafeeds.model.CJProduct newCJProduct,
+		com.liferay.portal.kernel.service.ServiceContext serviceContext)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		return getService().refresh(userId, newCJProduct, serviceContext);
 	}
 
 	/**

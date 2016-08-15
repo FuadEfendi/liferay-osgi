@@ -4,7 +4,7 @@
 <hibernate-mapping auto-import="false" default-lazy="false">
 	<import class="ca.efendi.datafeeds.model.CJProduct" />
 	<import class="ca.efendi.datafeeds.model.FtpSubscription" />
-	<class name="ca.efendi.datafeeds.model.impl.CJProductImpl" table="cafe_CJProduct">
+	<class name="ca.efendi.datafeeds.model.impl.CJProductImpl" table="FE_CJProduct">
 		<id name="productId" type="long">
 			<generator class="assigned" />
 		</id>
@@ -34,7 +34,7 @@
 		<property name="inStock" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 		<property name="viewCount" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
 	</class>
-	<class name="ca.efendi.datafeeds.model.impl.FtpSubscriptionImpl" table="cafe_FtpSubscription">
+	<class name="ca.efendi.datafeeds.model.impl.FtpSubscriptionImpl" table="FE_FtpSubscription">
 		<id name="ftpSubscriptionId" type="long">
 			<generator class="assigned" />
 		</id>

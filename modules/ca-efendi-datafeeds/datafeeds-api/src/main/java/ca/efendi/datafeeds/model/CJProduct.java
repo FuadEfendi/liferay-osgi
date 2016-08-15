@@ -21,7 +21,7 @@ import com.liferay.portal.kernel.model.PersistedModel;
 import com.liferay.portal.kernel.util.Accessor;
 
 /**
- * The extended model interface for the CJProduct service. Represents a row in the &quot;cafe_CJProduct&quot; database table, with each column mapped to a property of this class.
+ * The extended model interface for the CJProduct service. Represents a row in the &quot;FE_CJProduct&quot; database table, with each column mapped to a property of this class.
  *
  * @author fefendi
  * @see CJProductModel
