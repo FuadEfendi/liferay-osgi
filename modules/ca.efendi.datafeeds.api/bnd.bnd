@@ -4,4 +4,5 @@ Export-Package:\
 	ca.efendi.datafeeds.exception,\
 	ca.efendi.datafeeds.model,\
 	ca.efendi.datafeeds.service,\
-	ca.efendi.datafeeds.service.persistence
+	ca.efendi.datafeeds.service.persistence,\
+	ca.efendi.datafeeds.constants

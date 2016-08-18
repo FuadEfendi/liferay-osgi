@@ -10,17 +10,18 @@ Export-Package: ca.efendi.datafeeds.exception;uses:="com.liferay.porta
  com.liferay.portal.kernel.annotation,com.liferay.portal.kernel.bean,c
  om.liferay.portal.kernel.model,com.liferay.portal.kernel.service,com.
  liferay.portal.kernel.util";version="1.0.0",ca.efendi.datafeeds.servi
- ce;uses:="ca.efendi.datafeeds.model,com.liferay.exportimport.kernel.l
- ar,com.liferay.portal.kernel.dao.orm,com.liferay.portal.kernel.except
- ion,com.liferay.portal.kernel.jsonwebservice,com.liferay.portal.kerne
- l.model,com.liferay.portal.kernel.search,com.liferay.portal.kernel.se
- curity.access.control,com.liferay.portal.kernel.service,com.liferay.p
- ortal.kernel.spring.osgi,com.liferay.portal.kernel.transaction,com.li
- feray.portal.kernel.util";version="1.0.0",ca.efendi.datafeeds.service
- .persistence;uses:="ca.efendi.datafeeds.exception,ca.efendi.datafeeds
- .model,com.liferay.portal.kernel.dao.orm,com.liferay.portal.kernel.se
- rvice,com.liferay.portal.kernel.service.persistence,com.liferay.porta
- l.kernel.util";version="1.0.0"
+ ce;uses:="ca.efendi.datafeeds.exception,ca.efendi.datafeeds.model,com
+ .liferay.exportimport.kernel.lar,com.liferay.portal.kernel.dao.orm,co
+ m.liferay.portal.kernel.exception,com.liferay.portal.kernel.jsonwebse
+ rvice,com.liferay.portal.kernel.model,com.liferay.portal.kernel.searc
+ h,com.liferay.portal.kernel.security.access.control,com.liferay.porta
+ l.kernel.service,com.liferay.portal.kernel.spring.osgi,com.liferay.po
+ rtal.kernel.transaction,com.liferay.portal.kernel.util";version="1.0.
+ 0",ca.efendi.datafeeds.service.persistence;uses:="ca.efendi.datafeeds
+ .exception,ca.efendi.datafeeds.model,com.liferay.portal.kernel.dao.or
+ m,com.liferay.portal.kernel.service,com.liferay.portal.kernel.service
+ .persistence,com.liferay.portal.kernel.util";version="1.0.0",ca.efend
+ i.datafeeds.constants;version="1.0.0"
 Import-Package: ca.efendi.datafeeds.exception,ca.efendi.datafeeds.mode
  l,com.liferay.expando.kernel.model;version="[1.0,2)",com.liferay.expo
  rtimport.kernel.lar;version="[1.1,2)",com.liferay.osgi.util;version="

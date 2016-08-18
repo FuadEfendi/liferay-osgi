@@ -744,18 +744,18 @@ public abstract class FtpSubscriptionLocalServiceBaseImpl
 	}
 
 	/**
-	 * Returns the workflow instance link local service.
+	 * Returns the ca.efendi.datafeeds.workflow instance link local service.
 	 *
-	 * @return the workflow instance link local service
+	 * @return the ca.efendi.datafeeds.workflow instance link local service
 	 */
 	public com.liferay.portal.kernel.service.WorkflowInstanceLinkLocalService getWorkflowInstanceLinkLocalService() {
 		return workflowInstanceLinkLocalService;
 	}
 
 	/**
-	 * Sets the workflow instance link local service.
+	 * Sets the ca.efendi.datafeeds.workflow instance link local service.
 	 *
-	 * @param workflowInstanceLinkLocalService the workflow instance link local service
+	 * @param workflowInstanceLinkLocalService the ca.efendi.datafeeds.workflow instance link local service
 	 */
 	public void setWorkflowInstanceLinkLocalService(
 		com.liferay.portal.kernel.service.WorkflowInstanceLinkLocalService workflowInstanceLinkLocalService) {
@@ -763,18 +763,18 @@ public abstract class FtpSubscriptionLocalServiceBaseImpl
 	}
 
 	/**
-	 * Returns the workflow instance link persistence.
+	 * Returns the ca.efendi.datafeeds.workflow instance link persistence.
 	 *
-	 * @return the workflow instance link persistence
+	 * @return the ca.efendi.datafeeds.workflow instance link persistence
 	 */
 	public WorkflowInstanceLinkPersistence getWorkflowInstanceLinkPersistence() {
 		return workflowInstanceLinkPersistence;
 	}
 
 	/**
-	 * Sets the workflow instance link persistence.
+	 * Sets the ca.efendi.datafeeds.workflow instance link persistence.
 	 *
-	 * @param workflowInstanceLinkPersistence the workflow instance link persistence
+	 * @param workflowInstanceLinkPersistence the ca.efendi.datafeeds.workflow instance link persistence
 	 */
 	public void setWorkflowInstanceLinkPersistence(
 		WorkflowInstanceLinkPersistence workflowInstanceLinkPersistence) {
@@ -782,18 +782,18 @@ public abstract class FtpSubscriptionLocalServiceBaseImpl
 	}
 
 	/**
-	 * Returns the asset entry local service.
+	 * Returns the ca.efendi.datafeeds.asset entry local service.
 	 *
-	 * @return the asset entry local service
+	 * @return the ca.efendi.datafeeds.asset entry local service
 	 */
 	public com.liferay.asset.kernel.service.AssetEntryLocalService getAssetEntryLocalService() {
 		return assetEntryLocalService;
 	}
 
 	/**
-	 * Sets the asset entry local service.
+	 * Sets the ca.efendi.datafeeds.asset entry local service.
 	 *
-	 * @param assetEntryLocalService the asset entry local service
+	 * @param assetEntryLocalService the ca.efendi.datafeeds.asset entry local service
 	 */
 	public void setAssetEntryLocalService(
 		com.liferay.asset.kernel.service.AssetEntryLocalService assetEntryLocalService) {
@@ -801,18 +801,18 @@ public abstract class FtpSubscriptionLocalServiceBaseImpl
 	}
 
 	/**
-	 * Returns the asset entry persistence.
+	 * Returns the ca.efendi.datafeeds.asset entry persistence.
 	 *
-	 * @return the asset entry persistence
+	 * @return the ca.efendi.datafeeds.asset entry persistence
 	 */
 	public AssetEntryPersistence getAssetEntryPersistence() {
 		return assetEntryPersistence;
 	}
 
 	/**
-	 * Sets the asset entry persistence.
+	 * Sets the ca.efendi.datafeeds.asset entry persistence.
 	 *
-	 * @param assetEntryPersistence the asset entry persistence
+	 * @param assetEntryPersistence the ca.efendi.datafeeds.asset entry persistence
 	 */
 	public void setAssetEntryPersistence(
 		AssetEntryPersistence assetEntryPersistence) {
@@ -820,18 +820,18 @@ public abstract class FtpSubscriptionLocalServiceBaseImpl
 	}
 
 	/**
-	 * Returns the asset link local service.
+	 * Returns the ca.efendi.datafeeds.asset link local service.
 	 *
-	 * @return the asset link local service
+	 * @return the ca.efendi.datafeeds.asset link local service
 	 */
 	public com.liferay.asset.kernel.service.AssetLinkLocalService getAssetLinkLocalService() {
 		return assetLinkLocalService;
 	}
 
 	/**
-	 * Sets the asset link local service.
+	 * Sets the ca.efendi.datafeeds.asset link local service.
 	 *
-	 * @param assetLinkLocalService the asset link local service
+	 * @param assetLinkLocalService the ca.efendi.datafeeds.asset link local service
 	 */
 	public void setAssetLinkLocalService(
 		com.liferay.asset.kernel.service.AssetLinkLocalService assetLinkLocalService) {
@@ -839,18 +839,18 @@ public abstract class FtpSubscriptionLocalServiceBaseImpl
 	}
 
 	/**
-	 * Returns the asset link persistence.
+	 * Returns the ca.efendi.datafeeds.asset link persistence.
 	 *
-	 * @return the asset link persistence
+	 * @return the ca.efendi.datafeeds.asset link persistence
 	 */
 	public AssetLinkPersistence getAssetLinkPersistence() {
 		return assetLinkPersistence;
 	}
 
 	/**
-	 * Sets the asset link persistence.
+	 * Sets the ca.efendi.datafeeds.asset link persistence.
 	 *
-	 * @param assetLinkPersistence the asset link persistence
+	 * @param assetLinkPersistence the ca.efendi.datafeeds.asset link persistence
 	 */
 	public void setAssetLinkPersistence(
 		AssetLinkPersistence assetLinkPersistence) {
@@ -858,18 +858,18 @@ public abstract class FtpSubscriptionLocalServiceBaseImpl
 	}
 
 	/**
-	 * Returns the asset tag local service.
+	 * Returns the ca.efendi.datafeeds.asset tag local service.
 	 *
-	 * @return the asset tag local service
+	 * @return the ca.efendi.datafeeds.asset tag local service
 	 */
 	public com.liferay.asset.kernel.service.AssetTagLocalService getAssetTagLocalService() {
 		return assetTagLocalService;
 	}
 
 	/**
-	 * Sets the asset tag local service.
+	 * Sets the ca.efendi.datafeeds.asset tag local service.
 	 *
-	 * @param assetTagLocalService the asset tag local service
+	 * @param assetTagLocalService the ca.efendi.datafeeds.asset tag local service
 	 */
 	public void setAssetTagLocalService(
 		com.liferay.asset.kernel.service.AssetTagLocalService assetTagLocalService) {
@@ -877,18 +877,18 @@ public abstract class FtpSubscriptionLocalServiceBaseImpl
 	}
 
 	/**
-	 * Returns the asset tag persistence.
+	 * Returns the ca.efendi.datafeeds.asset tag persistence.
 	 *
-	 * @return the asset tag persistence
+	 * @return the ca.efendi.datafeeds.asset tag persistence
 	 */
 	public AssetTagPersistence getAssetTagPersistence() {
 		return assetTagPersistence;
 	}
 
 	/**
-	 * Sets the asset tag persistence.
+	 * Sets the ca.efendi.datafeeds.asset tag persistence.
 	 *
-	 * @param assetTagPersistence the asset tag persistence
+	 * @param assetTagPersistence the ca.efendi.datafeeds.asset tag persistence
 	 */
 	public void setAssetTagPersistence(AssetTagPersistence assetTagPersistence) {
 		this.assetTagPersistence = assetTagPersistence;
