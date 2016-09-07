@@ -33,7 +33,7 @@ import java.util.Date;
 /**
  * The cache model class for representing FtpSubscription in entity cache.
  *
- * @author fefendi
+ * @author Brian Wing Shun Chan
  * @see FtpSubscription
  * @generated
  */

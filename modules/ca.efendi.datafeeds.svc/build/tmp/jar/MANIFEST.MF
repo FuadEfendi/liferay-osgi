@@ -2,27 +2,29 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: datafeeds-service
 Bundle-SymbolicName: datafeeds-service
-Bundle-Version: 1.0.0
+Bundle-Version: 1.0.4
 Created-By: 1.8.0_101 (Oracle Corporation)
 Import-Package: ca.efendi.datafeeds.exception;version="[1.0,2)",ca.efe
  ndi.datafeeds.model;version="[1.0,1.1)",ca.efendi.datafeeds.service;v
  ersion="[1.0,1.1)",ca.efendi.datafeeds.service.persistence;version="[
  1.0,1.1)",com.liferay.asset.kernel.model,com.liferay.asset.kernel.ser
- vice,com.liferay.asset.kernel.service.persistence,com.liferay.counter
- .kernel.service,com.liferay.expando.kernel.model,com.liferay.expando.
- kernel.util,com.liferay.exportimport.kernel.lar,com.liferay.portal.ke
- rnel.bean,com.liferay.portal.kernel.configuration,com.liferay.portal.
- kernel.dao.db,com.liferay.portal.kernel.dao.jdbc,com.liferay.portal.k
- ernel.dao.orm,com.liferay.portal.kernel.exception,com.liferay.portal.
- kernel.json,com.liferay.portal.kernel.log,com.liferay.portal.kernel.m
- odel,com.liferay.portal.kernel.model.impl,com.liferay.portal.kernel.m
- odule.framework.service,com.liferay.portal.kernel.search,com.liferay.
- portal.kernel.security.auth,com.liferay.portal.kernel.service,com.lif
- eray.portal.kernel.service.http,com.liferay.portal.kernel.service.per
- sistence,com.liferay.portal.kernel.service.persistence.impl,com.lifer
- ay.portal.kernel.util,com.liferay.portal.kernel.uuid,com.liferay.port
- al.spring.extender.service;version="[1.0,2)",com.liferay.ratings.kern
- el.service,com.liferay.ratings.kernel.service.persistence,javax.sql
+ vice,com.liferay.asset.kernel.service.persistence,com.liferay.blogs.k
+ ernel.service,com.liferay.blogs.kernel.service.persistence,com.lifera
+ y.counter.kernel.service,com.liferay.expando.kernel.model,com.liferay
+ .expando.kernel.service,com.liferay.expando.kernel.service.persistenc
+ e,com.liferay.expando.kernel.util,com.liferay.exportimport.kernel.lar
+ ,com.liferay.portal.kernel.bean,com.liferay.portal.kernel.configurati
+ on,com.liferay.portal.kernel.dao.db,com.liferay.portal.kernel.dao.jdb
+ c,com.liferay.portal.kernel.dao.orm,com.liferay.portal.kernel.excepti
+ on,com.liferay.portal.kernel.log,com.liferay.portal.kernel.model,com.
+ liferay.portal.kernel.model.impl,com.liferay.portal.kernel.module.fra
+ mework.service,com.liferay.portal.kernel.search,com.liferay.portal.ke
+ rnel.service,com.liferay.portal.kernel.service.persistence,com.lifera
+ y.portal.kernel.service.persistence.impl,com.liferay.portal.kernel.ut
+ il,com.liferay.portal.kernel.uuid,com.liferay.portal.spring.extender.
+ service;version="[1.0,2)",com.liferay.ratings.kernel.service,com.life
+ ray.ratings.kernel.service.persistence,com.liferay.trash.kernel.servi
+ ce,com.liferay.trash.kernel.service.persistence,javax.sql
 Javac-Debug: on
 Javac-Deprecation: off
 Javac-Encoding: UTF-8

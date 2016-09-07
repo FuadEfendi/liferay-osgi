@@ -23,7 +23,7 @@
 </liferay-ui:icon-menu>
  --%>
 <portlet:renderURL var="addFtpSubscriptionURL">
-    <portlet:param name="jspPage" value="/admin/edit_ftp_subscription.jsp"/>
+    <portlet:param name="jspPage" value="/datafeeds_admin/edit_ftp_subscription.jsp"/>
 </portlet:renderURL>
 <input type="button" value="<liferay-ui:message key="add-ftp-subscription" />"
        onClick="location.href = '<%=addFtpSubscriptionURL.toString()%>';"/>

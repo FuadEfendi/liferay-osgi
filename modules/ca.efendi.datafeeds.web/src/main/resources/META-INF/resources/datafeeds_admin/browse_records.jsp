@@ -27,7 +27,7 @@
             pageContext.setAttribute("total", total);
         %>
     </liferay-ui:search-container-results>
-    <liferay-ui:search-container-row className="tdf.servicebuilder.model.FtpSubscription"
+    <liferay-ui:search-container-row className="ca.efendi.datafeeds.model.FtpSubscription"
                                      keyProperty="ftpSubscriptionId" modelVar="ftpSubscription">
         <liferay-ui:search-container-column-text name="ftpHost" property="ftpHost"/>
         <liferay-ui:search-container-column-text name="ftpUser" property="ftpUser"/>
@@ -36,7 +36,7 @@
         <liferay-ui:search-container-column-text name="ftpFile" property="ftpFile"/>
         <liferay-ui:search-container-column-text name="ftpDatafeedName" property="ftpDatafeedName"/>
         <liferay-ui:search-container-column-text name="ftpDatafeedDescription" property="ftpDatafeedDescription"/>
-        <liferay-ui:search-container-column-jsp path="/admin/admin_actions.jsp" align="right"/>
+        <liferay-ui:search-container-column-jsp path="/datafeeds_admin/admin_actions.jsp" align="right"/>
     </liferay-ui:search-container-row>
     <liferay-ui:search-iterator/>
 </liferay-ui:search-container>

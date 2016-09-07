@@ -1,6 +1,7 @@
 Bundle-SymbolicName: datafeeds-api
 Bundle-Version: 1.0.0
 Export-Package:\
+	ca.efendi.datafeeds.configuration,\
 	ca.efendi.datafeeds.exception,\
 	ca.efendi.datafeeds.model,\
 	ca.efendi.datafeeds.service,\

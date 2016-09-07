@@ -33,7 +33,7 @@ import java.util.Date;
 /**
  * The cache model class for representing CJProduct in entity cache.
  *
- * @author fefendi
+ * @author Brian Wing Shun Chan
  * @see CJProduct
  * @generated
  */

@@ -23,7 +23,7 @@ import com.liferay.portal.kernel.util.Accessor;
 /**
  * The extended model interface for the FtpSubscription service. Represents a row in the &quot;FE_FtpSubscription&quot; database table, with each column mapped to a property of this class.
  *
- * @author fefendi
+ * @author Brian Wing Shun Chan
  * @see FtpSubscriptionModel
  * @see ca.efendi.datafeeds.model.impl.FtpSubscriptionImpl
  * @see ca.efendi.datafeeds.model.impl.FtpSubscriptionModelImpl

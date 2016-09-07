@@ -20,7 +20,6 @@ import ca.efendi.datafeeds.constants.DatafeedsPortletKeys;
 import ca.efendi.datafeeds.model.CJProduct;
 import ca.efendi.datafeeds.service.CJProductLocalService;
 import ca.efendi.datafeeds.service.CJProductLocalServiceUtil;
-import ca.efendi.datafeeds.service.CJProductService;
 import com.liferay.asset.kernel.model.AssetRenderer;
 import com.liferay.asset.kernel.model.AssetRendererFactory;
 import com.liferay.asset.kernel.model.BaseAssetRendererFactory;
@@ -111,12 +110,8 @@ public class CJProductAssetRendererFactory
         this._cjProductLocalService = cjProductLocalService;
     }
 
-    @Reference(unbind = "-")
-    protected void setCJProductService(CJProductService cjProductService) {
-        this._cjProductService = cjProductService;
-    }
 
-    private volatile CJProductLocalService _cjProductLocalService;
-    private volatile CJProductService _cjProductService;
+    private CJProductLocalService _cjProductLocalService;
     private volatile ServletContext _servletContext;
-}
+
+        }

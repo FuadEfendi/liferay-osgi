@@ -21,7 +21,7 @@ import com.liferay.portal.kernel.service.ServiceWrapper;
 /**
  * Provides a wrapper for {@link CJProductLocalService}.
  *
- * @author fefendi
+ * @author Brian Wing Shun Chan
  * @see CJProductLocalService
  * @generated
  */

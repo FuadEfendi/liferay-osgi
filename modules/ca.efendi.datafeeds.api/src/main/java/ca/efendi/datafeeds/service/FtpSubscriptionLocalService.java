@@ -45,7 +45,7 @@ import java.util.List;
  * credentials because this service can only be accessed from within the same
  * VM.
  *
- * @author fefendi
+ * @author Brian Wing Shun Chan
  * @see FtpSubscriptionLocalServiceUtil
  * @see ca.efendi.datafeeds.service.base.FtpSubscriptionLocalServiceBaseImpl
  * @see ca.efendi.datafeeds.service.impl.FtpSubscriptionLocalServiceImpl

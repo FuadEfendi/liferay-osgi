@@ -25,7 +25,7 @@ import java.util.List;
 /**
  * This class is used by SOAP remote services.
  *
- * @author fefendi
+ * @author Brian Wing Shun Chan
  * @generated
  */
 @ProviderType

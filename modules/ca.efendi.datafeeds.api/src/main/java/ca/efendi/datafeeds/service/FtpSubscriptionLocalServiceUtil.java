@@ -28,7 +28,7 @@ import org.osgi.util.tracker.ServiceTracker;
  * based on the propagated JAAS credentials because this service can only be
  * accessed from within the same VM.
  *
- * @author fefendi
+ * @author Brian Wing Shun Chan
  * @see FtpSubscriptionLocalService
  * @see ca.efendi.datafeeds.service.base.FtpSubscriptionLocalServiceBaseImpl
  * @see ca.efendi.datafeeds.service.impl.FtpSubscriptionLocalServiceImpl

@@ -59,7 +59,7 @@ import java.util.Set;
  * Caching information and settings can be found in <code>portal.properties</code>
  * </p>
  *
- * @author fefendi
+ * @author Brian Wing Shun Chan
  * @see FtpSubscriptionPersistence
  * @see ca.efendi.datafeeds.service.persistence.FtpSubscriptionUtil
  * @generated

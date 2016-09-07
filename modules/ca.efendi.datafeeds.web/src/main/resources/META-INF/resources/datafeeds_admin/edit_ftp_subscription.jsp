@@ -1,3 +1,4 @@
+<%--
   ~ Copyright (c) 2016 Fuad Efendi <fuad@efendi.ca>
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,7 +16,7 @@
 <%@include file="init.jsp" %>
 
 <portlet:renderURL windowState="normal" var="backURL">
-    <portlet:param name="jspPage" value="/admin/view.jsp"></portlet:param>
+    <portlet:param name="jspPage" value="/datafeeds_admin/view.jsp"></portlet:param>
 </portlet:renderURL>
 <liferay-ui:header backURL="<%=backURL%>" title="FTP Subscriptions"/>
 <%
@@ -29,7 +30,7 @@
     <portlet:param name="redirect" value="<%=redirect%>"/>
 </portlet:actionURL>
 <portlet:renderURL var="cancelURL">
-    <portlet:param name="jspPage" value="/admin/view.jsp"/>
+    <portlet:param name="jspPage" value="/datafeeds_admin/view.jsp"/>
 </portlet:renderURL>
 <aui:form name="fm" action="<%=updateURL.toString()%>" method="post">
     <aui:fieldset>

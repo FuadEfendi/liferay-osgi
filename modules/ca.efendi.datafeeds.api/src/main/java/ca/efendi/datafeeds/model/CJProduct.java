@@ -23,7 +23,7 @@ import com.liferay.portal.kernel.util.Accessor;
 /**
  * The extended model interface for the CJProduct service. Represents a row in the &quot;FE_CJProduct&quot; database table, with each column mapped to a property of this class.
  *
- * @author fefendi
+ * @author Brian Wing Shun Chan
  * @see CJProductModel
  * @see ca.efendi.datafeeds.model.impl.CJProductImpl
  * @see ca.efendi.datafeeds.model.impl.CJProductModelImpl

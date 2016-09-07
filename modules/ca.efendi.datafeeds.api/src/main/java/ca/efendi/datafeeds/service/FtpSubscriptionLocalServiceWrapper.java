@@ -21,7 +21,7 @@ import com.liferay.portal.kernel.service.ServiceWrapper;
 /**
  * Provides a wrapper for {@link FtpSubscriptionLocalService}.
  *
- * @author fefendi
+ * @author Brian Wing Shun Chan
  * @see FtpSubscriptionLocalService
  * @generated
  */

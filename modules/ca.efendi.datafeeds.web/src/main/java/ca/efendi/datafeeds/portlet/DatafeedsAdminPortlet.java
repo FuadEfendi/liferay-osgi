@@ -87,7 +87,7 @@ public class DatafeedsAdminPortlet extends MVCPortlet {
             }
             request.setAttribute(DatafeedsPortletKeys.FTP_SUBSCRIPTION_ENTRY, ftpSubscriptionFromRequest);
             response.setRenderParameter(
-                    "jspPage", "/admin/edit_ftp_subscription.jsp");
+                    "jspPage", editFtpSubscriptionJSP);
             return;
         }
         if (ftpSubscriptionId > 0) {

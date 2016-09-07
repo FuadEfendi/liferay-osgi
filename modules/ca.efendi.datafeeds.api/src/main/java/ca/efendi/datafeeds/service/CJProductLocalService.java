@@ -49,7 +49,7 @@ import java.util.List;
  * credentials because this service can only be accessed from within the same
  * VM.
  *
- * @author fefendi
+ * @author Brian Wing Shun Chan
  * @see CJProductLocalServiceUtil
  * @see ca.efendi.datafeeds.service.base.CJProductLocalServiceBaseImpl
  * @see ca.efendi.datafeeds.service.impl.CJProductLocalServiceImpl

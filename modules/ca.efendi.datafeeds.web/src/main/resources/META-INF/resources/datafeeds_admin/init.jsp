@@ -24,4 +24,6 @@
 <%@ page import="ca.efendi.datafeeds.model.FtpSubscription" %>
 <%@ page import="com.liferay.taglib.search.ResultRow" %>
 <%@ page import="ca.efendi.datafeeds.constants.DatafeedsPortletKeys" %>
-<%@ page import="com.liferay.portal.kernel.bean.BeanParamUtil" %><%--
+<%@ page import="com.liferay.portal.kernel.bean.BeanParamUtil" %>
+
+

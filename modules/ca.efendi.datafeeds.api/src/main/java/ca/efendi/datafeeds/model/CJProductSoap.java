@@ -23,10 +23,9 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * This class is used by SOAP remote services, specifically {@link ca.efendi.datafeeds.service.http.CJProductServiceSoap}.
+ * This class is used by SOAP remote services.
  *
- * @author fefendi
- * @see ca.efendi.datafeeds.service.http.CJProductServiceSoap
+ * @author Brian Wing Shun Chan
  * @generated
  */
 @ProviderType

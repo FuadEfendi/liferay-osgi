@@ -33,7 +33,7 @@ import java.util.Objects;
  * This class is a wrapper for {@link FtpSubscription}.
  * </p>
  *
- * @author fefendi
+ * @author Brian Wing Shun Chan
  * @see FtpSubscription
  * @generated
  */

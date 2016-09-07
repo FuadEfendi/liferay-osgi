@@ -28,7 +28,7 @@ import com.liferay.portal.kernel.service.persistence.BasePersistence;
  * Caching information and settings can be found in <code>portal.properties</code>
  * </p>
  *
- * @author fefendi
+ * @author Brian Wing Shun Chan
  * @see ca.efendi.datafeeds.service.persistence.impl.CJProductPersistenceImpl
  * @see CJProductUtil
  * @generated

@@ -35,7 +35,7 @@ import java.util.Objects;
  * This class is a wrapper for {@link CJProduct}.
  * </p>
  *
- * @author fefendi
+ * @author Brian Wing Shun Chan
  * @see CJProduct
  * @generated
  */
