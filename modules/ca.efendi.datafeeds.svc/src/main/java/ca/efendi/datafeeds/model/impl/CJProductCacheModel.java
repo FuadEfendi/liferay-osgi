@@ -66,7 +66,7 @@ public class CJProductCacheModel implements CacheModel<CJProduct>,
 
 	@Override
 	public String toString() {
-		StringBundler sb = new StringBundler(53);
+		StringBundler sb = new StringBundler(51);
 
 		sb.append("{uuid=");
 		sb.append(uuid);
@@ -84,8 +84,6 @@ public class CJProductCacheModel implements CacheModel<CJProduct>,
 		sb.append(createDate);
 		sb.append(", modifiedDate=");
 		sb.append(modifiedDate);
-		sb.append(", urlTitle=");
-		sb.append(urlTitle);
 		sb.append(", programName=");
 		sb.append(programName);
 		sb.append(", catalogName=");
@@ -160,13 +158,6 @@ public class CJProductCacheModel implements CacheModel<CJProduct>,
 		}
 		else {
 			cjProductImpl.setModifiedDate(new Date(modifiedDate));
-		}
-
-		if (urlTitle == null) {
-			cjProductImpl.setUrlTitle(StringPool.BLANK);
-		}
-		else {
-			cjProductImpl.setUrlTitle(urlTitle);
 		}
 
 		if (programName == null) {
@@ -302,7 +293,6 @@ public class CJProductCacheModel implements CacheModel<CJProduct>,
 		userName = objectInput.readUTF();
 		createDate = objectInput.readLong();
 		modifiedDate = objectInput.readLong();
-		urlTitle = objectInput.readUTF();
 		programName = objectInput.readUTF();
 		catalogName = objectInput.readUTF();
 		sku = objectInput.readUTF();
@@ -350,13 +340,6 @@ public class CJProductCacheModel implements CacheModel<CJProduct>,
 
 		objectOutput.writeLong(createDate);
 		objectOutput.writeLong(modifiedDate);
-
-		if (urlTitle == null) {
-			objectOutput.writeUTF(StringPool.BLANK);
-		}
-		else {
-			objectOutput.writeUTF(urlTitle);
-		}
 
 		if (programName == null) {
 			objectOutput.writeUTF(StringPool.BLANK);
@@ -481,7 +464,6 @@ public class CJProductCacheModel implements CacheModel<CJProduct>,
 	public String userName;
 	public long createDate;
 	public long modifiedDate;
-	public String urlTitle;
 	public String programName;
 	public String catalogName;
 	public String sku;

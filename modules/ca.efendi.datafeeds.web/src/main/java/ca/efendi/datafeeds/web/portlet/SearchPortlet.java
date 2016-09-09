@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package ca.efendi.datafeeds.portlet;
+package ca.efendi.datafeeds.web.portlet;
 
 import com.liferay.message.boards.kernel.model.MBMessage;
 import com.liferay.message.boards.kernel.service.MBMessageServiceUtil;

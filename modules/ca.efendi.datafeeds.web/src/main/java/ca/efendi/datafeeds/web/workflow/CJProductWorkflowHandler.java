@@ -12,7 +12,7 @@
  * details.
  */
 
-package ca.efendi.datafeeds.workflow;
+package ca.efendi.datafeeds.web.workflow;
 
 import ca.efendi.datafeeds.model.CJProduct;
 import com.liferay.portal.kernel.exception.PortalException;

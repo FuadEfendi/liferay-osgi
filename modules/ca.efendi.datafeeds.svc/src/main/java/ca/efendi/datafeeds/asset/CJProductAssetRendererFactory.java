@@ -19,7 +19,6 @@ package ca.efendi.datafeeds.asset;
 import ca.efendi.datafeeds.constants.DatafeedsPortletKeys;
 import ca.efendi.datafeeds.model.CJProduct;
 import ca.efendi.datafeeds.service.CJProductLocalService;
-import ca.efendi.datafeeds.service.CJProductLocalServiceUtil;
 import com.liferay.asset.kernel.model.AssetRenderer;
 import com.liferay.asset.kernel.model.AssetRendererFactory;
 import com.liferay.asset.kernel.model.BaseAssetRendererFactory;
@@ -27,7 +26,6 @@ import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.portlet.LiferayPortletResponse;
 import com.liferay.portal.kernel.portlet.LiferayPortletURL;
-import com.liferay.portal.kernel.theme.ThemeDisplay;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
@@ -37,36 +35,30 @@ import javax.portlet.WindowState;
 import javax.portlet.WindowStateException;
 import javax.servlet.ServletContext;
 
-@Component(immediate = true, property = {
-        "javax.portlet.name=" + DatafeedsPortletKeys.DATAFEEDS}, service = AssetRendererFactory.class)
+@Component(
+        immediate = true,
+        property = {"javax.portlet.name=" + DatafeedsPortletKeys.DATAFEEDS_ADMIN},
+        service = AssetRendererFactory.class)
 public class CJProductAssetRendererFactory
         extends BaseAssetRendererFactory<CJProduct> {
 
-    public static final String TYPE = "product";
+    public static final String TYPE = "cj_product";
 
     public CJProductAssetRendererFactory() {
         setClassName(CJProduct.class.getName());
         setLinkable(true);
-        setPortletId(DatafeedsPortletKeys.DATAFEEDS);
+        setPortletId(DatafeedsPortletKeys.DATAFEEDS_ADMIN);
     }
 
     @Override
     public AssetRenderer<CJProduct> getAssetRenderer(
             final long classPK, final int type)
             throws PortalException, SystemException {
-        final CJProduct product = CJProductLocalServiceUtil.getCJProduct(classPK);
+        final CJProduct product = _cjProductLocalService.getCJProduct(classPK);
         final CJProductAssetRenderer cjProductAssetRenderer = new CJProductAssetRenderer(product);
         cjProductAssetRenderer.setAssetRendererType(type);
-        // cjProductAssetRenderer.setServletContext(_servletContext);
+        cjProductAssetRenderer.setServletContext(_servletContext);
         return cjProductAssetRenderer;
-    }
-
-    @Override
-    public AssetRenderer<CJProduct> getAssetRenderer(
-            final long groupId, final String urlTitle)
-            throws PortalException {
-        final CJProduct entry = CJProductLocalServiceUtil.getCJProduct(groupId, urlTitle);
-        return new CJProductAssetRenderer(entry);
     }
 
     @Override
@@ -84,7 +76,7 @@ public class CJProductAssetRendererFactory
             final LiferayPortletResponse liferayPortletResponse,
             final WindowState windowState) {
         final LiferayPortletURL liferayPortletURL = liferayPortletResponse.createLiferayPortletURL(
-                DatafeedsPortletKeys.DATAFEEDS, PortletRequest.RENDER_PHASE);
+                DatafeedsPortletKeys.DATAFEEDS_ADMIN, PortletRequest.RENDER_PHASE);
         try {
             liferayPortletURL.setWindowState(windowState);
         } catch (final WindowStateException wse) {
@@ -93,17 +85,12 @@ public class CJProductAssetRendererFactory
     }
 
     @Reference(
-            target = "(osgi.web.symbolicname=ca.tokenizer.web)", unbind = "-"
+            target = "(osgi.web.symbolicname=ca.efendi.datafeeds.web)", unbind = "-"
     )
     public void setServletContext(ServletContext servletContext) {
         _servletContext = servletContext;
     }
 
-    // TODO: uncomment it later; current Liferay snapshot is outdated 
-    // @Override
-    protected String getIconPath(ThemeDisplay themeDisplay) {
-        return themeDisplay.getPathThemeImages() + "/blogs/blogs.png";
-    }
 
     @Reference(unbind = "-")
     protected void setCJProductLocalService(CJProductLocalService cjProductLocalService) {
@@ -114,4 +101,4 @@ public class CJProductAssetRendererFactory
     private CJProductLocalService _cjProductLocalService;
     private volatile ServletContext _servletContext;
 
-        }
+}

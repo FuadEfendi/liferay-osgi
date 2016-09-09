@@ -16,6 +16,8 @@ package ca.efendi.datafeeds.service.impl;
 
 import aQute.bnd.annotation.ProviderType;
 import ca.efendi.datafeeds.model.FtpSubscription;
+import ca.efendi.datafeeds.service.FtpSubscriptionLocalService;
+import ca.efendi.datafeeds.service.FtpSubscriptionLocalServiceUtil;
 import ca.efendi.datafeeds.service.base.FtpSubscriptionLocalServiceBaseImpl;
 import com.liferay.portal.kernel.service.ServiceContext;
 
@@ -25,7 +27,7 @@ import java.util.List;
  * The implementation of the ftp subscription local service.
  *
  * <p>
- * All custom service methods should be put in this class. Whenever methods are added, rerun ServiceBuilder to copy their definitions into the {@link ca.efendi.datafeeds.service.FtpSubscriptionLocalService} interface.
+ * All custom service methods should be put in this class. Whenever methods are added, rerun ServiceBuilder to copy their definitions into the {@link FtpSubscriptionLocalService} interface.
  *
  * <p>
  * This is a local service. Methods of this service will not have security checks based on the propagated JAAS credentials because this service can only be accessed from within the same VM.
@@ -33,7 +35,7 @@ import java.util.List;
  *
  * @author fefendi
  * @see FtpSubscriptionLocalServiceBaseImpl
- * @see ca.efendi.datafeeds.service.FtpSubscriptionLocalServiceUtil
+ * @see FtpSubscriptionLocalServiceUtil
  */
 @ProviderType
 public class FtpSubscriptionLocalServiceImpl

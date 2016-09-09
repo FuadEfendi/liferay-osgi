@@ -211,21 +211,6 @@ public interface CJProductModel extends BaseModel<CJProduct>, GroupedModel,
 	public void setModifiedDate(Date modifiedDate);
 
 	/**
-	 * Returns the url title of this c j product.
-	 *
-	 * @return the url title of this c j product
-	 */
-	@AutoEscape
-	public String getUrlTitle();
-
-	/**
-	 * Sets the url title of this c j product.
-	 *
-	 * @param urlTitle the url title of this c j product
-	 */
-	public void setUrlTitle(String urlTitle);
-
-	/**
 	 * Returns the program name of this c j product.
 	 *
 	 * @return the program name of this c j product

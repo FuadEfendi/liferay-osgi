@@ -1,4 +1,5 @@
-<%--
+<%@ page import="ca.efendi.datafeeds.constants.DatafeedsPortletKeys" %>
+<%@ page import="ca.efendi.datafeeds.model.FtpSubscription" %><%--
   ~ Copyright (c) 2016 Fuad Efendi <fuad@efendi.ca>
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");

@@ -1,11 +1,11 @@
 /**
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
- *
+ * <p>
  * This library is free software; you can redistribute it and/or modify it under
  * the terms of the GNU Lesser General Public License as published by the Free
  * Software Foundation; either version 2.1 of the License, or (at your option)
  * any later version.
- *
+ * <p>
  * This library is distributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
  * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
@@ -17,20 +17,30 @@ package ca.efendi.datafeeds.service.impl;
 import aQute.bnd.annotation.ProviderType;
 import ca.efendi.datafeeds.exception.NoSuchCJProductException;
 import ca.efendi.datafeeds.model.CJProduct;
+import ca.efendi.datafeeds.service.CJProductLocalService;
+import ca.efendi.datafeeds.service.CJProductLocalServiceUtil;
 import ca.efendi.datafeeds.service.base.CJProductLocalServiceBaseImpl;
+import com.liferay.asset.kernel.model.AssetEntry;
+import com.liferay.asset.kernel.model.AssetLinkConstants;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.model.User;
 import com.liferay.portal.kernel.search.Indexable;
 import com.liferay.portal.kernel.search.IndexableType;
-import com.liferay.portal.kernel.service.ServiceContext;
+import com.liferay.portal.kernel.search.Indexer;
+import com.liferay.portal.kernel.search.IndexerRegistryUtil;
+import com.liferay.portal.kernel.util.ContentTypes;
+import com.liferay.portal.kernel.util.HtmlUtil;
+import com.liferay.portal.kernel.util.StringUtil;
+import com.liferay.portal.kernel.uuid.PortalUUIDUtil;
 
+import java.util.Calendar;
 import java.util.Date;
 
 /**
  * The implementation of the c j product local service.
  *
  * <p>
- * All custom service methods should be put in this class. Whenever methods are added, rerun ServiceBuilder to copy their definitions into the {@link ca.efendi.datafeeds.service.CJProductLocalService} interface.
+ * All custom service methods should be put in this class. Whenever methods are added, rerun ServiceBuilder to copy their definitions into the {@link CJProductLocalService} interface.
  *
  * <p>
  * This is a local service. Methods of this service will not have security checks based on the propagated JAAS credentials because this service can only be accessed from within the same VM.
@@ -38,11 +48,11 @@ import java.util.Date;
  *
  * @author fefendi
  * @see CJProductLocalServiceBaseImpl
- * @see ca.efendi.datafeeds.service.CJProductLocalServiceUtil
+ * @see CJProductLocalServiceUtil
  */
 @ProviderType
 public class CJProductLocalServiceImpl extends CJProductLocalServiceBaseImpl {
-	/*
+    /*
 	 * NOTE FOR DEVELOPERS:
 	 *
 	 * Never reference this class directly. Always use {@link ca.efendi.datafeeds.service.CJProductLocalServiceUtil} to access the c j product local service.
@@ -51,26 +61,29 @@ public class CJProductLocalServiceImpl extends CJProductLocalServiceBaseImpl {
     @Override
     @Indexable(type = IndexableType.REINDEX)
     // TODO: use primitives as a method parameters, same as for BlogsPortlet style
-    public CJProduct refresh(final long userId, final CJProduct newCJProduct, final ServiceContext serviceContext) throws PortalException
-    {
+    public CJProduct refresh(final long userId, final CJProduct newCJProduct) throws PortalException {
 
         final Date now = new Date();
 
         CJProduct cjProduct;
 
-        try
-        {
+        try {
             cjProduct = cjProductPersistence.findByPROGRAM_CATALOG_SKU(newCJProduct.getProgramName(), newCJProduct.getCatalogName(), newCJProduct.getSku());
-        }
-        catch (final NoSuchCJProductException e)
-        {
+        } catch (final NoSuchCJProductException e) {
 
             final User user = userPersistence.findByPrimaryKey(userId);
-            final long groupId = serviceContext.getScopeGroupId();
+            final long groupId = user.getGroupId();
             final long productId = counterLocalService.increment(CJProduct.class.getName());
+
             cjProduct = cjProductPersistence.create(productId);
 
-            cjProduct.setUuid(serviceContext.getUuid());
+            resourceLocalService.addModelResources(
+                    user.getCompanyId(), user.getGroupId(), userId,
+                    CJProduct.class.getName(), productId,
+                    new String[]{"VIEW"}, new String[]{"VIEW"});
+
+
+            cjProduct.setUuid(PortalUUIDUtil.generate());
             cjProduct.setGroupId(groupId);
             cjProduct.setCompanyId(user.getCompanyId());
             cjProduct.setUserId(user.getUserId());
@@ -99,7 +112,6 @@ public class CJProductLocalServiceImpl extends CJProductLocalServiceBaseImpl {
         cjProduct.setImageUrl(newCJProduct.getImageUrl());
         cjProduct.setInStock(newCJProduct.getInStock());
 
-        cjProduct.setUrlTitle(newCJProduct.getUrlTitle());
 
         // TODO: is it already implemented by Liferay?
         //cjProduct.setModifiedDate(now);
@@ -108,34 +120,64 @@ public class CJProductLocalServiceImpl extends CJProductLocalServiceBaseImpl {
         //cjProduct.setGroupId(GROUP_ID);
         //cjProduct.setUserId(USER_ID);
 
-        resourceLocalService.addResources(
-                cjProduct.getCompanyId(), cjProduct.getGroupId(), cjProduct.getUserId(),
-                CJProduct.class.getName(), cjProduct.getPrimaryKey(), false,
-                true, true);
+        Date current = new Date();
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.MONTH, 1);
+        Date expire = cal.getTime();
 
-        assetEntryLocalService.updateEntry(
+
+       /* assetEntryLocalService.updateEntry(
                 cjProduct.getUserId(), cjProduct.getGroupId(), CJProduct.class.getName(),
                 cjProduct.getProductId(),
-                new long[] {}, //serviceContext.getAssetCategoryIds(),
-                new String[] { "shopping" }); //serviceContext.getAssetTagNames());
+                new long[]{}, //serviceContext.getAssetCategoryIds(),
+                new String[]{"shopping"}); //serviceContext.getAssetTagNames());
+
+        assetEntryLocalService.updateEntry(
+                CJProduct.class.getName(),
+                cjProduct.getProductId(),
+                current,
+                expire,
+                true,
+                true);
+*/
+
+        String summary = HtmlUtil.extractText(
+                StringUtil.shorten(cjProduct.getDescription(), 500));
+
+        long[] assetCategoryIds = null;
+        String[] assetTagNames = null;
+        boolean visible = true;
+        Double priority = null;
+
+        AssetEntry assetEntry = assetEntryLocalService.updateEntry(
+                userId, cjProduct.getGroupId(), cjProduct.getCreateDate(),
+                cjProduct.getModifiedDate(), CJProduct.class.getName(),
+                cjProduct.getProductId(), cjProduct.getUuid(), 0, assetCategoryIds,
+                assetTagNames, true, visible, current, expire, current, expire,
+                ContentTypes.TEXT_HTML, cjProduct.getName(), cjProduct.getDescription(),
+                summary, cjProduct.getBuyUrl(), null, 0, 0, priority);
+
+        long[] assetLinkEntryIds = null;
+
+
+        assetLinkLocalService.updateLinks(
+                userId, assetEntry.getEntryId(), assetLinkEntryIds,
+                AssetLinkConstants.TYPE_RELATED);
+
+
+        Indexer<CJProduct> indexer = IndexerRegistryUtil.nullSafeGetIndexer(
+                CJProduct.class);
+
+        indexer.reindex(cjProduct);
 
         return cjProductPersistence.update(cjProduct);
 
     }
 
     @Override
-    public CJProduct getCJProduct(final long groupId, final String urlTitle) throws NoSuchCJProductException
-    {
-
-        return cjProductPersistence.findByG_UT(groupId, urlTitle);
+    public CJProduct getCJProduct(final long groupId, final String sku) throws NoSuchCJProductException {
+        return cjProductPersistence.findByG_SKU(groupId, sku);
     }
-
-    /*  public static final int COMPANY_ID = 20148;
-
-      public static final int GROUP_ID = 20177; // guest
-
-      public static final int USER_ID = 20204; // administrator
-    */
 
 
 }

@@ -22,8 +22,6 @@
 
 		<!-- Other fields -->
 
-		<column name="urlTitle" type="String" />
-
 		<!-- Unique Composite PK -->
 		<column name="programName" type="String" />
 		<column name="catalogName" type="String" />
@@ -61,9 +59,9 @@
 			<finder-column name="manufacturer" />
 		</finder>
 
-		<finder name="G_UT" return-type="CJProduct" unique="true">
+		<finder name="G_SKU" return-type="CJProduct" unique="true">
 			<finder-column name="groupId" />
-			<finder-column name="urlTitle" />
+			<finder-column name="sku" />
 		</finder>
 
 		<!-- References -->

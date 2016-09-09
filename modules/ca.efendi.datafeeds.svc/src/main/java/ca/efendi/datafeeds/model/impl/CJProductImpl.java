@@ -23,7 +23,7 @@ import aQute.bnd.annotation.ProviderType;
  * Helper methods and all application logic should be put in this class. Whenever methods are added, rerun ServiceBuilder to copy their definitions into the {@link ca.efendi.datafeeds.model.CJProduct} interface.
  * </p>
  *
- * @author fefendi
+ * @author Brian Wing Shun Chan
  */
 @ProviderType
 public class CJProductImpl extends CJProductBaseImpl {

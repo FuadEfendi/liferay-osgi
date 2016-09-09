@@ -1,4 +1,5 @@
-
+<%@ page import="ca.efendi.datafeeds.web.portlet.ActionUtil" %>
+<%@ page import="ca.efendi.datafeeds.model.FtpSubscription" %>
 <%--
   ~ Copyright (c) 2016 Fuad Efendi <fuad@efendi.ca>
   ~

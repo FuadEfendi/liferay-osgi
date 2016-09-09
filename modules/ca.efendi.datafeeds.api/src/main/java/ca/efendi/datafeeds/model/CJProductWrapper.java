@@ -67,7 +67,6 @@ public class CJProductWrapper implements CJProduct, ModelWrapper<CJProduct> {
 		attributes.put("userName", getUserName());
 		attributes.put("createDate", getCreateDate());
 		attributes.put("modifiedDate", getModifiedDate());
-		attributes.put("urlTitle", getUrlTitle());
 		attributes.put("programName", getProgramName());
 		attributes.put("catalogName", getCatalogName());
 		attributes.put("sku", getSku());
@@ -137,12 +136,6 @@ public class CJProductWrapper implements CJProduct, ModelWrapper<CJProduct> {
 
 		if (modifiedDate != null) {
 			setModifiedDate(modifiedDate);
-		}
-
-		String urlTitle = (String)attributes.get("urlTitle");
-
-		if (urlTitle != null) {
-			setUrlTitle(urlTitle);
 		}
 
 		String programName = (String)attributes.get("programName");
@@ -471,16 +464,6 @@ public class CJProductWrapper implements CJProduct, ModelWrapper<CJProduct> {
 	@Override
 	public java.lang.String getSku() {
 		return _cjProduct.getSku();
-	}
-
-	/**
-	* Returns the url title of this c j product.
-	*
-	* @return the url title of this c j product
-	*/
-	@Override
-	public java.lang.String getUrlTitle() {
-		return _cjProduct.getUrlTitle();
 	}
 
 	/**
@@ -847,16 +830,6 @@ public class CJProductWrapper implements CJProduct, ModelWrapper<CJProduct> {
 	@Override
 	public void setSku(java.lang.String sku) {
 		_cjProduct.setSku(sku);
-	}
-
-	/**
-	* Sets the url title of this c j product.
-	*
-	* @param urlTitle the url title of this c j product
-	*/
-	@Override
-	public void setUrlTitle(java.lang.String urlTitle) {
-		_cjProduct.setUrlTitle(urlTitle);
 	}
 
 	/**

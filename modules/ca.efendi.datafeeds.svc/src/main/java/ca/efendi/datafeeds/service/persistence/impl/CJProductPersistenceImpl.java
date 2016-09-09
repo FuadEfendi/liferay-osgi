@@ -2387,29 +2387,29 @@ public class CJProductPersistenceImpl extends BasePersistenceImpl<CJProduct>
 	private static final String _FINDER_COLUMN_MANUFACTURER_MANUFACTURER_1 = "cjProduct.manufacturer IS NULL";
 	private static final String _FINDER_COLUMN_MANUFACTURER_MANUFACTURER_2 = "cjProduct.manufacturer = ?";
 	private static final String _FINDER_COLUMN_MANUFACTURER_MANUFACTURER_3 = "(cjProduct.manufacturer IS NULL OR cjProduct.manufacturer = '')";
-	public static final FinderPath FINDER_PATH_FETCH_BY_G_UT = new FinderPath(CJProductModelImpl.ENTITY_CACHE_ENABLED,
+	public static final FinderPath FINDER_PATH_FETCH_BY_G_SKU = new FinderPath(CJProductModelImpl.ENTITY_CACHE_ENABLED,
 			CJProductModelImpl.FINDER_CACHE_ENABLED, CJProductImpl.class,
-			FINDER_CLASS_NAME_ENTITY, "fetchByG_UT",
+			FINDER_CLASS_NAME_ENTITY, "fetchByG_SKU",
 			new String[] { Long.class.getName(), String.class.getName() },
 			CJProductModelImpl.GROUPID_COLUMN_BITMASK |
-			CJProductModelImpl.URLTITLE_COLUMN_BITMASK);
-	public static final FinderPath FINDER_PATH_COUNT_BY_G_UT = new FinderPath(CJProductModelImpl.ENTITY_CACHE_ENABLED,
+			CJProductModelImpl.SKU_COLUMN_BITMASK);
+	public static final FinderPath FINDER_PATH_COUNT_BY_G_SKU = new FinderPath(CJProductModelImpl.ENTITY_CACHE_ENABLED,
 			CJProductModelImpl.FINDER_CACHE_ENABLED, Long.class,
-			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "countByG_UT",
+			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "countByG_SKU",
 			new String[] { Long.class.getName(), String.class.getName() });
 
 	/**
-	 * Returns the c j product where groupId = &#63; and urlTitle = &#63; or throws a {@link NoSuchCJProductException} if it could not be found.
+	 * Returns the c j product where groupId = &#63; and sku = &#63; or throws a {@link NoSuchCJProductException} if it could not be found.
 	 *
 	 * @param groupId the group ID
-	 * @param urlTitle the url title
+	 * @param sku the sku
 	 * @return the matching c j product
 	 * @throws NoSuchCJProductException if a matching c j product could not be found
 	 */
 	@Override
-	public CJProduct findByG_UT(long groupId, String urlTitle)
+	public CJProduct findByG_SKU(long groupId, String sku)
 		throws NoSuchCJProductException {
-		CJProduct cjProduct = fetchByG_UT(groupId, urlTitle);
+		CJProduct cjProduct = fetchByG_SKU(groupId, sku);
 
 		if (cjProduct == null) {
 			StringBundler msg = new StringBundler(6);
@@ -2419,8 +2419,8 @@ public class CJProductPersistenceImpl extends BasePersistenceImpl<CJProduct>
 			msg.append("groupId=");
 			msg.append(groupId);
 
-			msg.append(", urlTitle=");
-			msg.append(urlTitle);
+			msg.append(", sku=");
+			msg.append(sku);
 
 			msg.append(StringPool.CLOSE_CURLY_BRACE);
 
@@ -2435,34 +2435,34 @@ public class CJProductPersistenceImpl extends BasePersistenceImpl<CJProduct>
 	}
 
 	/**
-	 * Returns the c j product where groupId = &#63; and urlTitle = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
+	 * Returns the c j product where groupId = &#63; and sku = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
 	 *
 	 * @param groupId the group ID
-	 * @param urlTitle the url title
+	 * @param sku the sku
 	 * @return the matching c j product, or <code>null</code> if a matching c j product could not be found
 	 */
 	@Override
-	public CJProduct fetchByG_UT(long groupId, String urlTitle) {
-		return fetchByG_UT(groupId, urlTitle, true);
+	public CJProduct fetchByG_SKU(long groupId, String sku) {
+		return fetchByG_SKU(groupId, sku, true);
 	}
 
 	/**
-	 * Returns the c j product where groupId = &#63; and urlTitle = &#63; or returns <code>null</code> if it could not be found, optionally using the finder cache.
+	 * Returns the c j product where groupId = &#63; and sku = &#63; or returns <code>null</code> if it could not be found, optionally using the finder cache.
 	 *
 	 * @param groupId the group ID
-	 * @param urlTitle the url title
+	 * @param sku the sku
 	 * @param retrieveFromCache whether to retrieve from the finder cache
 	 * @return the matching c j product, or <code>null</code> if a matching c j product could not be found
 	 */
 	@Override
-	public CJProduct fetchByG_UT(long groupId, String urlTitle,
+	public CJProduct fetchByG_SKU(long groupId, String sku,
 		boolean retrieveFromCache) {
-		Object[] finderArgs = new Object[] { groupId, urlTitle };
+		Object[] finderArgs = new Object[] { groupId, sku };
 
 		Object result = null;
 
 		if (retrieveFromCache) {
-			result = finderCache.getResult(FINDER_PATH_FETCH_BY_G_UT,
+			result = finderCache.getResult(FINDER_PATH_FETCH_BY_G_SKU,
 					finderArgs, this);
 		}
 
@@ -2470,7 +2470,7 @@ public class CJProductPersistenceImpl extends BasePersistenceImpl<CJProduct>
 			CJProduct cjProduct = (CJProduct)result;
 
 			if ((groupId != cjProduct.getGroupId()) ||
-					!Objects.equals(urlTitle, cjProduct.getUrlTitle())) {
+					!Objects.equals(sku, cjProduct.getSku())) {
 				result = null;
 			}
 		}
@@ -2480,20 +2480,20 @@ public class CJProductPersistenceImpl extends BasePersistenceImpl<CJProduct>
 
 			query.append(_SQL_SELECT_CJPRODUCT_WHERE);
 
-			query.append(_FINDER_COLUMN_G_UT_GROUPID_2);
+			query.append(_FINDER_COLUMN_G_SKU_GROUPID_2);
 
-			boolean bindUrlTitle = false;
+			boolean bindSku = false;
 
-			if (urlTitle == null) {
-				query.append(_FINDER_COLUMN_G_UT_URLTITLE_1);
+			if (sku == null) {
+				query.append(_FINDER_COLUMN_G_SKU_SKU_1);
 			}
-			else if (urlTitle.equals(StringPool.BLANK)) {
-				query.append(_FINDER_COLUMN_G_UT_URLTITLE_3);
+			else if (sku.equals(StringPool.BLANK)) {
+				query.append(_FINDER_COLUMN_G_SKU_SKU_3);
 			}
 			else {
-				bindUrlTitle = true;
+				bindSku = true;
 
-				query.append(_FINDER_COLUMN_G_UT_URLTITLE_2);
+				query.append(_FINDER_COLUMN_G_SKU_SKU_2);
 			}
 
 			String sql = query.toString();
@@ -2509,14 +2509,14 @@ public class CJProductPersistenceImpl extends BasePersistenceImpl<CJProduct>
 
 				qPos.add(groupId);
 
-				if (bindUrlTitle) {
-					qPos.add(urlTitle);
+				if (bindSku) {
+					qPos.add(sku);
 				}
 
 				List<CJProduct> list = q.list();
 
 				if (list.isEmpty()) {
-					finderCache.putResult(FINDER_PATH_FETCH_BY_G_UT,
+					finderCache.putResult(FINDER_PATH_FETCH_BY_G_SKU,
 						finderArgs, list);
 				}
 				else {
@@ -2527,15 +2527,15 @@ public class CJProductPersistenceImpl extends BasePersistenceImpl<CJProduct>
 					cacheResult(cjProduct);
 
 					if ((cjProduct.getGroupId() != groupId) ||
-							(cjProduct.getUrlTitle() == null) ||
-							!cjProduct.getUrlTitle().equals(urlTitle)) {
-						finderCache.putResult(FINDER_PATH_FETCH_BY_G_UT,
+							(cjProduct.getSku() == null) ||
+							!cjProduct.getSku().equals(sku)) {
+						finderCache.putResult(FINDER_PATH_FETCH_BY_G_SKU,
 							finderArgs, cjProduct);
 					}
 				}
 			}
 			catch (Exception e) {
-				finderCache.removeResult(FINDER_PATH_FETCH_BY_G_UT, finderArgs);
+				finderCache.removeResult(FINDER_PATH_FETCH_BY_G_SKU, finderArgs);
 
 				throw processException(e);
 			}
@@ -2553,32 +2553,32 @@ public class CJProductPersistenceImpl extends BasePersistenceImpl<CJProduct>
 	}
 
 	/**
-	 * Removes the c j product where groupId = &#63; and urlTitle = &#63; from the database.
+	 * Removes the c j product where groupId = &#63; and sku = &#63; from the database.
 	 *
 	 * @param groupId the group ID
-	 * @param urlTitle the url title
+	 * @param sku the sku
 	 * @return the c j product that was removed
 	 */
 	@Override
-	public CJProduct removeByG_UT(long groupId, String urlTitle)
+	public CJProduct removeByG_SKU(long groupId, String sku)
 		throws NoSuchCJProductException {
-		CJProduct cjProduct = findByG_UT(groupId, urlTitle);
+		CJProduct cjProduct = findByG_SKU(groupId, sku);
 
 		return remove(cjProduct);
 	}
 
 	/**
-	 * Returns the number of c j products where groupId = &#63; and urlTitle = &#63;.
+	 * Returns the number of c j products where groupId = &#63; and sku = &#63;.
 	 *
 	 * @param groupId the group ID
-	 * @param urlTitle the url title
+	 * @param sku the sku
 	 * @return the number of matching c j products
 	 */
 	@Override
-	public int countByG_UT(long groupId, String urlTitle) {
-		FinderPath finderPath = FINDER_PATH_COUNT_BY_G_UT;
+	public int countByG_SKU(long groupId, String sku) {
+		FinderPath finderPath = FINDER_PATH_COUNT_BY_G_SKU;
 
-		Object[] finderArgs = new Object[] { groupId, urlTitle };
+		Object[] finderArgs = new Object[] { groupId, sku };
 
 		Long count = (Long)finderCache.getResult(finderPath, finderArgs, this);
 
@@ -2587,20 +2587,20 @@ public class CJProductPersistenceImpl extends BasePersistenceImpl<CJProduct>
 
 			query.append(_SQL_COUNT_CJPRODUCT_WHERE);
 
-			query.append(_FINDER_COLUMN_G_UT_GROUPID_2);
+			query.append(_FINDER_COLUMN_G_SKU_GROUPID_2);
 
-			boolean bindUrlTitle = false;
+			boolean bindSku = false;
 
-			if (urlTitle == null) {
-				query.append(_FINDER_COLUMN_G_UT_URLTITLE_1);
+			if (sku == null) {
+				query.append(_FINDER_COLUMN_G_SKU_SKU_1);
 			}
-			else if (urlTitle.equals(StringPool.BLANK)) {
-				query.append(_FINDER_COLUMN_G_UT_URLTITLE_3);
+			else if (sku.equals(StringPool.BLANK)) {
+				query.append(_FINDER_COLUMN_G_SKU_SKU_3);
 			}
 			else {
-				bindUrlTitle = true;
+				bindSku = true;
 
-				query.append(_FINDER_COLUMN_G_UT_URLTITLE_2);
+				query.append(_FINDER_COLUMN_G_SKU_SKU_2);
 			}
 
 			String sql = query.toString();
@@ -2616,8 +2616,8 @@ public class CJProductPersistenceImpl extends BasePersistenceImpl<CJProduct>
 
 				qPos.add(groupId);
 
-				if (bindUrlTitle) {
-					qPos.add(urlTitle);
+				if (bindSku) {
+					qPos.add(sku);
 				}
 
 				count = (Long)q.uniqueResult();
@@ -2637,10 +2637,10 @@ public class CJProductPersistenceImpl extends BasePersistenceImpl<CJProduct>
 		return count.intValue();
 	}
 
-	private static final String _FINDER_COLUMN_G_UT_GROUPID_2 = "cjProduct.groupId = ? AND ";
-	private static final String _FINDER_COLUMN_G_UT_URLTITLE_1 = "cjProduct.urlTitle IS NULL";
-	private static final String _FINDER_COLUMN_G_UT_URLTITLE_2 = "cjProduct.urlTitle = ?";
-	private static final String _FINDER_COLUMN_G_UT_URLTITLE_3 = "(cjProduct.urlTitle IS NULL OR cjProduct.urlTitle = '')";
+	private static final String _FINDER_COLUMN_G_SKU_GROUPID_2 = "cjProduct.groupId = ? AND ";
+	private static final String _FINDER_COLUMN_G_SKU_SKU_1 = "cjProduct.sku IS NULL";
+	private static final String _FINDER_COLUMN_G_SKU_SKU_2 = "cjProduct.sku = ?";
+	private static final String _FINDER_COLUMN_G_SKU_SKU_3 = "(cjProduct.sku IS NULL OR cjProduct.sku = '')";
 
 	public CJProductPersistenceImpl() {
 		setModelClass(CJProduct.class);
@@ -2666,8 +2666,8 @@ public class CJProductPersistenceImpl extends BasePersistenceImpl<CJProduct>
 				cjProduct.getSku()
 			}, cjProduct);
 
-		finderCache.putResult(FINDER_PATH_FETCH_BY_G_UT,
-			new Object[] { cjProduct.getGroupId(), cjProduct.getUrlTitle() },
+		finderCache.putResult(FINDER_PATH_FETCH_BY_G_SKU,
+			new Object[] { cjProduct.getGroupId(), cjProduct.getSku() },
 			cjProduct);
 
 		cjProduct.resetOriginalValues();
@@ -2763,13 +2763,12 @@ public class CJProductPersistenceImpl extends BasePersistenceImpl<CJProduct>
 				args, cjProductModelImpl);
 
 			args = new Object[] {
-					cjProductModelImpl.getGroupId(),
-					cjProductModelImpl.getUrlTitle()
+					cjProductModelImpl.getGroupId(), cjProductModelImpl.getSku()
 				};
 
-			finderCache.putResult(FINDER_PATH_COUNT_BY_G_UT, args,
+			finderCache.putResult(FINDER_PATH_COUNT_BY_G_SKU, args,
 				Long.valueOf(1));
-			finderCache.putResult(FINDER_PATH_FETCH_BY_G_UT, args,
+			finderCache.putResult(FINDER_PATH_FETCH_BY_G_SKU, args,
 				cjProductModelImpl);
 		}
 		else {
@@ -2801,15 +2800,15 @@ public class CJProductPersistenceImpl extends BasePersistenceImpl<CJProduct>
 			}
 
 			if ((cjProductModelImpl.getColumnBitmask() &
-					FINDER_PATH_FETCH_BY_G_UT.getColumnBitmask()) != 0) {
+					FINDER_PATH_FETCH_BY_G_SKU.getColumnBitmask()) != 0) {
 				Object[] args = new Object[] {
 						cjProductModelImpl.getGroupId(),
-						cjProductModelImpl.getUrlTitle()
+						cjProductModelImpl.getSku()
 					};
 
-				finderCache.putResult(FINDER_PATH_COUNT_BY_G_UT, args,
+				finderCache.putResult(FINDER_PATH_COUNT_BY_G_SKU, args,
 					Long.valueOf(1));
-				finderCache.putResult(FINDER_PATH_FETCH_BY_G_UT, args,
+				finderCache.putResult(FINDER_PATH_FETCH_BY_G_SKU, args,
 					cjProductModelImpl);
 			}
 		}
@@ -2858,22 +2857,21 @@ public class CJProductPersistenceImpl extends BasePersistenceImpl<CJProduct>
 		}
 
 		args = new Object[] {
-				cjProductModelImpl.getGroupId(),
-				cjProductModelImpl.getUrlTitle()
+				cjProductModelImpl.getGroupId(), cjProductModelImpl.getSku()
 			};
 
-		finderCache.removeResult(FINDER_PATH_COUNT_BY_G_UT, args);
-		finderCache.removeResult(FINDER_PATH_FETCH_BY_G_UT, args);
+		finderCache.removeResult(FINDER_PATH_COUNT_BY_G_SKU, args);
+		finderCache.removeResult(FINDER_PATH_FETCH_BY_G_SKU, args);
 
 		if ((cjProductModelImpl.getColumnBitmask() &
-				FINDER_PATH_FETCH_BY_G_UT.getColumnBitmask()) != 0) {
+				FINDER_PATH_FETCH_BY_G_SKU.getColumnBitmask()) != 0) {
 			args = new Object[] {
 					cjProductModelImpl.getOriginalGroupId(),
-					cjProductModelImpl.getOriginalUrlTitle()
+					cjProductModelImpl.getOriginalSku()
 				};
 
-			finderCache.removeResult(FINDER_PATH_COUNT_BY_G_UT, args);
-			finderCache.removeResult(FINDER_PATH_FETCH_BY_G_UT, args);
+			finderCache.removeResult(FINDER_PATH_COUNT_BY_G_SKU, args);
+			finderCache.removeResult(FINDER_PATH_FETCH_BY_G_SKU, args);
 		}
 	}
 
@@ -3132,7 +3130,6 @@ public class CJProductPersistenceImpl extends BasePersistenceImpl<CJProduct>
 		cjProductImpl.setUserName(cjProduct.getUserName());
 		cjProductImpl.setCreateDate(cjProduct.getCreateDate());
 		cjProductImpl.setModifiedDate(cjProduct.getModifiedDate());
-		cjProductImpl.setUrlTitle(cjProduct.getUrlTitle());
 		cjProductImpl.setProgramName(cjProduct.getProgramName());
 		cjProductImpl.setCatalogName(cjProduct.getCatalogName());
 		cjProductImpl.setSku(cjProduct.getSku());

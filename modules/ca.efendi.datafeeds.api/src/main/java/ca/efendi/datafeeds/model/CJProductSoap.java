@@ -41,7 +41,6 @@ public class CJProductSoap implements Serializable {
 		soapModel.setUserName(model.getUserName());
 		soapModel.setCreateDate(model.getCreateDate());
 		soapModel.setModifiedDate(model.getModifiedDate());
-		soapModel.setUrlTitle(model.getUrlTitle());
 		soapModel.setProgramName(model.getProgramName());
 		soapModel.setCatalogName(model.getCatalogName());
 		soapModel.setSku(model.getSku());
@@ -173,14 +172,6 @@ public class CJProductSoap implements Serializable {
 
 	public void setModifiedDate(Date modifiedDate) {
 		_modifiedDate = modifiedDate;
-	}
-
-	public String getUrlTitle() {
-		return _urlTitle;
-	}
-
-	public void setUrlTitle(String urlTitle) {
-		_urlTitle = urlTitle;
 	}
 
 	public String getProgramName() {
@@ -327,7 +318,6 @@ public class CJProductSoap implements Serializable {
 	private String _userName;
 	private Date _createDate;
 	private Date _modifiedDate;
-	private String _urlTitle;
 	private String _programName;
 	private String _catalogName;
 	private String _sku;

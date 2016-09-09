@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package ca.efendi.datafeeds.util;
+package ca.efendi.datafeeds.web.util;
 
 public class PortletKeys {
 

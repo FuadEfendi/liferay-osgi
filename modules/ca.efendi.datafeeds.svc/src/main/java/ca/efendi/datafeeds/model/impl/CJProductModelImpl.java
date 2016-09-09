@@ -76,7 +76,6 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 			{ "userName", Types.VARCHAR },
 			{ "createDate", Types.TIMESTAMP },
 			{ "modifiedDate", Types.TIMESTAMP },
-			{ "urlTitle", Types.VARCHAR },
 			{ "programName", Types.VARCHAR },
 			{ "catalogName", Types.VARCHAR },
 			{ "sku", Types.VARCHAR },
@@ -106,7 +105,6 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		TABLE_COLUMNS_MAP.put("userName", Types.VARCHAR);
 		TABLE_COLUMNS_MAP.put("createDate", Types.TIMESTAMP);
 		TABLE_COLUMNS_MAP.put("modifiedDate", Types.TIMESTAMP);
-		TABLE_COLUMNS_MAP.put("urlTitle", Types.VARCHAR);
 		TABLE_COLUMNS_MAP.put("programName", Types.VARCHAR);
 		TABLE_COLUMNS_MAP.put("catalogName", Types.VARCHAR);
 		TABLE_COLUMNS_MAP.put("sku", Types.VARCHAR);
@@ -126,7 +124,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		TABLE_COLUMNS_MAP.put("viewCount", Types.INTEGER);
 	}
 
-	public static final String TABLE_SQL_CREATE = "create table FE_CJProduct (uuid_ VARCHAR(75) null,productId LONG not null primary key,groupId LONG,companyId LONG,userId LONG,userName VARCHAR(75) null,createDate DATE null,modifiedDate DATE null,urlTitle VARCHAR(75) null,programName VARCHAR(75) null,catalogName VARCHAR(75) null,sku VARCHAR(75) null,programUrl VARCHAR(75) null,lastUpdated VARCHAR(75) null,name VARCHAR(75) null,keywords VARCHAR(75) null,description VARCHAR(75) null,manufacturer VARCHAR(75) null,manufacturerId VARCHAR(75) null,currency_ VARCHAR(75) null,price VARCHAR(75) null,buyUrl VARCHAR(75) null,impressionUrl VARCHAR(75) null,imageUrl VARCHAR(75) null,inStock VARCHAR(75) null,viewCount INTEGER)";
+	public static final String TABLE_SQL_CREATE = "create table FE_CJProduct (uuid_ VARCHAR(75) null,productId LONG not null primary key,groupId LONG,companyId LONG,userId LONG,userName VARCHAR(75) null,createDate DATE null,modifiedDate DATE null,programName VARCHAR(75) null,catalogName VARCHAR(75) null,sku VARCHAR(75) null,programUrl VARCHAR(75) null,lastUpdated VARCHAR(75) null,name VARCHAR(75) null,keywords VARCHAR(75) null,description VARCHAR(75) null,manufacturer VARCHAR(75) null,manufacturerId VARCHAR(75) null,currency_ VARCHAR(75) null,price VARCHAR(75) null,buyUrl VARCHAR(75) null,impressionUrl VARCHAR(75) null,imageUrl VARCHAR(75) null,inStock VARCHAR(75) null,viewCount INTEGER)";
 	public static final String TABLE_SQL_DROP = "drop table FE_CJProduct";
 	public static final String ORDER_BY_JPQL = " ORDER BY cjProduct.manufacturer ASC, cjProduct.name DESC";
 	public static final String ORDER_BY_SQL = " ORDER BY FE_CJProduct.manufacturer ASC, FE_CJProduct.name DESC";
@@ -148,9 +146,8 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 	public static final long MANUFACTURER_COLUMN_BITMASK = 8L;
 	public static final long PROGRAMNAME_COLUMN_BITMASK = 16L;
 	public static final long SKU_COLUMN_BITMASK = 32L;
-	public static final long URLTITLE_COLUMN_BITMASK = 64L;
-	public static final long UUID_COLUMN_BITMASK = 128L;
-	public static final long NAME_COLUMN_BITMASK = 256L;
+	public static final long UUID_COLUMN_BITMASK = 64L;
+	public static final long NAME_COLUMN_BITMASK = 128L;
 	public static final long LOCK_EXPIRATION_TIME = GetterUtil.getLong(ca.efendi.datafeeds.service.util.PropsUtil.get(
 				"lock.expiration.time.ca.efendi.datafeeds.model.CJProduct"));
 
@@ -199,7 +196,6 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		attributes.put("userName", getUserName());
 		attributes.put("createDate", getCreateDate());
 		attributes.put("modifiedDate", getModifiedDate());
-		attributes.put("urlTitle", getUrlTitle());
 		attributes.put("programName", getProgramName());
 		attributes.put("catalogName", getCatalogName());
 		attributes.put("sku", getSku());
@@ -272,12 +268,6 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 
 		if (modifiedDate != null) {
 			setModifiedDate(modifiedDate);
-		}
-
-		String urlTitle = (String)attributes.get("urlTitle");
-
-		if (urlTitle != null) {
-			setUrlTitle(urlTitle);
 		}
 
 		String programName = (String)attributes.get("programName");
@@ -525,31 +515,6 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_setModifiedDate = true;
 
 		_modifiedDate = modifiedDate;
-	}
-
-	@Override
-	public String getUrlTitle() {
-		if (_urlTitle == null) {
-			return StringPool.BLANK;
-		}
-		else {
-			return _urlTitle;
-		}
-	}
-
-	@Override
-	public void setUrlTitle(String urlTitle) {
-		_columnBitmask |= URLTITLE_COLUMN_BITMASK;
-
-		if (_originalUrlTitle == null) {
-			_originalUrlTitle = _urlTitle;
-		}
-
-		_urlTitle = urlTitle;
-	}
-
-	public String getOriginalUrlTitle() {
-		return GetterUtil.getString(_originalUrlTitle);
 	}
 
 	@Override
@@ -889,7 +854,6 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		cjProductImpl.setUserName(getUserName());
 		cjProductImpl.setCreateDate(getCreateDate());
 		cjProductImpl.setModifiedDate(getModifiedDate());
-		cjProductImpl.setUrlTitle(getUrlTitle());
 		cjProductImpl.setProgramName(getProgramName());
 		cjProductImpl.setCatalogName(getCatalogName());
 		cjProductImpl.setSku(getSku());
@@ -987,8 +951,6 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 
 		cjProductModelImpl._setModifiedDate = false;
 
-		cjProductModelImpl._originalUrlTitle = cjProductModelImpl._urlTitle;
-
 		cjProductModelImpl._originalProgramName = cjProductModelImpl._programName;
 
 		cjProductModelImpl._originalCatalogName = cjProductModelImpl._catalogName;
@@ -1044,14 +1006,6 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		}
 		else {
 			cjProductCacheModel.modifiedDate = Long.MIN_VALUE;
-		}
-
-		cjProductCacheModel.urlTitle = getUrlTitle();
-
-		String urlTitle = cjProductCacheModel.urlTitle;
-
-		if ((urlTitle != null) && (urlTitle.length() == 0)) {
-			cjProductCacheModel.urlTitle = null;
 		}
 
 		cjProductCacheModel.programName = getProgramName();
@@ -1189,7 +1143,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 
 	@Override
 	public String toString() {
-		StringBundler sb = new StringBundler(53);
+		StringBundler sb = new StringBundler(51);
 
 		sb.append("{uuid=");
 		sb.append(getUuid());
@@ -1207,8 +1161,6 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		sb.append(getCreateDate());
 		sb.append(", modifiedDate=");
 		sb.append(getModifiedDate());
-		sb.append(", urlTitle=");
-		sb.append(getUrlTitle());
 		sb.append(", programName=");
 		sb.append(getProgramName());
 		sb.append(", catalogName=");
@@ -1250,7 +1202,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 
 	@Override
 	public String toXmlString() {
-		StringBundler sb = new StringBundler(82);
+		StringBundler sb = new StringBundler(79);
 
 		sb.append("<model><model-name>");
 		sb.append("ca.efendi.datafeeds.model.CJProduct");
@@ -1287,10 +1239,6 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		sb.append(
 			"<column><column-name>modifiedDate</column-name><column-value><![CDATA[");
 		sb.append(getModifiedDate());
-		sb.append("]]></column-value></column>");
-		sb.append(
-			"<column><column-name>urlTitle</column-name><column-value><![CDATA[");
-		sb.append(getUrlTitle());
 		sb.append("]]></column-value></column>");
 		sb.append(
 			"<column><column-name>programName</column-name><column-value><![CDATA[");
@@ -1384,8 +1332,6 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 	private Date _createDate;
 	private Date _modifiedDate;
 	private boolean _setModifiedDate;
-	private String _urlTitle;
-	private String _originalUrlTitle;
 	private String _programName;
 	private String _originalProgramName;
 	private String _catalogName;

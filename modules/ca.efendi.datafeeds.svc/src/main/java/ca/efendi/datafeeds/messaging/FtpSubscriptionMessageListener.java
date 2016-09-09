@@ -14,14 +14,13 @@
  * limitations under the License.
  */
 
-package ca.efendi.datafeeds.util;
+package ca.efendi.datafeeds.messaging;
 
 import ca.efendi.datafeeds.configuration.FtpSubscriptionConfiguration;
 import ca.efendi.datafeeds.model.CJProduct;
 import ca.efendi.datafeeds.model.FtpSubscription;
 import ca.efendi.datafeeds.service.CJProductLocalService;
 import ca.efendi.datafeeds.service.FtpSubscriptionLocalService;
-import ca.efendi.datafeeds.service.FtpSubscriptionLocalServiceUtil;
 import com.liferay.portal.configuration.metatype.bnd.util.ConfigurableUtil;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
@@ -35,7 +34,6 @@ import com.liferay.portal.kernel.scheduler.SchedulerEngineHelper;
 import com.liferay.portal.kernel.scheduler.TimeUnit;
 import com.liferay.portal.kernel.scheduler.TriggerFactory;
 import com.liferay.portal.kernel.scheduler.TriggerFactoryUtil;
-import com.liferay.portal.kernel.service.ServiceContext;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.net.PrintCommandListener;
 import org.apache.commons.net.ftp.FTP;
@@ -73,7 +71,9 @@ public class FtpSubscriptionMessageListener
         schedulerEntryImpl.setTrigger(
                 TriggerFactoryUtil.createTrigger(
                         getEventListenerClass(), getEventListenerClass(),
-                        _ftpSubscriptionConfiguration.entryCheckInterval(), TimeUnit.MINUTE));
+                        //_ftpSubscriptionConfiguration.entryCheckInterval(),
+                        1,
+                        TimeUnit.MINUTE));
 
         _schedulerEngineHelper.register(
                 this, schedulerEntryImpl, DestinationNames.SCHEDULER_DISPATCH);
@@ -84,15 +84,22 @@ public class FtpSubscriptionMessageListener
         _schedulerEngineHelper.unregister(this);
     }
 
+    boolean processed = false;
+
     @Override
     protected void doReceive(Message message) throws Exception {
+        if (processed) return;
+
         final List<FtpSubscription> ftpSubscriptions =
-                FtpSubscriptionLocalServiceUtil.getAllFtpSubscriptions();
+                _ftpSubscriptionLocalService.getAllFtpSubscriptions();
         for (final FtpSubscription ftpSubscription : ftpSubscriptions) {
             fetch(ftpSubscription);
         }
 
+        processed = true;
+
     }
+
 
     public void fetch(final FtpSubscription ftpSubscription) {
         if (_log.isDebugEnabled()) {
@@ -171,7 +178,7 @@ public class FtpSubscriptionMessageListener
     private void unzip(FtpSubscription ftpSubscription, final InputStream is) {
         try {
             final GZIPInputStream gzis = new GZIPInputStream(is);
-            parse( ftpSubscription, gzis);
+            parse(ftpSubscription, gzis);
             gzis.close();
         } catch (final IOException e) {
             _log.error(e);
@@ -187,8 +194,12 @@ public class FtpSubscriptionMessageListener
         final XMLStreamReader reader = factory.createXMLStreamReader(is, "UTF-8");
         CJProduct product = null;
         String tagContent = null;
-        final ServiceContext serviceContext = new ServiceContext();
-        serviceContext.setScopeGroupId(20159);
+        //final ServiceContext serviceContext = new ServiceContext();
+
+        //ServiceContext serviceContext = ServiceContextFactory.getInstance(
+        //        BlogsEntry.class.getName(), actionRequest);
+
+        //serviceContext.setScopeGroupId(20159);
         while (reader.hasNext()) {
             final int event = reader.next();
             switch (event) {
@@ -206,8 +217,9 @@ public class FtpSubscriptionMessageListener
                     switch (reader.getLocalName()) {
                         case "product":
                             try {
-                                product.setUrlTitle(product.getSku() + " " + product.getName());
-                                _cjProductLocalService.refresh(ftpSubscription.getUserId(), product, serviceContext);
+
+                                _log.warn("refreshing document...");
+                                _cjProductLocalService.refresh(ftpSubscription.getUserId(), product);
                             } catch (final SystemException e) {
                                 _log.error(e);
                             } catch (final PortalException e) {
@@ -269,8 +281,6 @@ public class FtpSubscriptionMessageListener
             }
         }
     }
-
-
 
 
     @Reference(unbind = "-")

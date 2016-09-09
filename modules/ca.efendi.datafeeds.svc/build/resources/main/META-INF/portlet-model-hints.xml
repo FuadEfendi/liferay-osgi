@@ -10,7 +10,6 @@
 		<field name="userName" type="String" />
 		<field name="createDate" type="Date" />
 		<field name="modifiedDate" type="Date" />
-		<field name="urlTitle" type="String" />
 		<field name="programName" type="String" />
 		<field name="catalogName" type="String" />
 		<field name="sku" type="String" />

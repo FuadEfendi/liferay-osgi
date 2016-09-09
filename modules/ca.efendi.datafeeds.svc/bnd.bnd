@@ -1,4 +1,18 @@
-Bundle-SymbolicName: datafeeds-service
-Bundle-Version: 1.0.4
-Liferay-Require-SchemaVersion: 1.0.0
+Bundle-SymbolicName: ca.efendi.datafeeds.svc
+Bundle-Version: 1.0.1
+Export-Package:\
+		ca.efendi.datafeeds.asset,\
+		ca.efendi.datafeeds.search
+
+Bundle-ClassPath:\
+  .,\
+  lib/commons-lang3-3.4.jar,\
+  lib/commons-net-3.5.jar
+
+Include-Resource:\
+  lib/commons-lang3-3.4.jar=lib/commons-lang3-3.4.jar,\
+  lib/commons-net-3.5.jar=lib/commons-net-3.5.jar
+
+Liferay-Releng-Module-Group-Description:
+Liferay-Releng-Module-Group-Title: Datafeeds
 Liferay-Service: true

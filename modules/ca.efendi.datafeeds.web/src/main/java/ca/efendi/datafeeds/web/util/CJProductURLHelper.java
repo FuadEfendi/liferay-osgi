@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package ca.efendi.datafeeds.util;
+package ca.efendi.datafeeds.web.util;
 
 import ca.efendi.datafeeds.model.CJProduct;
 import com.liferay.portal.kernel.exception.PortalException;
@@ -24,8 +24,6 @@ import com.liferay.portal.kernel.util.Validator;
 import javax.portlet.PortletURL;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
-
-import static ca.efendi.datafeeds.util.PortletKeys.*;
 
 public class CJProductURLHelper {
 
@@ -41,16 +39,16 @@ public class CJProductURLHelper {
             throws PortalException {
         final PortletURL portletURL = _renderResponse.createRenderURL();
         final String portletId = PortalUtil.getPortletId(_renderRequest);
-        if (portletId.startsWith(T_DATAFEEDS_ADMIN) ||
-                portletId.startsWith(T_DATAFEEDS_SEARCH)) {
+        if (portletId.startsWith(PortletKeys.T_DATAFEEDS_ADMIN) ||
+                portletId.startsWith(PortletKeys.T_DATAFEEDS_SEARCH)) {
             portletURL.setParameter(
                     "mvcPath", _templatePath + "view_cjproduct.jsp");
         }
-        if (portletId.startsWith(T_DATAFEEDS_ADMIN)) {
+        if (portletId.startsWith(PortletKeys.T_DATAFEEDS_ADMIN)) {
             portletURL.setParameter(
                     "redirect", PortalUtil.getCurrentURL(_renderRequest));
         }
-        if (portletId.equals(T_DATAFEEDS_ADMIN)) {
+        if (portletId.equals(PortletKeys.T_DATAFEEDS_ADMIN)) {
             portletURL.setParameter(
                     "resourceClassNameId",
                     String.valueOf(PortalUtil.getClassNameId(

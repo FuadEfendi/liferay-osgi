@@ -1,3 +1,4 @@
+<%@ page import="ca.efendi.datafeeds.model.FtpSubscription" %>
 <%@include file="init.jsp" %>
 
 <%

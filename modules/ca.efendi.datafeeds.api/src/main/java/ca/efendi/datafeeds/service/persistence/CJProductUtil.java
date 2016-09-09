@@ -749,63 +749,63 @@ public class CJProductUtil {
 	}
 
 	/**
-	* Returns the c j product where groupId = &#63; and urlTitle = &#63; or throws a {@link NoSuchCJProductException} if it could not be found.
+	* Returns the c j product where groupId = &#63; and sku = &#63; or throws a {@link NoSuchCJProductException} if it could not be found.
 	*
 	* @param groupId the group ID
-	* @param urlTitle the url title
+	* @param sku the sku
 	* @return the matching c j product
 	* @throws NoSuchCJProductException if a matching c j product could not be found
 	*/
-	public static CJProduct findByG_UT(long groupId, java.lang.String urlTitle)
+	public static CJProduct findByG_SKU(long groupId, java.lang.String sku)
 		throws ca.efendi.datafeeds.exception.NoSuchCJProductException {
-		return getPersistence().findByG_UT(groupId, urlTitle);
+		return getPersistence().findByG_SKU(groupId, sku);
 	}
 
 	/**
-	* Returns the c j product where groupId = &#63; and urlTitle = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
+	* Returns the c j product where groupId = &#63; and sku = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
 	*
 	* @param groupId the group ID
-	* @param urlTitle the url title
+	* @param sku the sku
 	* @return the matching c j product, or <code>null</code> if a matching c j product could not be found
 	*/
-	public static CJProduct fetchByG_UT(long groupId, java.lang.String urlTitle) {
-		return getPersistence().fetchByG_UT(groupId, urlTitle);
+	public static CJProduct fetchByG_SKU(long groupId, java.lang.String sku) {
+		return getPersistence().fetchByG_SKU(groupId, sku);
 	}
 
 	/**
-	* Returns the c j product where groupId = &#63; and urlTitle = &#63; or returns <code>null</code> if it could not be found, optionally using the finder cache.
+	* Returns the c j product where groupId = &#63; and sku = &#63; or returns <code>null</code> if it could not be found, optionally using the finder cache.
 	*
 	* @param groupId the group ID
-	* @param urlTitle the url title
+	* @param sku the sku
 	* @param retrieveFromCache whether to retrieve from the finder cache
 	* @return the matching c j product, or <code>null</code> if a matching c j product could not be found
 	*/
-	public static CJProduct fetchByG_UT(long groupId,
-		java.lang.String urlTitle, boolean retrieveFromCache) {
-		return getPersistence().fetchByG_UT(groupId, urlTitle, retrieveFromCache);
+	public static CJProduct fetchByG_SKU(long groupId, java.lang.String sku,
+		boolean retrieveFromCache) {
+		return getPersistence().fetchByG_SKU(groupId, sku, retrieveFromCache);
 	}
 
 	/**
-	* Removes the c j product where groupId = &#63; and urlTitle = &#63; from the database.
+	* Removes the c j product where groupId = &#63; and sku = &#63; from the database.
 	*
 	* @param groupId the group ID
-	* @param urlTitle the url title
+	* @param sku the sku
 	* @return the c j product that was removed
 	*/
-	public static CJProduct removeByG_UT(long groupId, java.lang.String urlTitle)
+	public static CJProduct removeByG_SKU(long groupId, java.lang.String sku)
 		throws ca.efendi.datafeeds.exception.NoSuchCJProductException {
-		return getPersistence().removeByG_UT(groupId, urlTitle);
+		return getPersistence().removeByG_SKU(groupId, sku);
 	}
 
 	/**
-	* Returns the number of c j products where groupId = &#63; and urlTitle = &#63;.
+	* Returns the number of c j products where groupId = &#63; and sku = &#63;.
 	*
 	* @param groupId the group ID
-	* @param urlTitle the url title
+	* @param sku the sku
 	* @return the number of matching c j products
 	*/
-	public static int countByG_UT(long groupId, java.lang.String urlTitle) {
-		return getPersistence().countByG_UT(groupId, urlTitle);
+	public static int countByG_SKU(long groupId, java.lang.String sku) {
+		return getPersistence().countByG_SKU(groupId, sku);
 	}
 
 	/**

@@ -11,7 +11,7 @@
  * Dissemination of this information or reproduction of this material is strictly 
  * forbidden unless prior written permission is obtained from InterCall.
  */
-package ca.efendi.datafeeds.util;
+package ca.efendi.datafeeds.web.util;
 
 import com.liferay.portal.kernel.search.Field;
 import com.liferay.portal.kernel.search.Sort;

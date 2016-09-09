@@ -1,5 +1,5 @@
-Bundle-SymbolicName: datafeeds-api
-Bundle-Version: 1.0.0
+Bundle-SymbolicName: ca.efendi.datafeeds.api
+Bundle-Version: 1.0.1
 Export-Package:\
 	ca.efendi.datafeeds.configuration,\
 	ca.efendi.datafeeds.exception,\

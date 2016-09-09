@@ -19,7 +19,7 @@ import aQute.bnd.annotation.ProviderType;
 import com.liferay.portal.kernel.exception.NoSuchModelException;
 
 /**
- * @author fefendi
+ * @author Brian Wing Shun Chan
  */
 @ProviderType
 public class NoSuchFtpSubscriptionException extends NoSuchModelException {

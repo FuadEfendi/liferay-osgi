@@ -92,7 +92,7 @@ public class CJProductAssetRenderer extends BaseJSPAssetRenderer<CJProduct> impl
     //}
 
     /**
-     * @see com.liferay.asset.kernel.model.BaseJSPAssetRenderer#getJspPath(HttpServletRequest,
+     * @see BaseJSPAssetRenderer#getJspPath(HttpServletRequest,
      * String)
      */
     @Override
@@ -162,7 +162,7 @@ public class CJProductAssetRenderer extends BaseJSPAssetRenderer<CJProduct> impl
 
     @Override
     public String getUrlTitle() {
-        return _entry.getUrlTitle();
+        return _entry.getName();
     }
 
     // @Override

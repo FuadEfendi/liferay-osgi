@@ -106,9 +106,9 @@ public class CJProductLocalServiceUtil {
 	}
 
 	public static ca.efendi.datafeeds.model.CJProduct getCJProduct(
-		long groupId, java.lang.String urlTitle)
+		long groupId, java.lang.String sku)
 		throws ca.efendi.datafeeds.exception.NoSuchCJProductException {
-		return getService().getCJProduct(groupId, urlTitle);
+		return getService().getCJProduct(groupId, sku);
 	}
 
 	/**
@@ -139,10 +139,9 @@ public class CJProductLocalServiceUtil {
 	}
 
 	public static ca.efendi.datafeeds.model.CJProduct refresh(long userId,
-		ca.efendi.datafeeds.model.CJProduct newCJProduct,
-		com.liferay.portal.kernel.service.ServiceContext serviceContext)
+		ca.efendi.datafeeds.model.CJProduct newCJProduct)
 		throws com.liferay.portal.kernel.exception.PortalException {
-		return getService().refresh(userId, newCJProduct, serviceContext);
+		return getService().refresh(userId, newCJProduct);
 	}
 
 	/**

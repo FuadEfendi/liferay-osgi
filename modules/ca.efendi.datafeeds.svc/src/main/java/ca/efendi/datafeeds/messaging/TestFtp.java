@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package ca.efendi.datafeeds.portlet;
+package ca.efendi.datafeeds.messaging;
 
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 import org.apache.commons.net.PrintCommandListener;
