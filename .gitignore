@@ -14,3 +14,4 @@ hs_err_pid*
 /.gradle
 /bundles
 **/.idea
+/liferay-ce-portal-tomcat-7.0-ga3-20160804222206210.zip
