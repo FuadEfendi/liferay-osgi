@@ -809,6 +809,321 @@ public class CJProductUtil {
 	}
 
 	/**
+	* Returns all the c j products where groupId = &#63;.
+	*
+	* @param groupId the group ID
+	* @return the matching c j products
+	*/
+	public static List<CJProduct> findByGroupId(long groupId) {
+		return getPersistence().findByGroupId(groupId);
+	}
+
+	/**
+	* Returns a range of all the c j products where groupId = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link CJProductModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param groupId the group ID
+	* @param start the lower bound of the range of c j products
+	* @param end the upper bound of the range of c j products (not inclusive)
+	* @return the range of matching c j products
+	*/
+	public static List<CJProduct> findByGroupId(long groupId, int start, int end) {
+		return getPersistence().findByGroupId(groupId, start, end);
+	}
+
+	/**
+	* Returns an ordered range of all the c j products where groupId = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link CJProductModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param groupId the group ID
+	* @param start the lower bound of the range of c j products
+	* @param end the upper bound of the range of c j products (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @return the ordered range of matching c j products
+	*/
+	public static List<CJProduct> findByGroupId(long groupId, int start,
+		int end, OrderByComparator<CJProduct> orderByComparator) {
+		return getPersistence()
+				   .findByGroupId(groupId, start, end, orderByComparator);
+	}
+
+	/**
+	* Returns an ordered range of all the c j products where groupId = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link CJProductModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param groupId the group ID
+	* @param start the lower bound of the range of c j products
+	* @param end the upper bound of the range of c j products (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @param retrieveFromCache whether to retrieve from the finder cache
+	* @return the ordered range of matching c j products
+	*/
+	public static List<CJProduct> findByGroupId(long groupId, int start,
+		int end, OrderByComparator<CJProduct> orderByComparator,
+		boolean retrieveFromCache) {
+		return getPersistence()
+				   .findByGroupId(groupId, start, end, orderByComparator,
+			retrieveFromCache);
+	}
+
+	/**
+	* Returns the first c j product in the ordered set where groupId = &#63;.
+	*
+	* @param groupId the group ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching c j product
+	* @throws NoSuchCJProductException if a matching c j product could not be found
+	*/
+	public static CJProduct findByGroupId_First(long groupId,
+		OrderByComparator<CJProduct> orderByComparator)
+		throws ca.efendi.datafeeds.exception.NoSuchCJProductException {
+		return getPersistence().findByGroupId_First(groupId, orderByComparator);
+	}
+
+	/**
+	* Returns the first c j product in the ordered set where groupId = &#63;.
+	*
+	* @param groupId the group ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching c j product, or <code>null</code> if a matching c j product could not be found
+	*/
+	public static CJProduct fetchByGroupId_First(long groupId,
+		OrderByComparator<CJProduct> orderByComparator) {
+		return getPersistence().fetchByGroupId_First(groupId, orderByComparator);
+	}
+
+	/**
+	* Returns the last c j product in the ordered set where groupId = &#63;.
+	*
+	* @param groupId the group ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching c j product
+	* @throws NoSuchCJProductException if a matching c j product could not be found
+	*/
+	public static CJProduct findByGroupId_Last(long groupId,
+		OrderByComparator<CJProduct> orderByComparator)
+		throws ca.efendi.datafeeds.exception.NoSuchCJProductException {
+		return getPersistence().findByGroupId_Last(groupId, orderByComparator);
+	}
+
+	/**
+	* Returns the last c j product in the ordered set where groupId = &#63;.
+	*
+	* @param groupId the group ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching c j product, or <code>null</code> if a matching c j product could not be found
+	*/
+	public static CJProduct fetchByGroupId_Last(long groupId,
+		OrderByComparator<CJProduct> orderByComparator) {
+		return getPersistence().fetchByGroupId_Last(groupId, orderByComparator);
+	}
+
+	/**
+	* Returns the c j products before and after the current c j product in the ordered set where groupId = &#63;.
+	*
+	* @param productId the primary key of the current c j product
+	* @param groupId the group ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the previous, current, and next c j product
+	* @throws NoSuchCJProductException if a c j product with the primary key could not be found
+	*/
+	public static CJProduct[] findByGroupId_PrevAndNext(long productId,
+		long groupId, OrderByComparator<CJProduct> orderByComparator)
+		throws ca.efendi.datafeeds.exception.NoSuchCJProductException {
+		return getPersistence()
+				   .findByGroupId_PrevAndNext(productId, groupId,
+			orderByComparator);
+	}
+
+	/**
+	* Removes all the c j products where groupId = &#63; from the database.
+	*
+	* @param groupId the group ID
+	*/
+	public static void removeByGroupId(long groupId) {
+		getPersistence().removeByGroupId(groupId);
+	}
+
+	/**
+	* Returns the number of c j products where groupId = &#63;.
+	*
+	* @param groupId the group ID
+	* @return the number of matching c j products
+	*/
+	public static int countByGroupId(long groupId) {
+		return getPersistence().countByGroupId(groupId);
+	}
+
+	/**
+	* Returns all the c j products where companyId = &#63;.
+	*
+	* @param companyId the company ID
+	* @return the matching c j products
+	*/
+	public static List<CJProduct> findByCompanyId(long companyId) {
+		return getPersistence().findByCompanyId(companyId);
+	}
+
+	/**
+	* Returns a range of all the c j products where companyId = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link CJProductModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param companyId the company ID
+	* @param start the lower bound of the range of c j products
+	* @param end the upper bound of the range of c j products (not inclusive)
+	* @return the range of matching c j products
+	*/
+	public static List<CJProduct> findByCompanyId(long companyId, int start,
+		int end) {
+		return getPersistence().findByCompanyId(companyId, start, end);
+	}
+
+	/**
+	* Returns an ordered range of all the c j products where companyId = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link CJProductModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param companyId the company ID
+	* @param start the lower bound of the range of c j products
+	* @param end the upper bound of the range of c j products (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @return the ordered range of matching c j products
+	*/
+	public static List<CJProduct> findByCompanyId(long companyId, int start,
+		int end, OrderByComparator<CJProduct> orderByComparator) {
+		return getPersistence()
+				   .findByCompanyId(companyId, start, end, orderByComparator);
+	}
+
+	/**
+	* Returns an ordered range of all the c j products where companyId = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link CJProductModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param companyId the company ID
+	* @param start the lower bound of the range of c j products
+	* @param end the upper bound of the range of c j products (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @param retrieveFromCache whether to retrieve from the finder cache
+	* @return the ordered range of matching c j products
+	*/
+	public static List<CJProduct> findByCompanyId(long companyId, int start,
+		int end, OrderByComparator<CJProduct> orderByComparator,
+		boolean retrieveFromCache) {
+		return getPersistence()
+				   .findByCompanyId(companyId, start, end, orderByComparator,
+			retrieveFromCache);
+	}
+
+	/**
+	* Returns the first c j product in the ordered set where companyId = &#63;.
+	*
+	* @param companyId the company ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching c j product
+	* @throws NoSuchCJProductException if a matching c j product could not be found
+	*/
+	public static CJProduct findByCompanyId_First(long companyId,
+		OrderByComparator<CJProduct> orderByComparator)
+		throws ca.efendi.datafeeds.exception.NoSuchCJProductException {
+		return getPersistence()
+				   .findByCompanyId_First(companyId, orderByComparator);
+	}
+
+	/**
+	* Returns the first c j product in the ordered set where companyId = &#63;.
+	*
+	* @param companyId the company ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching c j product, or <code>null</code> if a matching c j product could not be found
+	*/
+	public static CJProduct fetchByCompanyId_First(long companyId,
+		OrderByComparator<CJProduct> orderByComparator) {
+		return getPersistence()
+				   .fetchByCompanyId_First(companyId, orderByComparator);
+	}
+
+	/**
+	* Returns the last c j product in the ordered set where companyId = &#63;.
+	*
+	* @param companyId the company ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching c j product
+	* @throws NoSuchCJProductException if a matching c j product could not be found
+	*/
+	public static CJProduct findByCompanyId_Last(long companyId,
+		OrderByComparator<CJProduct> orderByComparator)
+		throws ca.efendi.datafeeds.exception.NoSuchCJProductException {
+		return getPersistence()
+				   .findByCompanyId_Last(companyId, orderByComparator);
+	}
+
+	/**
+	* Returns the last c j product in the ordered set where companyId = &#63;.
+	*
+	* @param companyId the company ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching c j product, or <code>null</code> if a matching c j product could not be found
+	*/
+	public static CJProduct fetchByCompanyId_Last(long companyId,
+		OrderByComparator<CJProduct> orderByComparator) {
+		return getPersistence()
+				   .fetchByCompanyId_Last(companyId, orderByComparator);
+	}
+
+	/**
+	* Returns the c j products before and after the current c j product in the ordered set where companyId = &#63;.
+	*
+	* @param productId the primary key of the current c j product
+	* @param companyId the company ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the previous, current, and next c j product
+	* @throws NoSuchCJProductException if a c j product with the primary key could not be found
+	*/
+	public static CJProduct[] findByCompanyId_PrevAndNext(long productId,
+		long companyId, OrderByComparator<CJProduct> orderByComparator)
+		throws ca.efendi.datafeeds.exception.NoSuchCJProductException {
+		return getPersistence()
+				   .findByCompanyId_PrevAndNext(productId, companyId,
+			orderByComparator);
+	}
+
+	/**
+	* Removes all the c j products where companyId = &#63; from the database.
+	*
+	* @param companyId the company ID
+	*/
+	public static void removeByCompanyId(long companyId) {
+		getPersistence().removeByCompanyId(companyId);
+	}
+
+	/**
+	* Returns the number of c j products where companyId = &#63;.
+	*
+	* @param companyId the company ID
+	* @return the number of matching c j products
+	*/
+	public static int countByCompanyId(long companyId) {
+		return getPersistence().countByCompanyId(companyId);
+	}
+
+	/**
 	* Caches the c j product in the entity cache if it is enabled.
 	*
 	* @param cjProduct the c j product

@@ -82,6 +82,13 @@ public class CJProductLocalServiceWrapper implements CJProductLocalService,
 	}
 
 	@Override
+	public ca.efendi.datafeeds.model.CJProduct deleteEntry(
+		ca.efendi.datafeeds.model.CJProduct entry)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		return _cjProductLocalService.deleteEntry(entry);
+	}
+
+	@Override
 	public ca.efendi.datafeeds.model.CJProduct fetchCJProduct(long productId) {
 		return _cjProductLocalService.fetchCJProduct(productId);
 	}
@@ -136,10 +143,11 @@ public class CJProductLocalServiceWrapper implements CJProductLocalService,
 	}
 
 	@Override
-	public ca.efendi.datafeeds.model.CJProduct refresh(long userId,
+	public ca.efendi.datafeeds.model.CJProduct refresh(
+		ca.efendi.datafeeds.model.FtpSubscription subscription,
 		ca.efendi.datafeeds.model.CJProduct newCJProduct)
 		throws com.liferay.portal.kernel.exception.PortalException {
-		return _cjProductLocalService.refresh(userId, newCJProduct);
+		return _cjProductLocalService.refresh(subscription, newCJProduct);
 	}
 
 	/**
@@ -265,6 +273,13 @@ public class CJProductLocalServiceWrapper implements CJProductLocalService,
 			orderByComparator);
 	}
 
+	@Override
+	public java.util.List<ca.efendi.datafeeds.model.CJProduct> findByGroupId(
+		long groupId, int start, int end)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		return _cjProductLocalService.findByGroupId(groupId, start, end);
+	}
+
 	/**
 	* Returns a range of all the c j products.
 	*
@@ -338,6 +353,18 @@ public class CJProductLocalServiceWrapper implements CJProductLocalService,
 		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery,
 		com.liferay.portal.kernel.dao.orm.Projection projection) {
 		return _cjProductLocalService.dynamicQueryCount(dynamicQuery, projection);
+	}
+
+	@Override
+	public void deleteEntries(long groupId)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		_cjProductLocalService.deleteEntries(groupId);
+	}
+
+	@Override
+	public void deleteEntry(long entryId)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		_cjProductLocalService.deleteEntry(entryId);
 	}
 
 	@Override

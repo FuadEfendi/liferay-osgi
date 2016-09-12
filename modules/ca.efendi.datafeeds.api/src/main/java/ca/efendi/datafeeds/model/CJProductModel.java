@@ -24,6 +24,7 @@ import com.liferay.portal.kernel.model.CacheModel;
 import com.liferay.portal.kernel.model.GroupedModel;
 import com.liferay.portal.kernel.model.ShardedModel;
 import com.liferay.portal.kernel.model.StagedAuditedModel;
+import com.liferay.portal.kernel.model.WorkflowedModel;
 import com.liferay.portal.kernel.service.ServiceContext;
 
 import java.io.Serializable;
@@ -45,7 +46,7 @@ import java.util.Date;
  */
 @ProviderType
 public interface CJProductModel extends BaseModel<CJProduct>, GroupedModel,
-	ShardedModel, StagedAuditedModel {
+	ShardedModel, StagedAuditedModel, WorkflowedModel {
 	/*
 	 * NOTE FOR DEVELOPERS:
 	 *
@@ -463,6 +464,318 @@ public interface CJProductModel extends BaseModel<CJProduct>, GroupedModel,
 	 * @param viewCount the view count of this c j product
 	 */
 	public void setViewCount(int viewCount);
+
+	/**
+	 * Returns the status of this c j product.
+	 *
+	 * @return the status of this c j product
+	 */
+	@Override
+	public int getStatus();
+
+	/**
+	 * Sets the status of this c j product.
+	 *
+	 * @param status the status of this c j product
+	 */
+	@Override
+	public void setStatus(int status);
+
+	/**
+	 * Returns the status by user ID of this c j product.
+	 *
+	 * @return the status by user ID of this c j product
+	 */
+	@Override
+	public long getStatusByUserId();
+
+	/**
+	 * Sets the status by user ID of this c j product.
+	 *
+	 * @param statusByUserId the status by user ID of this c j product
+	 */
+	@Override
+	public void setStatusByUserId(long statusByUserId);
+
+	/**
+	 * Returns the status by user uuid of this c j product.
+	 *
+	 * @return the status by user uuid of this c j product
+	 */
+	@Override
+	public String getStatusByUserUuid();
+
+	/**
+	 * Sets the status by user uuid of this c j product.
+	 *
+	 * @param statusByUserUuid the status by user uuid of this c j product
+	 */
+	@Override
+	public void setStatusByUserUuid(String statusByUserUuid);
+
+	/**
+	 * Returns the status by user name of this c j product.
+	 *
+	 * @return the status by user name of this c j product
+	 */
+	@AutoEscape
+	@Override
+	public String getStatusByUserName();
+
+	/**
+	 * Sets the status by user name of this c j product.
+	 *
+	 * @param statusByUserName the status by user name of this c j product
+	 */
+	@Override
+	public void setStatusByUserName(String statusByUserName);
+
+	/**
+	 * Returns the status date of this c j product.
+	 *
+	 * @return the status date of this c j product
+	 */
+	@Override
+	public Date getStatusDate();
+
+	/**
+	 * Sets the status date of this c j product.
+	 *
+	 * @param statusDate the status date of this c j product
+	 */
+	@Override
+	public void setStatusDate(Date statusDate);
+
+	/**
+	 * Returns the subtitle of this c j product.
+	 *
+	 * @return the subtitle of this c j product
+	 */
+	@AutoEscape
+	public String getSubtitle();
+
+	/**
+	 * Sets the subtitle of this c j product.
+	 *
+	 * @param subtitle the subtitle of this c j product
+	 */
+	public void setSubtitle(String subtitle);
+
+	/**
+	 * Returns the url title of this c j product.
+	 *
+	 * @return the url title of this c j product
+	 */
+	@AutoEscape
+	public String getUrlTitle();
+
+	/**
+	 * Sets the url title of this c j product.
+	 *
+	 * @param urlTitle the url title of this c j product
+	 */
+	public void setUrlTitle(String urlTitle);
+
+	/**
+	 * Returns the content of this c j product.
+	 *
+	 * @return the content of this c j product
+	 */
+	@AutoEscape
+	public String getContent();
+
+	/**
+	 * Sets the content of this c j product.
+	 *
+	 * @param content the content of this c j product
+	 */
+	public void setContent(String content);
+
+	/**
+	 * Returns the display date of this c j product.
+	 *
+	 * @return the display date of this c j product
+	 */
+	public Date getDisplayDate();
+
+	/**
+	 * Sets the display date of this c j product.
+	 *
+	 * @param displayDate the display date of this c j product
+	 */
+	public void setDisplayDate(Date displayDate);
+
+	/**
+	 * Returns the cover image caption of this c j product.
+	 *
+	 * @return the cover image caption of this c j product
+	 */
+	@AutoEscape
+	public String getCoverImageCaption();
+
+	/**
+	 * Sets the cover image caption of this c j product.
+	 *
+	 * @param coverImageCaption the cover image caption of this c j product
+	 */
+	public void setCoverImageCaption(String coverImageCaption);
+
+	/**
+	 * Returns the cover image file entry ID of this c j product.
+	 *
+	 * @return the cover image file entry ID of this c j product
+	 */
+	public long getCoverImageFileEntryId();
+
+	/**
+	 * Sets the cover image file entry ID of this c j product.
+	 *
+	 * @param coverImageFileEntryId the cover image file entry ID of this c j product
+	 */
+	public void setCoverImageFileEntryId(long coverImageFileEntryId);
+
+	/**
+	 * Returns the cover image u r l of this c j product.
+	 *
+	 * @return the cover image u r l of this c j product
+	 */
+	@AutoEscape
+	public String getCoverImageURL();
+
+	/**
+	 * Sets the cover image u r l of this c j product.
+	 *
+	 * @param coverImageURL the cover image u r l of this c j product
+	 */
+	public void setCoverImageURL(String coverImageURL);
+
+	/**
+	 * Returns the small image of this c j product.
+	 *
+	 * @return the small image of this c j product
+	 */
+	public boolean getSmallImage();
+
+	/**
+	 * Returns <code>true</code> if this c j product is small image.
+	 *
+	 * @return <code>true</code> if this c j product is small image; <code>false</code> otherwise
+	 */
+	public boolean isSmallImage();
+
+	/**
+	 * Sets whether this c j product is small image.
+	 *
+	 * @param smallImage the small image of this c j product
+	 */
+	public void setSmallImage(boolean smallImage);
+
+	/**
+	 * Returns the small image file entry ID of this c j product.
+	 *
+	 * @return the small image file entry ID of this c j product
+	 */
+	public long getSmallImageFileEntryId();
+
+	/**
+	 * Sets the small image file entry ID of this c j product.
+	 *
+	 * @param smallImageFileEntryId the small image file entry ID of this c j product
+	 */
+	public void setSmallImageFileEntryId(long smallImageFileEntryId);
+
+	/**
+	 * Returns the small image ID of this c j product.
+	 *
+	 * @return the small image ID of this c j product
+	 */
+	public long getSmallImageId();
+
+	/**
+	 * Sets the small image ID of this c j product.
+	 *
+	 * @param smallImageId the small image ID of this c j product
+	 */
+	public void setSmallImageId(long smallImageId);
+
+	/**
+	 * Returns the small image u r l of this c j product.
+	 *
+	 * @return the small image u r l of this c j product
+	 */
+	@AutoEscape
+	public String getSmallImageURL();
+
+	/**
+	 * Sets the small image u r l of this c j product.
+	 *
+	 * @param smallImageURL the small image u r l of this c j product
+	 */
+	public void setSmallImageURL(String smallImageURL);
+
+	/**
+	 * Returns <code>true</code> if this c j product is approved.
+	 *
+	 * @return <code>true</code> if this c j product is approved; <code>false</code> otherwise
+	 */
+	@Override
+	public boolean isApproved();
+
+	/**
+	 * Returns <code>true</code> if this c j product is denied.
+	 *
+	 * @return <code>true</code> if this c j product is denied; <code>false</code> otherwise
+	 */
+	@Override
+	public boolean isDenied();
+
+	/**
+	 * Returns <code>true</code> if this c j product is a draft.
+	 *
+	 * @return <code>true</code> if this c j product is a draft; <code>false</code> otherwise
+	 */
+	@Override
+	public boolean isDraft();
+
+	/**
+	 * Returns <code>true</code> if this c j product is expired.
+	 *
+	 * @return <code>true</code> if this c j product is expired; <code>false</code> otherwise
+	 */
+	@Override
+	public boolean isExpired();
+
+	/**
+	 * Returns <code>true</code> if this c j product is inactive.
+	 *
+	 * @return <code>true</code> if this c j product is inactive; <code>false</code> otherwise
+	 */
+	@Override
+	public boolean isInactive();
+
+	/**
+	 * Returns <code>true</code> if this c j product is incomplete.
+	 *
+	 * @return <code>true</code> if this c j product is incomplete; <code>false</code> otherwise
+	 */
+	@Override
+	public boolean isIncomplete();
+
+	/**
+	 * Returns <code>true</code> if this c j product is pending.
+	 *
+	 * @return <code>true</code> if this c j product is pending; <code>false</code> otherwise
+	 */
+	@Override
+	public boolean isPending();
+
+	/**
+	 * Returns <code>true</code> if this c j product is scheduled.
+	 *
+	 * @return <code>true</code> if this c j product is scheduled; <code>false</code> otherwise
+	 */
+	@Override
+	public boolean isScheduled();
 
 	@Override
 	public boolean isNew();

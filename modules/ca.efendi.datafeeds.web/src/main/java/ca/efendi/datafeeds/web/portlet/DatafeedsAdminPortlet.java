@@ -35,7 +35,12 @@ import com.liferay.portal.kernel.util.ParamUtil;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
-import javax.portlet.*;
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
+import javax.portlet.Portlet;
+import javax.portlet.PortletException;
+import javax.portlet.RenderRequest;
+import javax.portlet.RenderResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -43,18 +48,18 @@ import java.util.Date;
 import static com.liferay.portal.kernel.util.WebKeys.THEME_DISPLAY;
 
 
+
 @Component(
         immediate = true,
         property = {
                 "com.liferay.portlet.add-default-resource=true",
-                "com.liferay.portlet.display-category=category.sample",
+                "com.liferay.portlet.display-category=category.datafeeds",
                 "com.liferay.portlet.instanceable=true",
-                "javax.portlet.display-name=datafeeds-web Portlet",
+                "javax.portlet.display-name=Datafeeds Admin Portlet",
                 "javax.portlet.init-param.template-path=/",
                 "javax.portlet.init-param.view-template=/datafeeds_admin/view.jsp",
                 "javax.portlet.resource-bundle=content.Language",
-                "javax.portlet.security-role-ref=administrator,power-user,user",
-                "javax.portlet.name=" + DatafeedsPortletKeys.DATAFEEDS_ADMIN
+                "javax.portlet.security-role-ref=administrator,power-user,user"
         },
         service = Portlet.class
 )
@@ -68,8 +73,7 @@ public class DatafeedsAdminPortlet extends MVCPortlet {
         final FtpSubscription ftpSubscription = ftpSubscriptionFromRequest(request);
         final ArrayList<String> errors = new ArrayList<String>();
         if (FtpSubscriptionValidator.validate(request, errors)) {
-            getFtpSubscriptionLocalService().addFtpSubscription(
-                    ftpSubscription);
+            _ftpSubscriptionLocalService.addFtpSubscription(ftpSubscription);
             SessionMessages.add(request, "product-saved-successfully");
         } else {
             SessionErrors.add(request, "fields-required");
@@ -95,8 +99,7 @@ public class DatafeedsAdminPortlet extends MVCPortlet {
         if (ftpSubscriptionId > 0) {
             // Updating
             try {
-                FtpSubscription ftp = getFtpSubscriptionLocalService()
-                        .getFtpSubscription(ftpSubscriptionId);
+                FtpSubscription ftp = _ftpSubscriptionLocalService.getFtpSubscription(ftpSubscriptionId);
                 if (ftp != null) {
                     ftp.setModifiedDate(new Date());
                     ftp.setFtpHost(ParamUtil.getString(request, "ftpHost"));
@@ -106,8 +109,7 @@ public class DatafeedsAdminPortlet extends MVCPortlet {
                     ftp.setFtpDatafeedName(ParamUtil.getString(request, "ftpDatafeedName"));
                     ftp.setFtpFile(ParamUtil.getString(request, "ftpFile"));
                     ftp.setFtpDatafeedDescription(ParamUtil.getString(request, "ftpDatafeedDescription"));
-                    getFtpSubscriptionLocalService()
-                            .updateFtpSubscription(ftp);
+                    _ftpSubscriptionLocalService.updateFtpSubscription(ftp);
                     SessionMessages.add(request, "ftp-subscription-added");
                 }
             } catch (final PortalException e) {
@@ -118,9 +120,7 @@ public class DatafeedsAdminPortlet extends MVCPortlet {
         } else {
             // Adding
             try {
-                // TODO: FE: "context" is needed for Workflows only; please
-                // confirm.
-                getFtpSubscriptionLocalService().addFtpSubscription(
+                _ftpSubscriptionLocalService.addFtpSubscription(
                         ftpSubscriptionFromRequest, ftpSubscriptionFromRequest.getUserId(), serviceContext);
             } catch (final SystemException e) {
                 errors.add("failed-to-add");
@@ -133,7 +133,7 @@ public class DatafeedsAdminPortlet extends MVCPortlet {
             final ActionRequest actionRequest, final ActionResponse actionResponse)
             throws Exception {
         final long ftpSubscriptionId = ParamUtil.getLong(actionRequest, "ftpSubscriptionIdToDelete");
-        getFtpSubscriptionLocalService().deleteFtpSubscription(ftpSubscriptionId);
+        _ftpSubscriptionLocalService.deleteFtpSubscription(ftpSubscriptionId);
     }
 
     @Override
@@ -144,9 +144,9 @@ public class DatafeedsAdminPortlet extends MVCPortlet {
             FtpSubscription ftpSubscription = null;
             final long ftpSubscriptionId = ParamUtil.getLong(renderRequest, "ftpSubscriptionId");
             if (ftpSubscriptionId > 0) {
-                ftpSubscription = getFtpSubscriptionLocalService().getFtpSubscription(ftpSubscriptionId);
+                ftpSubscription = _ftpSubscriptionLocalService.getFtpSubscription(ftpSubscriptionId);
             } else {
-                ftpSubscription = getFtpSubscriptionLocalService().createFtpSubscription(0);
+                ftpSubscription = _ftpSubscriptionLocalService.createFtpSubscription(0);
             }
             renderRequest.setAttribute(DatafeedsPortletKeys.FTP_SUBSCRIPTION_ENTRY, ftpSubscription);
         } catch (final Exception e) {
@@ -166,7 +166,7 @@ public class DatafeedsAdminPortlet extends MVCPortlet {
     public FtpSubscription ftpSubscriptionFromRequest(final ActionRequest request) {
         final ThemeDisplay themeDisplay = (ThemeDisplay) request.getAttribute(THEME_DISPLAY);
         long ftpSubscriptionId = ParamUtil.getLong(request, "ftpSubscriptionId");
-        final FtpSubscription ftpSubscription = getFtpSubscriptionLocalService().createFtpSubscription(0);
+        final FtpSubscription ftpSubscription = _ftpSubscriptionLocalService.createFtpSubscription(0);
         ftpSubscription.setFtpSubscriptionId(ParamUtil.getInteger(request, "ftpSubscriptionId"));
         _log.warn("ftpSubscriptionId:" + ftpSubscription.getFtpSubscriptionId());
         ftpSubscription.setCompanyId(themeDisplay.getCompanyId());
@@ -188,9 +188,6 @@ public class DatafeedsAdminPortlet extends MVCPortlet {
         return ftpSubscription;
     }
 
-    public FtpSubscriptionLocalService getFtpSubscriptionLocalService() {
-        return _ftpSubscriptionLocalService;
-    }
 
     @Reference
     public void setFtpSubscriptionLocalService(FtpSubscriptionLocalService ftpSubscriptionLocalService) {

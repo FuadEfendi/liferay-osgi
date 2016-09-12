@@ -1,8 +1,8 @@
 Bundle-SymbolicName: ca.efendi.datafeeds.svc
 Bundle-Version: 1.0.1
 Export-Package:\
-		ca.efendi.datafeeds.asset,\
-		ca.efendi.datafeeds.search
+		ca.efendi.datafeeds.search,\
+        ca.efendi.datafeeds.service.permission
 
 Bundle-ClassPath:\
   .,\

@@ -66,7 +66,7 @@ public class CJProductCacheModel implements CacheModel<CJProduct>,
 
 	@Override
 	public String toString() {
-		StringBundler sb = new StringBundler(51);
+		StringBundler sb = new StringBundler(81);
 
 		sb.append("{uuid=");
 		sb.append(uuid);
@@ -118,6 +118,36 @@ public class CJProductCacheModel implements CacheModel<CJProduct>,
 		sb.append(inStock);
 		sb.append(", viewCount=");
 		sb.append(viewCount);
+		sb.append(", status=");
+		sb.append(status);
+		sb.append(", statusByUserId=");
+		sb.append(statusByUserId);
+		sb.append(", statusByUserName=");
+		sb.append(statusByUserName);
+		sb.append(", statusDate=");
+		sb.append(statusDate);
+		sb.append(", subtitle=");
+		sb.append(subtitle);
+		sb.append(", urlTitle=");
+		sb.append(urlTitle);
+		sb.append(", content=");
+		sb.append(content);
+		sb.append(", displayDate=");
+		sb.append(displayDate);
+		sb.append(", coverImageCaption=");
+		sb.append(coverImageCaption);
+		sb.append(", coverImageFileEntryId=");
+		sb.append(coverImageFileEntryId);
+		sb.append(", coverImageURL=");
+		sb.append(coverImageURL);
+		sb.append(", smallImage=");
+		sb.append(smallImage);
+		sb.append(", smallImageFileEntryId=");
+		sb.append(smallImageFileEntryId);
+		sb.append(", smallImageId=");
+		sb.append(smallImageId);
+		sb.append(", smallImageURL=");
+		sb.append(smallImageURL);
 		sb.append("}");
 
 		return sb.toString();
@@ -273,6 +303,77 @@ public class CJProductCacheModel implements CacheModel<CJProduct>,
 		}
 
 		cjProductImpl.setViewCount(viewCount);
+		cjProductImpl.setStatus(status);
+		cjProductImpl.setStatusByUserId(statusByUserId);
+
+		if (statusByUserName == null) {
+			cjProductImpl.setStatusByUserName(StringPool.BLANK);
+		}
+		else {
+			cjProductImpl.setStatusByUserName(statusByUserName);
+		}
+
+		if (statusDate == Long.MIN_VALUE) {
+			cjProductImpl.setStatusDate(null);
+		}
+		else {
+			cjProductImpl.setStatusDate(new Date(statusDate));
+		}
+
+		if (subtitle == null) {
+			cjProductImpl.setSubtitle(StringPool.BLANK);
+		}
+		else {
+			cjProductImpl.setSubtitle(subtitle);
+		}
+
+		if (urlTitle == null) {
+			cjProductImpl.setUrlTitle(StringPool.BLANK);
+		}
+		else {
+			cjProductImpl.setUrlTitle(urlTitle);
+		}
+
+		if (content == null) {
+			cjProductImpl.setContent(StringPool.BLANK);
+		}
+		else {
+			cjProductImpl.setContent(content);
+		}
+
+		if (displayDate == Long.MIN_VALUE) {
+			cjProductImpl.setDisplayDate(null);
+		}
+		else {
+			cjProductImpl.setDisplayDate(new Date(displayDate));
+		}
+
+		if (coverImageCaption == null) {
+			cjProductImpl.setCoverImageCaption(StringPool.BLANK);
+		}
+		else {
+			cjProductImpl.setCoverImageCaption(coverImageCaption);
+		}
+
+		cjProductImpl.setCoverImageFileEntryId(coverImageFileEntryId);
+
+		if (coverImageURL == null) {
+			cjProductImpl.setCoverImageURL(StringPool.BLANK);
+		}
+		else {
+			cjProductImpl.setCoverImageURL(coverImageURL);
+		}
+
+		cjProductImpl.setSmallImage(smallImage);
+		cjProductImpl.setSmallImageFileEntryId(smallImageFileEntryId);
+		cjProductImpl.setSmallImageId(smallImageId);
+
+		if (smallImageURL == null) {
+			cjProductImpl.setSmallImageURL(StringPool.BLANK);
+		}
+		else {
+			cjProductImpl.setSmallImageURL(smallImageURL);
+		}
 
 		cjProductImpl.resetOriginalValues();
 
@@ -311,6 +412,27 @@ public class CJProductCacheModel implements CacheModel<CJProduct>,
 		inStock = objectInput.readUTF();
 
 		viewCount = objectInput.readInt();
+
+		status = objectInput.readInt();
+
+		statusByUserId = objectInput.readLong();
+		statusByUserName = objectInput.readUTF();
+		statusDate = objectInput.readLong();
+		subtitle = objectInput.readUTF();
+		urlTitle = objectInput.readUTF();
+		content = objectInput.readUTF();
+		displayDate = objectInput.readLong();
+		coverImageCaption = objectInput.readUTF();
+
+		coverImageFileEntryId = objectInput.readLong();
+		coverImageURL = objectInput.readUTF();
+
+		smallImage = objectInput.readBoolean();
+
+		smallImageFileEntryId = objectInput.readLong();
+
+		smallImageId = objectInput.readLong();
+		smallImageURL = objectInput.readUTF();
 	}
 
 	@Override
@@ -454,6 +576,71 @@ public class CJProductCacheModel implements CacheModel<CJProduct>,
 		}
 
 		objectOutput.writeInt(viewCount);
+
+		objectOutput.writeInt(status);
+
+		objectOutput.writeLong(statusByUserId);
+
+		if (statusByUserName == null) {
+			objectOutput.writeUTF(StringPool.BLANK);
+		}
+		else {
+			objectOutput.writeUTF(statusByUserName);
+		}
+
+		objectOutput.writeLong(statusDate);
+
+		if (subtitle == null) {
+			objectOutput.writeUTF(StringPool.BLANK);
+		}
+		else {
+			objectOutput.writeUTF(subtitle);
+		}
+
+		if (urlTitle == null) {
+			objectOutput.writeUTF(StringPool.BLANK);
+		}
+		else {
+			objectOutput.writeUTF(urlTitle);
+		}
+
+		if (content == null) {
+			objectOutput.writeUTF(StringPool.BLANK);
+		}
+		else {
+			objectOutput.writeUTF(content);
+		}
+
+		objectOutput.writeLong(displayDate);
+
+		if (coverImageCaption == null) {
+			objectOutput.writeUTF(StringPool.BLANK);
+		}
+		else {
+			objectOutput.writeUTF(coverImageCaption);
+		}
+
+		objectOutput.writeLong(coverImageFileEntryId);
+
+		if (coverImageURL == null) {
+			objectOutput.writeUTF(StringPool.BLANK);
+		}
+		else {
+			objectOutput.writeUTF(coverImageURL);
+		}
+
+		objectOutput.writeBoolean(smallImage);
+
+		objectOutput.writeLong(smallImageFileEntryId);
+
+		objectOutput.writeLong(smallImageId);
+
+		if (smallImageURL == null) {
+			objectOutput.writeUTF(StringPool.BLANK);
+		}
+		else {
+			objectOutput.writeUTF(smallImageURL);
+		}
 	}
 
 	public String uuid;
@@ -481,4 +668,19 @@ public class CJProductCacheModel implements CacheModel<CJProduct>,
 	public String imageUrl;
 	public String inStock;
 	public int viewCount;
+	public int status;
+	public long statusByUserId;
+	public String statusByUserName;
+	public long statusDate;
+	public String subtitle;
+	public String urlTitle;
+	public String content;
+	public long displayDate;
+	public String coverImageCaption;
+	public long coverImageFileEntryId;
+	public String coverImageURL;
+	public boolean smallImage;
+	public long smallImageFileEntryId;
+	public long smallImageId;
+	public String smallImageURL;
 }

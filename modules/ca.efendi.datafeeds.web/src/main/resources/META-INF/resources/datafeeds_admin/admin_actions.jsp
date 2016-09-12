@@ -1,5 +1,6 @@
 <%@ page import="ca.efendi.datafeeds.model.FtpSubscription" %>
-<%@include file="init.jsp" %>
+<%@ page import="com.liferay.portal.kernel.util.ParamUtil" %>
+<%@include file="/datafeeds_admin/init.jsp" %>
 
 <%
     ResultRow row = (ResultRow) request.getAttribute(

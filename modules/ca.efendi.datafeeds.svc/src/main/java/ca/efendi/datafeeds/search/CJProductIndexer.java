@@ -18,12 +18,14 @@ package ca.efendi.datafeeds.search;
 
 import ca.efendi.datafeeds.model.CJProduct;
 import ca.efendi.datafeeds.service.CJProductLocalService;
-import ca.efendi.datafeeds.service.CJProductLocalServiceUtil;
-import ca.efendi.datafeeds.service.FtpSubscriptionLocalService;
-import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
-import com.liferay.portal.kernel.search.*;
+import com.liferay.portal.kernel.search.BaseIndexer;
+import com.liferay.portal.kernel.search.Document;
+import com.liferay.portal.kernel.search.Field;
+import com.liferay.portal.kernel.search.IndexWriterHelperUtil;
+import com.liferay.portal.kernel.search.Indexer;
+import com.liferay.portal.kernel.search.Summary;
 import com.liferay.portal.kernel.security.permission.PermissionChecker;
 import com.liferay.portal.kernel.util.GetterUtil;
 import com.liferay.portal.kernel.util.HtmlUtil;
@@ -47,7 +49,7 @@ public class CJProductIndexer extends BaseIndexer<CJProduct> {
                 Field.ASSET_TAG_NAMES, Field.COMPANY_ID, Field.CONTENT,
                 Field.ENTRY_CLASS_NAME, Field.ENTRY_CLASS_PK, Field.GROUP_ID,
                 Field.MODIFIED_DATE, Field.SCOPE_GROUP_ID, Field.TITLE, Field.UID);
-        setFilterSearch(false);
+        setFilterSearch(true);
         setPermissionAware(false);
     }
 
@@ -84,13 +86,11 @@ public class CJProductIndexer extends BaseIndexer<CJProduct> {
     }
 
 
-    /**
-     * @see BaseIndexer#doDelete(Object)
-     */
     @Override
     protected void doDelete(final CJProduct object) throws Exception {
         deleteDocument(object.getCompanyId(), object.getProductId());
     }
+
 
     @Override
     protected Document doGetDocument(final CJProduct object) throws Exception {
@@ -105,11 +105,7 @@ public class CJProductIndexer extends BaseIndexer<CJProduct> {
         return document;
     }
 
-    /**
-     * @see BaseIndexer#doGetSummary(Document,
-     * Locale, String, PortletRequest,
-     * PortletResponse)
-     */
+
     @Override
     protected Summary doGetSummary(final Document document, final Locale locale, final String snippet, final PortletRequest portletRequest,
                                    final PortletResponse portletResponse)
@@ -119,9 +115,6 @@ public class CJProductIndexer extends BaseIndexer<CJProduct> {
         return summary;
     }
 
-    /**
-     * @see BaseIndexer#doReindex(Object)
-     */
     @Override
     protected void doReindex(final CJProduct object) throws Exception {
         final Document document = getDocument(object);
@@ -131,56 +124,43 @@ public class CJProductIndexer extends BaseIndexer<CJProduct> {
         IndexWriterHelperUtil.updateDocument(
                 getSearchEngineId(), object.getCompanyId(), document,
                 isCommitImmediately());
+
     }
 
-    /**
-     * @see BaseIndexer#doReindex(String,
-     * long)
-     */
     @Override
     protected void doReindex(final String className, final long classPK) throws Exception {
-        final CJProduct entry = CJProductLocalServiceUtil.getCJProduct(classPK);
+        final CJProduct entry = _cjProductLocalService.getCJProduct(classPK);
         doReindex(entry);
     }
 
-    /**
-     * @see BaseIndexer#doReindex(String[])
-     */
     @Override
     protected void doReindex(final String[] ids) throws Exception {
-        _log.info("doReindex called for company Id " + ids[0]);
         final long companyId = GetterUtil.getLong(ids[0]);
         reindexEntries(companyId);
     }
 
-    protected void reindexEntries(final long companyId) throws PortalException {
+    protected void reindexEntries(final long companyId) throws Exception {
 
 
         List<CJProduct> products = _cjProductLocalService.getCJProducts(0, 100000);
 
         for (CJProduct entry : products) {
-            final Document document = getDocument(entry);
-
-            IndexWriterHelperUtil.updateDocument(
-                    getSearchEngineId(), entry.getCompanyId(), document,
-                    isCommitImmediately());
-
+            doReindex(entry);
         }
     }
 
-    @Reference(unbind = "-")
-    protected void setFtpSubscriptionLocalService(
-            FtpSubscriptionLocalService ftpSubscriptionLocalService) {
-
-        _ftpSubscriptionLocalService = ftpSubscriptionLocalService;
-    }
+//    @Reference(unbind = "-")
+//    protected void setFtpSubscriptionLocalService(
+//            FtpSubscriptionLocalService ftpSubscriptionLocalService) {
+//        _ftpSubscriptionLocalService = ftpSubscriptionLocalService;
+//    }
 
     @Reference(unbind = "-")
     public void setCJProductLocalService(CJProductLocalService cjProductLocalService) {
         _cjProductLocalService = cjProductLocalService;
     }
 
-    private FtpSubscriptionLocalService _ftpSubscriptionLocalService;
+    //private FtpSubscriptionLocalService _ftpSubscriptionLocalService;
     private CJProductLocalService _cjProductLocalService;
 
 }

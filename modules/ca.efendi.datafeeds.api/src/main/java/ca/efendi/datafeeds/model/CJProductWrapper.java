@@ -84,6 +84,21 @@ public class CJProductWrapper implements CJProduct, ModelWrapper<CJProduct> {
 		attributes.put("imageUrl", getImageUrl());
 		attributes.put("inStock", getInStock());
 		attributes.put("viewCount", getViewCount());
+		attributes.put("status", getStatus());
+		attributes.put("statusByUserId", getStatusByUserId());
+		attributes.put("statusByUserName", getStatusByUserName());
+		attributes.put("statusDate", getStatusDate());
+		attributes.put("subtitle", getSubtitle());
+		attributes.put("urlTitle", getUrlTitle());
+		attributes.put("content", getContent());
+		attributes.put("displayDate", getDisplayDate());
+		attributes.put("coverImageCaption", getCoverImageCaption());
+		attributes.put("coverImageFileEntryId", getCoverImageFileEntryId());
+		attributes.put("coverImageURL", getCoverImageURL());
+		attributes.put("smallImage", getSmallImage());
+		attributes.put("smallImageFileEntryId", getSmallImageFileEntryId());
+		attributes.put("smallImageId", getSmallImageId());
+		attributes.put("smallImageURL", getSmallImageURL());
 
 		return attributes;
 	}
@@ -239,6 +254,118 @@ public class CJProductWrapper implements CJProduct, ModelWrapper<CJProduct> {
 		if (viewCount != null) {
 			setViewCount(viewCount);
 		}
+
+		Integer status = (Integer)attributes.get("status");
+
+		if (status != null) {
+			setStatus(status);
+		}
+
+		Long statusByUserId = (Long)attributes.get("statusByUserId");
+
+		if (statusByUserId != null) {
+			setStatusByUserId(statusByUserId);
+		}
+
+		String statusByUserName = (String)attributes.get("statusByUserName");
+
+		if (statusByUserName != null) {
+			setStatusByUserName(statusByUserName);
+		}
+
+		Date statusDate = (Date)attributes.get("statusDate");
+
+		if (statusDate != null) {
+			setStatusDate(statusDate);
+		}
+
+		String subtitle = (String)attributes.get("subtitle");
+
+		if (subtitle != null) {
+			setSubtitle(subtitle);
+		}
+
+		String urlTitle = (String)attributes.get("urlTitle");
+
+		if (urlTitle != null) {
+			setUrlTitle(urlTitle);
+		}
+
+		String content = (String)attributes.get("content");
+
+		if (content != null) {
+			setContent(content);
+		}
+
+		Date displayDate = (Date)attributes.get("displayDate");
+
+		if (displayDate != null) {
+			setDisplayDate(displayDate);
+		}
+
+		String coverImageCaption = (String)attributes.get("coverImageCaption");
+
+		if (coverImageCaption != null) {
+			setCoverImageCaption(coverImageCaption);
+		}
+
+		Long coverImageFileEntryId = (Long)attributes.get(
+				"coverImageFileEntryId");
+
+		if (coverImageFileEntryId != null) {
+			setCoverImageFileEntryId(coverImageFileEntryId);
+		}
+
+		String coverImageURL = (String)attributes.get("coverImageURL");
+
+		if (coverImageURL != null) {
+			setCoverImageURL(coverImageURL);
+		}
+
+		Boolean smallImage = (Boolean)attributes.get("smallImage");
+
+		if (smallImage != null) {
+			setSmallImage(smallImage);
+		}
+
+		Long smallImageFileEntryId = (Long)attributes.get(
+				"smallImageFileEntryId");
+
+		if (smallImageFileEntryId != null) {
+			setSmallImageFileEntryId(smallImageFileEntryId);
+		}
+
+		Long smallImageId = (Long)attributes.get("smallImageId");
+
+		if (smallImageId != null) {
+			setSmallImageId(smallImageId);
+		}
+
+		String smallImageURL = (String)attributes.get("smallImageURL");
+
+		if (smallImageURL != null) {
+			setSmallImageURL(smallImageURL);
+		}
+	}
+
+	/**
+	* Returns the small image of this c j product.
+	*
+	* @return the small image of this c j product
+	*/
+	@Override
+	public boolean getSmallImage() {
+		return _cjProduct.getSmallImage();
+	}
+
+	/**
+	* Returns <code>true</code> if this c j product is approved.
+	*
+	* @return <code>true</code> if this c j product is approved; <code>false</code> otherwise
+	*/
+	@Override
+	public boolean isApproved() {
+		return _cjProduct.isApproved();
 	}
 
 	@Override
@@ -246,14 +373,94 @@ public class CJProductWrapper implements CJProduct, ModelWrapper<CJProduct> {
 		return _cjProduct.isCachedModel();
 	}
 
+	/**
+	* Returns <code>true</code> if this c j product is denied.
+	*
+	* @return <code>true</code> if this c j product is denied; <code>false</code> otherwise
+	*/
+	@Override
+	public boolean isDenied() {
+		return _cjProduct.isDenied();
+	}
+
+	/**
+	* Returns <code>true</code> if this c j product is a draft.
+	*
+	* @return <code>true</code> if this c j product is a draft; <code>false</code> otherwise
+	*/
+	@Override
+	public boolean isDraft() {
+		return _cjProduct.isDraft();
+	}
+
 	@Override
 	public boolean isEscapedModel() {
 		return _cjProduct.isEscapedModel();
 	}
 
+	/**
+	* Returns <code>true</code> if this c j product is expired.
+	*
+	* @return <code>true</code> if this c j product is expired; <code>false</code> otherwise
+	*/
+	@Override
+	public boolean isExpired() {
+		return _cjProduct.isExpired();
+	}
+
+	/**
+	* Returns <code>true</code> if this c j product is inactive.
+	*
+	* @return <code>true</code> if this c j product is inactive; <code>false</code> otherwise
+	*/
+	@Override
+	public boolean isInactive() {
+		return _cjProduct.isInactive();
+	}
+
+	/**
+	* Returns <code>true</code> if this c j product is incomplete.
+	*
+	* @return <code>true</code> if this c j product is incomplete; <code>false</code> otherwise
+	*/
+	@Override
+	public boolean isIncomplete() {
+		return _cjProduct.isIncomplete();
+	}
+
 	@Override
 	public boolean isNew() {
 		return _cjProduct.isNew();
+	}
+
+	/**
+	* Returns <code>true</code> if this c j product is pending.
+	*
+	* @return <code>true</code> if this c j product is pending; <code>false</code> otherwise
+	*/
+	@Override
+	public boolean isPending() {
+		return _cjProduct.isPending();
+	}
+
+	/**
+	* Returns <code>true</code> if this c j product is scheduled.
+	*
+	* @return <code>true</code> if this c j product is scheduled; <code>false</code> otherwise
+	*/
+	@Override
+	public boolean isScheduled() {
+		return _cjProduct.isScheduled();
+	}
+
+	/**
+	* Returns <code>true</code> if this c j product is small image.
+	*
+	* @return <code>true</code> if this c j product is small image; <code>false</code> otherwise
+	*/
+	@Override
+	public boolean isSmallImage() {
+		return _cjProduct.isSmallImage();
 	}
 
 	@Override
@@ -279,6 +486,16 @@ public class CJProductWrapper implements CJProduct, ModelWrapper<CJProduct> {
 	@Override
 	public int compareTo(ca.efendi.datafeeds.model.CJProduct cjProduct) {
 		return _cjProduct.compareTo(cjProduct);
+	}
+
+	/**
+	* Returns the status of this c j product.
+	*
+	* @return the status of this c j product
+	*/
+	@Override
+	public int getStatus() {
+		return _cjProduct.getStatus();
 	}
 
 	/**
@@ -324,6 +541,43 @@ public class CJProductWrapper implements CJProduct, ModelWrapper<CJProduct> {
 	@Override
 	public java.lang.String getCatalogName() {
 		return _cjProduct.getCatalogName();
+	}
+
+	/**
+	* Returns the content of this c j product.
+	*
+	* @return the content of this c j product
+	*/
+	@Override
+	public java.lang.String getContent() {
+		return _cjProduct.getContent();
+	}
+
+	/**
+	* Returns the cover image caption of this c j product.
+	*
+	* @return the cover image caption of this c j product
+	*/
+	@Override
+	public java.lang.String getCoverImageCaption() {
+		return _cjProduct.getCoverImageCaption();
+	}
+
+	/**
+	* Returns the cover image u r l of this c j product.
+	*
+	* @return the cover image u r l of this c j product
+	*/
+	@Override
+	public java.lang.String getCoverImageURL() {
+		return _cjProduct.getCoverImageURL();
+	}
+
+	@Override
+	public java.lang.String getCoverImageURL(
+		com.liferay.portal.kernel.theme.ThemeDisplay themeDisplay)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		return _cjProduct.getCoverImageURL(themeDisplay);
 	}
 
 	/**
@@ -467,6 +721,63 @@ public class CJProductWrapper implements CJProduct, ModelWrapper<CJProduct> {
 	}
 
 	/**
+	* Returns the small image u r l of this c j product.
+	*
+	* @return the small image u r l of this c j product
+	*/
+	@Override
+	public java.lang.String getSmallImageURL() {
+		return _cjProduct.getSmallImageURL();
+	}
+
+	@Override
+	public java.lang.String getSmallImageURL(
+		com.liferay.portal.kernel.theme.ThemeDisplay themeDisplay)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		return _cjProduct.getSmallImageURL(themeDisplay);
+	}
+
+	/**
+	* Returns the status by user name of this c j product.
+	*
+	* @return the status by user name of this c j product
+	*/
+	@Override
+	public java.lang.String getStatusByUserName() {
+		return _cjProduct.getStatusByUserName();
+	}
+
+	/**
+	* Returns the status by user uuid of this c j product.
+	*
+	* @return the status by user uuid of this c j product
+	*/
+	@Override
+	public java.lang.String getStatusByUserUuid() {
+		return _cjProduct.getStatusByUserUuid();
+	}
+
+	/**
+	* Returns the subtitle of this c j product.
+	*
+	* @return the subtitle of this c j product
+	*/
+	@Override
+	public java.lang.String getSubtitle() {
+		return _cjProduct.getSubtitle();
+	}
+
+	/**
+	* Returns the url title of this c j product.
+	*
+	* @return the url title of this c j product
+	*/
+	@Override
+	public java.lang.String getUrlTitle() {
+		return _cjProduct.getUrlTitle();
+	}
+
+	/**
 	* Returns the user name of this c j product.
 	*
 	* @return the user name of this c j product
@@ -517,6 +828,16 @@ public class CJProductWrapper implements CJProduct, ModelWrapper<CJProduct> {
 	}
 
 	/**
+	* Returns the display date of this c j product.
+	*
+	* @return the display date of this c j product
+	*/
+	@Override
+	public Date getDisplayDate() {
+		return _cjProduct.getDisplayDate();
+	}
+
+	/**
 	* Returns the modified date of this c j product.
 	*
 	* @return the modified date of this c j product
@@ -527,6 +848,16 @@ public class CJProductWrapper implements CJProduct, ModelWrapper<CJProduct> {
 	}
 
 	/**
+	* Returns the status date of this c j product.
+	*
+	* @return the status date of this c j product
+	*/
+	@Override
+	public Date getStatusDate() {
+		return _cjProduct.getStatusDate();
+	}
+
+	/**
 	* Returns the company ID of this c j product.
 	*
 	* @return the company ID of this c j product
@@ -534,6 +865,21 @@ public class CJProductWrapper implements CJProduct, ModelWrapper<CJProduct> {
 	@Override
 	public long getCompanyId() {
 		return _cjProduct.getCompanyId();
+	}
+
+	/**
+	* Returns the cover image file entry ID of this c j product.
+	*
+	* @return the cover image file entry ID of this c j product
+	*/
+	@Override
+	public long getCoverImageFileEntryId() {
+		return _cjProduct.getCoverImageFileEntryId();
+	}
+
+	@Override
+	public long getEntryId() {
+		return _cjProduct.getEntryId();
 	}
 
 	/**
@@ -564,6 +910,36 @@ public class CJProductWrapper implements CJProduct, ModelWrapper<CJProduct> {
 	@Override
 	public long getProductId() {
 		return _cjProduct.getProductId();
+	}
+
+	/**
+	* Returns the small image file entry ID of this c j product.
+	*
+	* @return the small image file entry ID of this c j product
+	*/
+	@Override
+	public long getSmallImageFileEntryId() {
+		return _cjProduct.getSmallImageFileEntryId();
+	}
+
+	/**
+	* Returns the small image ID of this c j product.
+	*
+	* @return the small image ID of this c j product
+	*/
+	@Override
+	public long getSmallImageId() {
+		return _cjProduct.getSmallImageId();
+	}
+
+	/**
+	* Returns the status by user ID of this c j product.
+	*
+	* @return the status by user ID of this c j product
+	*/
+	@Override
+	public long getStatusByUserId() {
+		return _cjProduct.getStatusByUserId();
 	}
 
 	/**
@@ -617,6 +993,46 @@ public class CJProductWrapper implements CJProduct, ModelWrapper<CJProduct> {
 	}
 
 	/**
+	* Sets the content of this c j product.
+	*
+	* @param content the content of this c j product
+	*/
+	@Override
+	public void setContent(java.lang.String content) {
+		_cjProduct.setContent(content);
+	}
+
+	/**
+	* Sets the cover image caption of this c j product.
+	*
+	* @param coverImageCaption the cover image caption of this c j product
+	*/
+	@Override
+	public void setCoverImageCaption(java.lang.String coverImageCaption) {
+		_cjProduct.setCoverImageCaption(coverImageCaption);
+	}
+
+	/**
+	* Sets the cover image file entry ID of this c j product.
+	*
+	* @param coverImageFileEntryId the cover image file entry ID of this c j product
+	*/
+	@Override
+	public void setCoverImageFileEntryId(long coverImageFileEntryId) {
+		_cjProduct.setCoverImageFileEntryId(coverImageFileEntryId);
+	}
+
+	/**
+	* Sets the cover image u r l of this c j product.
+	*
+	* @param coverImageURL the cover image u r l of this c j product
+	*/
+	@Override
+	public void setCoverImageURL(java.lang.String coverImageURL) {
+		_cjProduct.setCoverImageURL(coverImageURL);
+	}
+
+	/**
 	* Sets the create date of this c j product.
 	*
 	* @param createDate the create date of this c j product
@@ -644,6 +1060,16 @@ public class CJProductWrapper implements CJProduct, ModelWrapper<CJProduct> {
 	@Override
 	public void setDescription(java.lang.String description) {
 		_cjProduct.setDescription(description);
+	}
+
+	/**
+	* Sets the display date of this c j product.
+	*
+	* @param displayDate the display date of this c j product
+	*/
+	@Override
+	public void setDisplayDate(Date displayDate) {
+		_cjProduct.setDisplayDate(displayDate);
 	}
 
 	@Override
@@ -830,6 +1256,116 @@ public class CJProductWrapper implements CJProduct, ModelWrapper<CJProduct> {
 	@Override
 	public void setSku(java.lang.String sku) {
 		_cjProduct.setSku(sku);
+	}
+
+	/**
+	* Sets whether this c j product is small image.
+	*
+	* @param smallImage the small image of this c j product
+	*/
+	@Override
+	public void setSmallImage(boolean smallImage) {
+		_cjProduct.setSmallImage(smallImage);
+	}
+
+	/**
+	* Sets the small image file entry ID of this c j product.
+	*
+	* @param smallImageFileEntryId the small image file entry ID of this c j product
+	*/
+	@Override
+	public void setSmallImageFileEntryId(long smallImageFileEntryId) {
+		_cjProduct.setSmallImageFileEntryId(smallImageFileEntryId);
+	}
+
+	/**
+	* Sets the small image ID of this c j product.
+	*
+	* @param smallImageId the small image ID of this c j product
+	*/
+	@Override
+	public void setSmallImageId(long smallImageId) {
+		_cjProduct.setSmallImageId(smallImageId);
+	}
+
+	/**
+	* Sets the small image u r l of this c j product.
+	*
+	* @param smallImageURL the small image u r l of this c j product
+	*/
+	@Override
+	public void setSmallImageURL(java.lang.String smallImageURL) {
+		_cjProduct.setSmallImageURL(smallImageURL);
+	}
+
+	/**
+	* Sets the status of this c j product.
+	*
+	* @param status the status of this c j product
+	*/
+	@Override
+	public void setStatus(int status) {
+		_cjProduct.setStatus(status);
+	}
+
+	/**
+	* Sets the status by user ID of this c j product.
+	*
+	* @param statusByUserId the status by user ID of this c j product
+	*/
+	@Override
+	public void setStatusByUserId(long statusByUserId) {
+		_cjProduct.setStatusByUserId(statusByUserId);
+	}
+
+	/**
+	* Sets the status by user name of this c j product.
+	*
+	* @param statusByUserName the status by user name of this c j product
+	*/
+	@Override
+	public void setStatusByUserName(java.lang.String statusByUserName) {
+		_cjProduct.setStatusByUserName(statusByUserName);
+	}
+
+	/**
+	* Sets the status by user uuid of this c j product.
+	*
+	* @param statusByUserUuid the status by user uuid of this c j product
+	*/
+	@Override
+	public void setStatusByUserUuid(java.lang.String statusByUserUuid) {
+		_cjProduct.setStatusByUserUuid(statusByUserUuid);
+	}
+
+	/**
+	* Sets the status date of this c j product.
+	*
+	* @param statusDate the status date of this c j product
+	*/
+	@Override
+	public void setStatusDate(Date statusDate) {
+		_cjProduct.setStatusDate(statusDate);
+	}
+
+	/**
+	* Sets the subtitle of this c j product.
+	*
+	* @param subtitle the subtitle of this c j product
+	*/
+	@Override
+	public void setSubtitle(java.lang.String subtitle) {
+		_cjProduct.setSubtitle(subtitle);
+	}
+
+	/**
+	* Sets the url title of this c j product.
+	*
+	* @param urlTitle the url title of this c j product
+	*/
+	@Override
+	public void setUrlTitle(java.lang.String urlTitle) {
+		_cjProduct.setUrlTitle(urlTitle);
 	}
 
 	/**

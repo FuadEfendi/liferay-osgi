@@ -58,6 +58,21 @@ public class CJProductSoap implements Serializable {
 		soapModel.setImageUrl(model.getImageUrl());
 		soapModel.setInStock(model.getInStock());
 		soapModel.setViewCount(model.getViewCount());
+		soapModel.setStatus(model.getStatus());
+		soapModel.setStatusByUserId(model.getStatusByUserId());
+		soapModel.setStatusByUserName(model.getStatusByUserName());
+		soapModel.setStatusDate(model.getStatusDate());
+		soapModel.setSubtitle(model.getSubtitle());
+		soapModel.setUrlTitle(model.getUrlTitle());
+		soapModel.setContent(model.getContent());
+		soapModel.setDisplayDate(model.getDisplayDate());
+		soapModel.setCoverImageCaption(model.getCoverImageCaption());
+		soapModel.setCoverImageFileEntryId(model.getCoverImageFileEntryId());
+		soapModel.setCoverImageURL(model.getCoverImageURL());
+		soapModel.setSmallImage(model.getSmallImage());
+		soapModel.setSmallImageFileEntryId(model.getSmallImageFileEntryId());
+		soapModel.setSmallImageId(model.getSmallImageId());
+		soapModel.setSmallImageURL(model.getSmallImageURL());
 
 		return soapModel;
 	}
@@ -310,6 +325,130 @@ public class CJProductSoap implements Serializable {
 		_viewCount = viewCount;
 	}
 
+	public int getStatus() {
+		return _status;
+	}
+
+	public void setStatus(int status) {
+		_status = status;
+	}
+
+	public long getStatusByUserId() {
+		return _statusByUserId;
+	}
+
+	public void setStatusByUserId(long statusByUserId) {
+		_statusByUserId = statusByUserId;
+	}
+
+	public String getStatusByUserName() {
+		return _statusByUserName;
+	}
+
+	public void setStatusByUserName(String statusByUserName) {
+		_statusByUserName = statusByUserName;
+	}
+
+	public Date getStatusDate() {
+		return _statusDate;
+	}
+
+	public void setStatusDate(Date statusDate) {
+		_statusDate = statusDate;
+	}
+
+	public String getSubtitle() {
+		return _subtitle;
+	}
+
+	public void setSubtitle(String subtitle) {
+		_subtitle = subtitle;
+	}
+
+	public String getUrlTitle() {
+		return _urlTitle;
+	}
+
+	public void setUrlTitle(String urlTitle) {
+		_urlTitle = urlTitle;
+	}
+
+	public String getContent() {
+		return _content;
+	}
+
+	public void setContent(String content) {
+		_content = content;
+	}
+
+	public Date getDisplayDate() {
+		return _displayDate;
+	}
+
+	public void setDisplayDate(Date displayDate) {
+		_displayDate = displayDate;
+	}
+
+	public String getCoverImageCaption() {
+		return _coverImageCaption;
+	}
+
+	public void setCoverImageCaption(String coverImageCaption) {
+		_coverImageCaption = coverImageCaption;
+	}
+
+	public long getCoverImageFileEntryId() {
+		return _coverImageFileEntryId;
+	}
+
+	public void setCoverImageFileEntryId(long coverImageFileEntryId) {
+		_coverImageFileEntryId = coverImageFileEntryId;
+	}
+
+	public String getCoverImageURL() {
+		return _coverImageURL;
+	}
+
+	public void setCoverImageURL(String coverImageURL) {
+		_coverImageURL = coverImageURL;
+	}
+
+	public boolean getSmallImage() {
+		return _smallImage;
+	}
+
+	public boolean isSmallImage() {
+		return _smallImage;
+	}
+
+	public void setSmallImage(boolean smallImage) {
+		_smallImage = smallImage;
+	}
+
+	public long getSmallImageFileEntryId() {
+		return _smallImageFileEntryId;
+	}
+
+	public void setSmallImageFileEntryId(long smallImageFileEntryId) {
+		_smallImageFileEntryId = smallImageFileEntryId;
+	}
+
+	public long getSmallImageId() {
+		return _smallImageId;
+	}
+
+	public void setSmallImageId(long smallImageId) {
+		_smallImageId = smallImageId;
+	}
+
+	public String getSmallImageURL() {
+		return _smallImageURL;
+	}
+
+	public void setSmallImageURL(String smallImageURL) {
+		_smallImageURL = smallImageURL;
+	}
+
 	private String _uuid;
 	private long _productId;
 	private long _groupId;
@@ -335,4 +474,19 @@ public class CJProductSoap implements Serializable {
 	private String _imageUrl;
 	private String _inStock;
 	private int _viewCount;
+	private int _status;
+	private long _statusByUserId;
+	private String _statusByUserName;
+	private Date _statusDate;
+	private String _subtitle;
+	private String _urlTitle;
+	private String _content;
+	private Date _displayDate;
+	private String _coverImageCaption;
+	private long _coverImageFileEntryId;
+	private String _coverImageURL;
+	private boolean _smallImage;
+	private long _smallImageFileEntryId;
+	private long _smallImageId;
+	private String _smallImageURL;
 }

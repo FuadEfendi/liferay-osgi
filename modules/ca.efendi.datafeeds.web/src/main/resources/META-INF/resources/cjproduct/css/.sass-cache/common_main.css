@@ -1,0 +1,42 @@
+.portlet-blogs .entry-subtitle {
+  margin-bottom: 20px; }
+  .portlet-blogs .entry-subtitle h4 {
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 45px;
+    margin-top: 35px;
+    text-align: center; }
+
+.portlet-blogs .entry-body {
+  position: relative; }
+  .portlet-blogs .entry-body h1 {
+    font-weight: bold;
+    text-align: center; }
+  .portlet-blogs .entry-body p {
+    line-height: 27px;
+    margin-bottom: 30px; }
+    .portlet-blogs .entry-body p:last-child {
+      margin-bottom: 0; }
+  .portlet-blogs .entry-body img {
+    max-width: 100%; }
+  .portlet-blogs .entry-body .cover-image-container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px; }
+  .portlet-blogs .entry-body .uploading-image-container {
+    display: inline-block; }
+    .portlet-blogs .entry-body .uploading-image-container .progressbar {
+      height: 20px; }
+  .portlet-blogs .entry-body .uploading-image {
+    opacity: 0.4; }
+
+.portlet-blogs .entry-content img {
+  max-width: 100%; }
+
+.portlet-blogs .cover-image-caption {
+  color: #868896;
+  text-align: right; }
+
+.firefox .portlet-blogs fieldset {
+  display: table-cell; }

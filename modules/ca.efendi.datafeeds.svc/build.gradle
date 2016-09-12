@@ -2,6 +2,7 @@ dependencies {
 	compile group: "biz.aQute.bnd", name: "biz.aQute.bndlib", version: "3.1.0"
 	compile group: "com.liferay", name: "com.liferay.osgi.util", version: "3.0.0"
 	compile group: "com.liferay", name: "com.liferay.portal.spring.extender", version: "2.0.0"
+	compile group: "com.liferay.portal", name: "com.liferay.portal.impl", version: "2.6.0"
 	compile 'javax.portlet:portlet-api:2.0'
 	compile 'javax.servlet:javax.servlet-api:3.0.1'
 	compile 'org.apache.commons:commons-lang3:3.4'

@@ -1,0 +1,588 @@
+{
+  "bool": {
+    "must": {
+      "bool": {
+        "must": {
+          "bool": {
+            "should": [
+              {
+                "wildcard": {
+                  "assetCategoryTitles": "*spandex*"
+                }
+              },
+              {
+                "wildcard": {
+                  "assetCategoryTitles_en_US": "*spandex*"
+                }
+              },
+              {
+                "term": {
+                  "assetTagNames": "spandex"
+                }
+              },
+              {
+                "wildcard": {
+                  "assetCategoryTitles": "*spandex*"
+                }
+              },
+              {
+                "wildcard": {
+                  "assetTagNames": "*spandex*"
+                }
+              },
+              {
+                "match": {
+                  "comments": {
+                    "query": "spandex",
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "match": {
+                  "content": {
+                    "query": "spandex",
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "match": {
+                  "description": {
+                    "query": "spandex",
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "match": {
+                  "properties": {
+                    "query": "spandex",
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "match": {
+                  "title": {
+                    "query": "spandex",
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "match": {
+                  "url": {
+                    "query": "spandex",
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "wildcard": {
+                  "userName": "*spandex*"
+                }
+              },
+              {
+                "match": {
+                  "ddmContent": {
+                    "query": "spandex",
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "match": {
+                  "extension": {
+                    "query": "spandex",
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "match": {
+                  "fileEntryTypeId": {
+                    "query": "spandex",
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "wildcard": {
+                  "path": "*spandex*"
+                }
+              },
+              {
+                "match": {
+                  "city": {
+                    "query": "spandex",
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "match": {
+                  "country": {
+                    "query": "spandex",
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "wildcard": {
+                  "emailAddress": "*spandex*"
+                }
+              },
+              {
+                "wildcard": {
+                  "firstName": "*spandex*"
+                }
+              },
+              {
+                "match": {
+                  "fullName": {
+                    "query": "spandex",
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "wildcard": {
+                  "lastName": "*spandex*"
+                }
+              },
+              {
+                "wildcard": {
+                  "middleName": "*spandex*"
+                }
+              },
+              {
+                "match": {
+                  "region": {
+                    "query": "spandex",
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "wildcard": {
+                  "screenName": "*spandex*"
+                }
+              },
+              {
+                "match": {
+                  "street": {
+                    "query": "spandex",
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "match": {
+                  "zip": {
+                    "query": "spandex",
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "wildcard": {
+                  "userName": "*spandex*"
+                }
+              },
+              {
+                "match": {
+                  "ddmContent": {
+                    "query": "spandex",
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "match": {
+                  "articleId": {
+                    "query": "spandex",
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "match": {
+                  "classPK": {
+                    "query": "spandex",
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "match": {
+                  "content_en_US": {
+                    "query": "spandex",
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "match": {
+                  "description_en_US": {
+                    "query": "spandex",
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "match": {
+                  "entryClassPK": {
+                    "query": "spandex",
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "match": {
+                  "title_en_US": {
+                    "query": "spandex",
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "wildcard": {
+                  "userName": "*spandex*"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "filter": {
+      "bool": {
+        "must": [
+          {
+            "term": {
+              "companyId": "20116"
+            }
+          },
+          {
+            "bool": {
+              "must": [
+                {
+                  "bool": {
+                    "should": [
+                      {
+                        "bool": {
+                          "must": [
+                            {
+                              "terms": {
+                                "status": [
+                                  "0"
+                                ]
+                              }
+                            },
+                            {
+                              "bool": {
+                                "should": {
+                                  "term": {
+                                    "entryClassName": "com.liferay.wiki.model.WikiPage"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "bool": {
+                          "must": [
+                            {
+                              "terms": {
+                                "status": [
+                                  "0"
+                                ]
+                              }
+                            },
+                            {
+                              "bool": {
+                                "should": {
+                                  "term": {
+                                    "entryClassName": "com.liferay.document.library.kernel.model.DLFileEntry"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "bool": {
+                          "must": [
+                            {
+                              "term": {
+                                "status": "0"
+                              }
+                            },
+                            {
+                              "bool": {
+                                "should": {
+                                  "term": {
+                                    "entryClassName": "com.liferay.portal.kernel.model.User"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "bool": {
+                          "must": [
+                            {
+                              "terms": {
+                                "status": [
+                                  "0"
+                                ]
+                              }
+                            },
+                            {
+                              "bool": {
+                                "should": {
+                                  "term": {
+                                    "entryClassName": "com.liferay.bookmarks.model.BookmarksFolder"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "bool": {
+                          "must": [
+                            {
+                              "terms": {
+                                "status": [
+                                  "0"
+                                ]
+                              }
+                            },
+                            {
+                              "bool": {
+                                "should": {
+                                  "term": {
+                                    "entryClassName": "com.liferay.blogs.kernel.model.BlogsEntry"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "bool": {
+                          "must": [
+                            {
+                              "term": {
+                                "hidden": "false"
+                              }
+                            },
+                            {
+                              "terms": {
+                                "status": [
+                                  "0"
+                                ]
+                              }
+                            },
+                            {
+                              "bool": {
+                                "should": {
+                                  "term": {
+                                    "entryClassName": "com.liferay.document.library.kernel.model.DLFolder"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "bool": {
+                          "must": [
+                            {
+                              "term": {
+                                "status": "0"
+                              }
+                            },
+                            {
+                              "term": {
+                                "recordSetScope": "0"
+                              }
+                            },
+                            {
+                              "bool": {
+                                "should": [
+                                  {
+                                    "term": {
+                                      "entryClassName": "com.liferay.dynamic.data.lists.model.DDLRecordSet"
+                                    }
+                                  },
+                                  {
+                                    "term": {
+                                      "entryClassName": "com.liferay.dynamic.data.lists.model.DDLRecord"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "bool": {
+                          "must": [
+                            {
+                              "terms": {
+                                "status": [
+                                  "0"
+                                ]
+                              }
+                            },
+                            {
+                              "bool": {
+                                "should": {
+                                  "term": {
+                                    "entryClassName": "com.liferay.bookmarks.model.BookmarksEntry"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "bool": {
+                          "must": [
+                            {
+                              "term": {
+                                "head": "true"
+                              }
+                            },
+                            {
+                              "terms": {
+                                "status": [
+                                  "0"
+                                ]
+                              }
+                            },
+                            {
+                              "bool": {
+                                "should": {
+                                  "term": {
+                                    "entryClassName": "com.liferay.journal.model.JournalArticle"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "bool": {
+                          "must": [
+                            {
+                              "terms": {
+                                "status": [
+                                  "0"
+                                ]
+                              }
+                            },
+                            {
+                              "bool": {
+                                "should": {
+                                  "term": {
+                                    "entryClassName": "com.liferay.journal.model.JournalFolder"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "bool": {
+                          "must": [
+                            {
+                              "term": {
+                                "discussion": "false"
+                              }
+                            },
+                            {
+                              "terms": {
+                                "status": [
+                                  "0"
+                                ]
+                              }
+                            },
+                            {
+                              "bool": {
+                                "should": {
+                                  "term": {
+                                    "entryClassName": "com.liferay.message.boards.kernel.model.MBMessage"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "bool": {
+                          "must": {
+                            "bool": {
+                              "should": [
+                                {
+                                  "term": {
+                                    "entryClassName": "com.liferay.calendar.model.Calendar"
+                                  }
+                                },
+                                {
+                                  "term": {
+                                    "entryClassName": "com.liferay.calendar.model.CalendarBooking"
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "bool": {
+                    "must": [
+                      {
+                        "terms": {
+                          "groupId": [
+                            "20147"
+                          ]
+                        }
+                      },
+                      {
+                        "terms": {
+                          "scopeGroupId": [
+                            "20147"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

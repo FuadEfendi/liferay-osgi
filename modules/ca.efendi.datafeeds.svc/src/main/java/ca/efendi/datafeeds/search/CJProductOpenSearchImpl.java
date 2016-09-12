@@ -28,7 +28,7 @@ import org.osgi.service.component.annotations.Component;
 @Component(immediate = true, service = OpenSearch.class)
 public class CJProductOpenSearchImpl extends HitsOpenSearchImpl {
 
-    public static final String TITLE = "Liferay Bookmarks Search: ";
+    public static final String TITLE = "CJ Products Search: ";
 
     @Override
     public String getClassName() {

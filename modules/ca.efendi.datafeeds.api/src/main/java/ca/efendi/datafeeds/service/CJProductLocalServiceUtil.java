@@ -88,6 +88,12 @@ public class CJProductLocalServiceUtil {
 		return getService().deleteCJProduct(productId);
 	}
 
+	public static ca.efendi.datafeeds.model.CJProduct deleteEntry(
+		ca.efendi.datafeeds.model.CJProduct entry)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		return getService().deleteEntry(entry);
+	}
+
 	public static ca.efendi.datafeeds.model.CJProduct fetchCJProduct(
 		long productId) {
 		return getService().fetchCJProduct(productId);
@@ -138,10 +144,11 @@ public class CJProductLocalServiceUtil {
 		return getService().getCJProductByUuidAndGroupId(uuid, groupId);
 	}
 
-	public static ca.efendi.datafeeds.model.CJProduct refresh(long userId,
+	public static ca.efendi.datafeeds.model.CJProduct refresh(
+		ca.efendi.datafeeds.model.FtpSubscription subscription,
 		ca.efendi.datafeeds.model.CJProduct newCJProduct)
 		throws com.liferay.portal.kernel.exception.PortalException {
-		return getService().refresh(userId, newCJProduct);
+		return getService().refresh(subscription, newCJProduct);
 	}
 
 	/**
@@ -255,6 +262,12 @@ public class CJProductLocalServiceUtil {
 				   .dynamicQuery(dynamicQuery, start, end, orderByComparator);
 	}
 
+	public static java.util.List<ca.efendi.datafeeds.model.CJProduct> findByGroupId(
+		long groupId, int start, int end)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		return getService().findByGroupId(groupId, start, end);
+	}
+
 	/**
 	* Returns a range of all the c j products.
 	*
@@ -323,6 +336,16 @@ public class CJProductLocalServiceUtil {
 		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery,
 		com.liferay.portal.kernel.dao.orm.Projection projection) {
 		return getService().dynamicQueryCount(dynamicQuery, projection);
+	}
+
+	public static void deleteEntries(long groupId)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		getService().deleteEntries(groupId);
+	}
+
+	public static void deleteEntry(long entryId)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		getService().deleteEntry(entryId);
 	}
 
 	public static CJProductLocalService getService() {

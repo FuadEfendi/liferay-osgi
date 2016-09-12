@@ -36,6 +36,7 @@ import com.liferay.portal.kernel.util.PortalUtil;
 import com.liferay.portal.kernel.util.ProxyUtil;
 import com.liferay.portal.kernel.util.StringBundler;
 import com.liferay.portal.kernel.util.StringPool;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
 
 import java.io.Serializable;
 
@@ -92,7 +93,22 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 			{ "impressionUrl", Types.VARCHAR },
 			{ "imageUrl", Types.VARCHAR },
 			{ "inStock", Types.VARCHAR },
-			{ "viewCount", Types.INTEGER }
+			{ "viewCount", Types.INTEGER },
+			{ "status", Types.INTEGER },
+			{ "statusByUserId", Types.BIGINT },
+			{ "statusByUserName", Types.VARCHAR },
+			{ "statusDate", Types.TIMESTAMP },
+			{ "subtitle", Types.VARCHAR },
+			{ "urlTitle", Types.VARCHAR },
+			{ "content", Types.VARCHAR },
+			{ "displayDate", Types.TIMESTAMP },
+			{ "coverImageCaption", Types.VARCHAR },
+			{ "coverImageFileEntryId", Types.BIGINT },
+			{ "coverImageURL", Types.VARCHAR },
+			{ "smallImage", Types.BOOLEAN },
+			{ "smallImageFileEntryId", Types.BIGINT },
+			{ "smallImageId", Types.BIGINT },
+			{ "smallImageURL", Types.VARCHAR }
 		};
 	public static final Map<String, Integer> TABLE_COLUMNS_MAP = new HashMap<String, Integer>();
 
@@ -122,9 +138,24 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		TABLE_COLUMNS_MAP.put("imageUrl", Types.VARCHAR);
 		TABLE_COLUMNS_MAP.put("inStock", Types.VARCHAR);
 		TABLE_COLUMNS_MAP.put("viewCount", Types.INTEGER);
+		TABLE_COLUMNS_MAP.put("status", Types.INTEGER);
+		TABLE_COLUMNS_MAP.put("statusByUserId", Types.BIGINT);
+		TABLE_COLUMNS_MAP.put("statusByUserName", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("statusDate", Types.TIMESTAMP);
+		TABLE_COLUMNS_MAP.put("subtitle", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("urlTitle", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("content", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("displayDate", Types.TIMESTAMP);
+		TABLE_COLUMNS_MAP.put("coverImageCaption", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("coverImageFileEntryId", Types.BIGINT);
+		TABLE_COLUMNS_MAP.put("coverImageURL", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("smallImage", Types.BOOLEAN);
+		TABLE_COLUMNS_MAP.put("smallImageFileEntryId", Types.BIGINT);
+		TABLE_COLUMNS_MAP.put("smallImageId", Types.BIGINT);
+		TABLE_COLUMNS_MAP.put("smallImageURL", Types.VARCHAR);
 	}
 
-	public static final String TABLE_SQL_CREATE = "create table FE_CJProduct (uuid_ VARCHAR(75) null,productId LONG not null primary key,groupId LONG,companyId LONG,userId LONG,userName VARCHAR(75) null,createDate DATE null,modifiedDate DATE null,programName VARCHAR(75) null,catalogName VARCHAR(75) null,sku VARCHAR(75) null,programUrl VARCHAR(75) null,lastUpdated VARCHAR(75) null,name VARCHAR(75) null,keywords VARCHAR(75) null,description VARCHAR(75) null,manufacturer VARCHAR(75) null,manufacturerId VARCHAR(75) null,currency_ VARCHAR(75) null,price VARCHAR(75) null,buyUrl VARCHAR(75) null,impressionUrl VARCHAR(75) null,imageUrl VARCHAR(75) null,inStock VARCHAR(75) null,viewCount INTEGER)";
+	public static final String TABLE_SQL_CREATE = "create table FE_CJProduct (uuid_ VARCHAR(75) null,productId LONG not null primary key,groupId LONG,companyId LONG,userId LONG,userName VARCHAR(75) null,createDate DATE null,modifiedDate DATE null,programName VARCHAR(75) null,catalogName VARCHAR(75) null,sku VARCHAR(77) null,programUrl VARCHAR(75) null,lastUpdated VARCHAR(75) null,name VARCHAR(1024) null,keywords VARCHAR(1024) null,description VARCHAR(2048) null,manufacturer VARCHAR(75) null,manufacturerId VARCHAR(75) null,currency_ VARCHAR(75) null,price VARCHAR(75) null,buyUrl VARCHAR(1024) null,impressionUrl VARCHAR(75) null,imageUrl VARCHAR(1024) null,inStock VARCHAR(75) null,viewCount INTEGER,status INTEGER,statusByUserId LONG,statusByUserName VARCHAR(75) null,statusDate DATE null,subtitle VARCHAR(75) null,urlTitle VARCHAR(75) null,content VARCHAR(75) null,displayDate DATE null,coverImageCaption VARCHAR(75) null,coverImageFileEntryId LONG,coverImageURL VARCHAR(75) null,smallImage BOOLEAN,smallImageFileEntryId LONG,smallImageId LONG,smallImageURL VARCHAR(75) null)";
 	public static final String TABLE_SQL_DROP = "drop table FE_CJProduct";
 	public static final String ORDER_BY_JPQL = " ORDER BY cjProduct.manufacturer ASC, cjProduct.name DESC";
 	public static final String ORDER_BY_SQL = " ORDER BY FE_CJProduct.manufacturer ASC, FE_CJProduct.name DESC";
@@ -213,6 +244,21 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		attributes.put("imageUrl", getImageUrl());
 		attributes.put("inStock", getInStock());
 		attributes.put("viewCount", getViewCount());
+		attributes.put("status", getStatus());
+		attributes.put("statusByUserId", getStatusByUserId());
+		attributes.put("statusByUserName", getStatusByUserName());
+		attributes.put("statusDate", getStatusDate());
+		attributes.put("subtitle", getSubtitle());
+		attributes.put("urlTitle", getUrlTitle());
+		attributes.put("content", getContent());
+		attributes.put("displayDate", getDisplayDate());
+		attributes.put("coverImageCaption", getCoverImageCaption());
+		attributes.put("coverImageFileEntryId", getCoverImageFileEntryId());
+		attributes.put("coverImageURL", getCoverImageURL());
+		attributes.put("smallImage", getSmallImage());
+		attributes.put("smallImageFileEntryId", getSmallImageFileEntryId());
+		attributes.put("smallImageId", getSmallImageId());
+		attributes.put("smallImageURL", getSmallImageURL());
 
 		attributes.put("entityCacheEnabled", isEntityCacheEnabled());
 		attributes.put("finderCacheEnabled", isFinderCacheEnabled());
@@ -370,6 +416,98 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 
 		if (viewCount != null) {
 			setViewCount(viewCount);
+		}
+
+		Integer status = (Integer)attributes.get("status");
+
+		if (status != null) {
+			setStatus(status);
+		}
+
+		Long statusByUserId = (Long)attributes.get("statusByUserId");
+
+		if (statusByUserId != null) {
+			setStatusByUserId(statusByUserId);
+		}
+
+		String statusByUserName = (String)attributes.get("statusByUserName");
+
+		if (statusByUserName != null) {
+			setStatusByUserName(statusByUserName);
+		}
+
+		Date statusDate = (Date)attributes.get("statusDate");
+
+		if (statusDate != null) {
+			setStatusDate(statusDate);
+		}
+
+		String subtitle = (String)attributes.get("subtitle");
+
+		if (subtitle != null) {
+			setSubtitle(subtitle);
+		}
+
+		String urlTitle = (String)attributes.get("urlTitle");
+
+		if (urlTitle != null) {
+			setUrlTitle(urlTitle);
+		}
+
+		String content = (String)attributes.get("content");
+
+		if (content != null) {
+			setContent(content);
+		}
+
+		Date displayDate = (Date)attributes.get("displayDate");
+
+		if (displayDate != null) {
+			setDisplayDate(displayDate);
+		}
+
+		String coverImageCaption = (String)attributes.get("coverImageCaption");
+
+		if (coverImageCaption != null) {
+			setCoverImageCaption(coverImageCaption);
+		}
+
+		Long coverImageFileEntryId = (Long)attributes.get(
+				"coverImageFileEntryId");
+
+		if (coverImageFileEntryId != null) {
+			setCoverImageFileEntryId(coverImageFileEntryId);
+		}
+
+		String coverImageURL = (String)attributes.get("coverImageURL");
+
+		if (coverImageURL != null) {
+			setCoverImageURL(coverImageURL);
+		}
+
+		Boolean smallImage = (Boolean)attributes.get("smallImage");
+
+		if (smallImage != null) {
+			setSmallImage(smallImage);
+		}
+
+		Long smallImageFileEntryId = (Long)attributes.get(
+				"smallImageFileEntryId");
+
+		if (smallImageFileEntryId != null) {
+			setSmallImageFileEntryId(smallImageFileEntryId);
+		}
+
+		Long smallImageId = (Long)attributes.get("smallImageId");
+
+		if (smallImageId != null) {
+			setSmallImageId(smallImageId);
+		}
+
+		String smallImageURL = (String)attributes.get("smallImageURL");
+
+		if (smallImageURL != null) {
+			setSmallImageURL(smallImageURL);
 		}
 	}
 
@@ -810,9 +948,295 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 	}
 
 	@Override
+	public int getStatus() {
+		return _status;
+	}
+
+	@Override
+	public void setStatus(int status) {
+		_status = status;
+	}
+
+	@Override
+	public long getStatusByUserId() {
+		return _statusByUserId;
+	}
+
+	@Override
+	public void setStatusByUserId(long statusByUserId) {
+		_statusByUserId = statusByUserId;
+	}
+
+	@Override
+	public String getStatusByUserUuid() {
+		try {
+			User user = UserLocalServiceUtil.getUserById(getStatusByUserId());
+
+			return user.getUuid();
+		}
+		catch (PortalException pe) {
+			return StringPool.BLANK;
+		}
+	}
+
+	@Override
+	public void setStatusByUserUuid(String statusByUserUuid) {
+	}
+
+	@Override
+	public String getStatusByUserName() {
+		if (_statusByUserName == null) {
+			return StringPool.BLANK;
+		}
+		else {
+			return _statusByUserName;
+		}
+	}
+
+	@Override
+	public void setStatusByUserName(String statusByUserName) {
+		_statusByUserName = statusByUserName;
+	}
+
+	@Override
+	public Date getStatusDate() {
+		return _statusDate;
+	}
+
+	@Override
+	public void setStatusDate(Date statusDate) {
+		_statusDate = statusDate;
+	}
+
+	@Override
+	public String getSubtitle() {
+		if (_subtitle == null) {
+			return StringPool.BLANK;
+		}
+		else {
+			return _subtitle;
+		}
+	}
+
+	@Override
+	public void setSubtitle(String subtitle) {
+		_subtitle = subtitle;
+	}
+
+	@Override
+	public String getUrlTitle() {
+		if (_urlTitle == null) {
+			return StringPool.BLANK;
+		}
+		else {
+			return _urlTitle;
+		}
+	}
+
+	@Override
+	public void setUrlTitle(String urlTitle) {
+		_urlTitle = urlTitle;
+	}
+
+	@Override
+	public String getContent() {
+		if (_content == null) {
+			return StringPool.BLANK;
+		}
+		else {
+			return _content;
+		}
+	}
+
+	@Override
+	public void setContent(String content) {
+		_content = content;
+	}
+
+	@Override
+	public Date getDisplayDate() {
+		return _displayDate;
+	}
+
+	@Override
+	public void setDisplayDate(Date displayDate) {
+		_displayDate = displayDate;
+	}
+
+	@Override
+	public String getCoverImageCaption() {
+		if (_coverImageCaption == null) {
+			return StringPool.BLANK;
+		}
+		else {
+			return _coverImageCaption;
+		}
+	}
+
+	@Override
+	public void setCoverImageCaption(String coverImageCaption) {
+		_coverImageCaption = coverImageCaption;
+	}
+
+	@Override
+	public long getCoverImageFileEntryId() {
+		return _coverImageFileEntryId;
+	}
+
+	@Override
+	public void setCoverImageFileEntryId(long coverImageFileEntryId) {
+		_coverImageFileEntryId = coverImageFileEntryId;
+	}
+
+	@Override
+	public String getCoverImageURL() {
+		if (_coverImageURL == null) {
+			return StringPool.BLANK;
+		}
+		else {
+			return _coverImageURL;
+		}
+	}
+
+	@Override
+	public void setCoverImageURL(String coverImageURL) {
+		_coverImageURL = coverImageURL;
+	}
+
+	@Override
+	public boolean getSmallImage() {
+		return _smallImage;
+	}
+
+	@Override
+	public boolean isSmallImage() {
+		return _smallImage;
+	}
+
+	@Override
+	public void setSmallImage(boolean smallImage) {
+		_smallImage = smallImage;
+	}
+
+	@Override
+	public long getSmallImageFileEntryId() {
+		return _smallImageFileEntryId;
+	}
+
+	@Override
+	public void setSmallImageFileEntryId(long smallImageFileEntryId) {
+		_smallImageFileEntryId = smallImageFileEntryId;
+	}
+
+	@Override
+	public long getSmallImageId() {
+		return _smallImageId;
+	}
+
+	@Override
+	public void setSmallImageId(long smallImageId) {
+		_smallImageId = smallImageId;
+	}
+
+	@Override
+	public String getSmallImageURL() {
+		if (_smallImageURL == null) {
+			return StringPool.BLANK;
+		}
+		else {
+			return _smallImageURL;
+		}
+	}
+
+	@Override
+	public void setSmallImageURL(String smallImageURL) {
+		_smallImageURL = smallImageURL;
+	}
+
+	@Override
 	public StagedModelType getStagedModelType() {
 		return new StagedModelType(PortalUtil.getClassNameId(
 				CJProduct.class.getName()));
+	}
+
+	@Override
+	public boolean isApproved() {
+		if (getStatus() == WorkflowConstants.STATUS_APPROVED) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	@Override
+	public boolean isDenied() {
+		if (getStatus() == WorkflowConstants.STATUS_DENIED) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	@Override
+	public boolean isDraft() {
+		if (getStatus() == WorkflowConstants.STATUS_DRAFT) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	@Override
+	public boolean isExpired() {
+		if (getStatus() == WorkflowConstants.STATUS_EXPIRED) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	@Override
+	public boolean isInactive() {
+		if (getStatus() == WorkflowConstants.STATUS_INACTIVE) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	@Override
+	public boolean isIncomplete() {
+		if (getStatus() == WorkflowConstants.STATUS_INCOMPLETE) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	@Override
+	public boolean isPending() {
+		if (getStatus() == WorkflowConstants.STATUS_PENDING) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	@Override
+	public boolean isScheduled() {
+		if (getStatus() == WorkflowConstants.STATUS_SCHEDULED) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	public long getColumnBitmask() {
@@ -871,6 +1295,21 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		cjProductImpl.setImageUrl(getImageUrl());
 		cjProductImpl.setInStock(getInStock());
 		cjProductImpl.setViewCount(getViewCount());
+		cjProductImpl.setStatus(getStatus());
+		cjProductImpl.setStatusByUserId(getStatusByUserId());
+		cjProductImpl.setStatusByUserName(getStatusByUserName());
+		cjProductImpl.setStatusDate(getStatusDate());
+		cjProductImpl.setSubtitle(getSubtitle());
+		cjProductImpl.setUrlTitle(getUrlTitle());
+		cjProductImpl.setContent(getContent());
+		cjProductImpl.setDisplayDate(getDisplayDate());
+		cjProductImpl.setCoverImageCaption(getCoverImageCaption());
+		cjProductImpl.setCoverImageFileEntryId(getCoverImageFileEntryId());
+		cjProductImpl.setCoverImageURL(getCoverImageURL());
+		cjProductImpl.setSmallImage(getSmallImage());
+		cjProductImpl.setSmallImageFileEntryId(getSmallImageFileEntryId());
+		cjProductImpl.setSmallImageId(getSmallImageId());
+		cjProductImpl.setSmallImageURL(getSmallImageURL());
 
 		cjProductImpl.resetOriginalValues();
 
@@ -1138,12 +1577,98 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 
 		cjProductCacheModel.viewCount = getViewCount();
 
+		cjProductCacheModel.status = getStatus();
+
+		cjProductCacheModel.statusByUserId = getStatusByUserId();
+
+		cjProductCacheModel.statusByUserName = getStatusByUserName();
+
+		String statusByUserName = cjProductCacheModel.statusByUserName;
+
+		if ((statusByUserName != null) && (statusByUserName.length() == 0)) {
+			cjProductCacheModel.statusByUserName = null;
+		}
+
+		Date statusDate = getStatusDate();
+
+		if (statusDate != null) {
+			cjProductCacheModel.statusDate = statusDate.getTime();
+		}
+		else {
+			cjProductCacheModel.statusDate = Long.MIN_VALUE;
+		}
+
+		cjProductCacheModel.subtitle = getSubtitle();
+
+		String subtitle = cjProductCacheModel.subtitle;
+
+		if ((subtitle != null) && (subtitle.length() == 0)) {
+			cjProductCacheModel.subtitle = null;
+		}
+
+		cjProductCacheModel.urlTitle = getUrlTitle();
+
+		String urlTitle = cjProductCacheModel.urlTitle;
+
+		if ((urlTitle != null) && (urlTitle.length() == 0)) {
+			cjProductCacheModel.urlTitle = null;
+		}
+
+		cjProductCacheModel.content = getContent();
+
+		String content = cjProductCacheModel.content;
+
+		if ((content != null) && (content.length() == 0)) {
+			cjProductCacheModel.content = null;
+		}
+
+		Date displayDate = getDisplayDate();
+
+		if (displayDate != null) {
+			cjProductCacheModel.displayDate = displayDate.getTime();
+		}
+		else {
+			cjProductCacheModel.displayDate = Long.MIN_VALUE;
+		}
+
+		cjProductCacheModel.coverImageCaption = getCoverImageCaption();
+
+		String coverImageCaption = cjProductCacheModel.coverImageCaption;
+
+		if ((coverImageCaption != null) && (coverImageCaption.length() == 0)) {
+			cjProductCacheModel.coverImageCaption = null;
+		}
+
+		cjProductCacheModel.coverImageFileEntryId = getCoverImageFileEntryId();
+
+		cjProductCacheModel.coverImageURL = getCoverImageURL();
+
+		String coverImageURL = cjProductCacheModel.coverImageURL;
+
+		if ((coverImageURL != null) && (coverImageURL.length() == 0)) {
+			cjProductCacheModel.coverImageURL = null;
+		}
+
+		cjProductCacheModel.smallImage = getSmallImage();
+
+		cjProductCacheModel.smallImageFileEntryId = getSmallImageFileEntryId();
+
+		cjProductCacheModel.smallImageId = getSmallImageId();
+
+		cjProductCacheModel.smallImageURL = getSmallImageURL();
+
+		String smallImageURL = cjProductCacheModel.smallImageURL;
+
+		if ((smallImageURL != null) && (smallImageURL.length() == 0)) {
+			cjProductCacheModel.smallImageURL = null;
+		}
+
 		return cjProductCacheModel;
 	}
 
 	@Override
 	public String toString() {
-		StringBundler sb = new StringBundler(51);
+		StringBundler sb = new StringBundler(81);
 
 		sb.append("{uuid=");
 		sb.append(getUuid());
@@ -1195,6 +1720,36 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		sb.append(getInStock());
 		sb.append(", viewCount=");
 		sb.append(getViewCount());
+		sb.append(", status=");
+		sb.append(getStatus());
+		sb.append(", statusByUserId=");
+		sb.append(getStatusByUserId());
+		sb.append(", statusByUserName=");
+		sb.append(getStatusByUserName());
+		sb.append(", statusDate=");
+		sb.append(getStatusDate());
+		sb.append(", subtitle=");
+		sb.append(getSubtitle());
+		sb.append(", urlTitle=");
+		sb.append(getUrlTitle());
+		sb.append(", content=");
+		sb.append(getContent());
+		sb.append(", displayDate=");
+		sb.append(getDisplayDate());
+		sb.append(", coverImageCaption=");
+		sb.append(getCoverImageCaption());
+		sb.append(", coverImageFileEntryId=");
+		sb.append(getCoverImageFileEntryId());
+		sb.append(", coverImageURL=");
+		sb.append(getCoverImageURL());
+		sb.append(", smallImage=");
+		sb.append(getSmallImage());
+		sb.append(", smallImageFileEntryId=");
+		sb.append(getSmallImageFileEntryId());
+		sb.append(", smallImageId=");
+		sb.append(getSmallImageId());
+		sb.append(", smallImageURL=");
+		sb.append(getSmallImageURL());
 		sb.append("}");
 
 		return sb.toString();
@@ -1202,7 +1757,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 
 	@Override
 	public String toXmlString() {
-		StringBundler sb = new StringBundler(79);
+		StringBundler sb = new StringBundler(124);
 
 		sb.append("<model><model-name>");
 		sb.append("ca.efendi.datafeeds.model.CJProduct");
@@ -1308,6 +1863,66 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 			"<column><column-name>viewCount</column-name><column-value><![CDATA[");
 		sb.append(getViewCount());
 		sb.append("]]></column-value></column>");
+		sb.append(
+			"<column><column-name>status</column-name><column-value><![CDATA[");
+		sb.append(getStatus());
+		sb.append("]]></column-value></column>");
+		sb.append(
+			"<column><column-name>statusByUserId</column-name><column-value><![CDATA[");
+		sb.append(getStatusByUserId());
+		sb.append("]]></column-value></column>");
+		sb.append(
+			"<column><column-name>statusByUserName</column-name><column-value><![CDATA[");
+		sb.append(getStatusByUserName());
+		sb.append("]]></column-value></column>");
+		sb.append(
+			"<column><column-name>statusDate</column-name><column-value><![CDATA[");
+		sb.append(getStatusDate());
+		sb.append("]]></column-value></column>");
+		sb.append(
+			"<column><column-name>subtitle</column-name><column-value><![CDATA[");
+		sb.append(getSubtitle());
+		sb.append("]]></column-value></column>");
+		sb.append(
+			"<column><column-name>urlTitle</column-name><column-value><![CDATA[");
+		sb.append(getUrlTitle());
+		sb.append("]]></column-value></column>");
+		sb.append(
+			"<column><column-name>content</column-name><column-value><![CDATA[");
+		sb.append(getContent());
+		sb.append("]]></column-value></column>");
+		sb.append(
+			"<column><column-name>displayDate</column-name><column-value><![CDATA[");
+		sb.append(getDisplayDate());
+		sb.append("]]></column-value></column>");
+		sb.append(
+			"<column><column-name>coverImageCaption</column-name><column-value><![CDATA[");
+		sb.append(getCoverImageCaption());
+		sb.append("]]></column-value></column>");
+		sb.append(
+			"<column><column-name>coverImageFileEntryId</column-name><column-value><![CDATA[");
+		sb.append(getCoverImageFileEntryId());
+		sb.append("]]></column-value></column>");
+		sb.append(
+			"<column><column-name>coverImageURL</column-name><column-value><![CDATA[");
+		sb.append(getCoverImageURL());
+		sb.append("]]></column-value></column>");
+		sb.append(
+			"<column><column-name>smallImage</column-name><column-value><![CDATA[");
+		sb.append(getSmallImage());
+		sb.append("]]></column-value></column>");
+		sb.append(
+			"<column><column-name>smallImageFileEntryId</column-name><column-value><![CDATA[");
+		sb.append(getSmallImageFileEntryId());
+		sb.append("]]></column-value></column>");
+		sb.append(
+			"<column><column-name>smallImageId</column-name><column-value><![CDATA[");
+		sb.append(getSmallImageId());
+		sb.append("]]></column-value></column>");
+		sb.append(
+			"<column><column-name>smallImageURL</column-name><column-value><![CDATA[");
+		sb.append(getSmallImageURL());
+		sb.append("]]></column-value></column>");
 
 		sb.append("</model>");
 
@@ -1353,6 +1968,21 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 	private String _imageUrl;
 	private String _inStock;
 	private int _viewCount;
+	private int _status;
+	private long _statusByUserId;
+	private String _statusByUserName;
+	private Date _statusDate;
+	private String _subtitle;
+	private String _urlTitle;
+	private String _content;
+	private Date _displayDate;
+	private String _coverImageCaption;
+	private long _coverImageFileEntryId;
+	private String _coverImageURL;
+	private boolean _smallImage;
+	private long _smallImageFileEntryId;
+	private long _smallImageId;
+	private String _smallImageURL;
 	private long _columnBitmask;
 	private CJProduct _escapedModel;
 }

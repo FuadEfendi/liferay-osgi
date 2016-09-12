@@ -1,11 +1,17 @@
 Bundle-SymbolicName: ca.efendi.datafeeds.web
 Bundle-Version: 1.0.1
 
+Export-Package:\
+	ca.efendi.datafeeds.web.asset,\
+	ca.efendi.datafeeds.web.constants,\
+	ca.efendi.datafeeds.web.social
 
 Bundle-ClassPath:\
   .,\
   lib/commons-lang3-3.4.jar
 
+
 Include-Resource:\
   lib/commons-lang3-3.4.jar=lib/commons-lang3-3.4.jar
+
 

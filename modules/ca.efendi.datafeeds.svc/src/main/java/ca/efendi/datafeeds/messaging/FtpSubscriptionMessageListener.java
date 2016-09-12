@@ -72,7 +72,7 @@ public class FtpSubscriptionMessageListener
                 TriggerFactoryUtil.createTrigger(
                         getEventListenerClass(), getEventListenerClass(),
                         //_ftpSubscriptionConfiguration.entryCheckInterval(),
-                        1,
+                        1000,
                         TimeUnit.MINUTE));
 
         _schedulerEngineHelper.register(
@@ -89,6 +89,27 @@ public class FtpSubscriptionMessageListener
     @Override
     protected void doReceive(Message message) throws Exception {
         if (processed) return;
+
+       // _cjProductLocalService.deleteCJProduct(1);
+      //  _cjProductLocalService.deleteCJProduct(2);
+       // _cjProductLocalService.deleteCJProduct(3);
+
+        //_cjProductLocalService.deleteEntries(20166);
+
+        long groupId = 20166;
+
+        List<CJProduct> entries = null;
+        entries = _cjProductLocalService.findByGroupId(groupId, 0, 1000);
+
+        while (entries != null && entries.size()>0) {
+
+            for (CJProduct entry : entries) {
+                // TODO: why not calling directly "deleteEntry"? Analyze Liferay if this is consistent pattern. Perhaps because "Indexable" annotation?
+                _cjProductLocalService.deleteEntry(entry);
+            }
+            entries = _cjProductLocalService.findByGroupId(groupId, 0, 1000);
+        }
+
 
         final List<FtpSubscription> ftpSubscriptions =
                 _ftpSubscriptionLocalService.getAllFtpSubscriptions();
@@ -219,7 +240,7 @@ public class FtpSubscriptionMessageListener
                             try {
 
                                 _log.warn("refreshing document...");
-                                _cjProductLocalService.refresh(ftpSubscription.getUserId(), product);
+                                _cjProductLocalService.refresh(ftpSubscription, product);
                             } catch (final SystemException e) {
                                 _log.error(e);
                             } catch (final PortalException e) {

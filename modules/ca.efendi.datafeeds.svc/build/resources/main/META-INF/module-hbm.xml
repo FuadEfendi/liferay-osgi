@@ -32,6 +32,21 @@
 		<property name="imageUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 		<property name="inStock" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 		<property name="viewCount" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="statusByUserId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="statusByUserName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="statusDate" type="org.hibernate.type.TimestampType" />
+		<property name="subtitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="urlTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="displayDate" type="org.hibernate.type.TimestampType" />
+		<property name="coverImageCaption" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="coverImageFileEntryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="coverImageURL" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="smallImage" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="smallImageFileEntryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="smallImageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="smallImageURL" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 	</class>
 	<class name="ca.efendi.datafeeds.model.impl.FtpSubscriptionImpl" table="FE_FtpSubscription">
 		<id name="ftpSubscriptionId" type="long">

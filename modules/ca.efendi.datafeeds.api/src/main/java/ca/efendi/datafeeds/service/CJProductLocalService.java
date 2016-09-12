@@ -18,6 +18,7 @@ import aQute.bnd.annotation.ProviderType;
 
 import ca.efendi.datafeeds.exception.NoSuchCJProductException;
 import ca.efendi.datafeeds.model.CJProduct;
+import ca.efendi.datafeeds.model.FtpSubscription;
 
 import com.liferay.exportimport.kernel.lar.PortletDataContext;
 
@@ -29,10 +30,12 @@ import com.liferay.portal.kernel.dao.orm.Projection;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.model.PersistedModel;
+import com.liferay.portal.kernel.model.SystemEventConstants;
 import com.liferay.portal.kernel.search.Indexable;
 import com.liferay.portal.kernel.search.IndexableType;
 import com.liferay.portal.kernel.service.BaseLocalService;
 import com.liferay.portal.kernel.service.PersistedModelLocalService;
+import com.liferay.portal.kernel.systemevent.SystemEvent;
 import com.liferay.portal.kernel.transaction.Isolation;
 import com.liferay.portal.kernel.transaction.Propagation;
 import com.liferay.portal.kernel.transaction.Transactional;
@@ -101,6 +104,10 @@ public interface CJProductLocalService extends BaseLocalService,
 	@Indexable(type = IndexableType.DELETE)
 	public CJProduct deleteCJProduct(long productId) throws PortalException;
 
+	@Indexable(type = IndexableType.DELETE)
+	@SystemEvent(type = SystemEventConstants.TYPE_DELETE)
+	public CJProduct deleteEntry(CJProduct entry) throws PortalException;
+
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public CJProduct fetchCJProduct(long productId);
 
@@ -142,8 +149,8 @@ public interface CJProductLocalService extends BaseLocalService,
 		long groupId) throws PortalException;
 
 	@Indexable(type = IndexableType.REINDEX)
-	public CJProduct refresh(long userId, CJProduct newCJProduct)
-		throws PortalException;
+	public CJProduct refresh(FtpSubscription subscription,
+		CJProduct newCJProduct) throws PortalException;
 
 	/**
 	* Updates the c j product in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.
@@ -232,6 +239,9 @@ public interface CJProductLocalService extends BaseLocalService,
 	public <T> List<T> dynamicQuery(DynamicQuery dynamicQuery, int start,
 		int end, OrderByComparator<T> orderByComparator);
 
+	public List<CJProduct> findByGroupId(long groupId, int start, int end)
+		throws PortalException;
+
 	/**
 	* Returns a range of all the c j products.
 	*
@@ -289,4 +299,8 @@ public interface CJProductLocalService extends BaseLocalService,
 	*/
 	public long dynamicQueryCount(DynamicQuery dynamicQuery,
 		Projection projection);
+
+	public void deleteEntries(long groupId) throws PortalException;
+
+	public void deleteEntry(long entryId) throws PortalException;
 }

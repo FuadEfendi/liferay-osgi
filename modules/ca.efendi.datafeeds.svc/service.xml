@@ -45,6 +45,29 @@
 		<column name="inStock" type="String" />
 		<column name="viewCount" type="int" />
 
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" />
+		<column name="statusDate" type="Date" />
+
+
+		<column name="subtitle" type="String" />
+		<column name="urlTitle" type="String" />
+		<column name="content" type="String" />
+		<column name="displayDate" type="Date" />
+
+		<column name="coverImageCaption" type="String" />
+		<column name="coverImageFileEntryId" type="long" />
+		<column name="coverImageURL" type="String" />
+
+		<column name="smallImage" type="boolean" />
+		<column name="smallImageFileEntryId" type="long" />
+		<column name="smallImageId" type="long" />
+		<column name="smallImageURL" type="String" />
+
+
+
+
 		<!-- Order -->
 		<order>
 			<order-column name="manufacturer" order-by="asc" />
@@ -63,6 +86,13 @@
 			<finder-column name="groupId" />
 			<finder-column name="sku" />
 		</finder>
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+		<finder name="CompanyId" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+
 
 		<!-- References -->
 		<reference package-path="com.liferay.portal" entity="ClassName" />
@@ -77,6 +107,11 @@
 		<reference package-path="com.liferay.portlet.asset" entity="AssetEntry" />
 		<reference package-path="com.liferay.portlet.asset" entity="AssetLink" />
 		<reference package-path="com.liferay.portlet.ratings" entity="RatingsStats" />
+
+		<reference entity="ExpandoRow" package-path="com.liferay.portlet.expando" />
+		<reference entity="RatingsStats" package-path="com.liferay.portlet.ratings" />
+		<reference entity="TrashEntry" package-path="com.liferay.portlet.trash" />
+
 	</entity>
 
 	<entity name="FtpSubscription" local-service="true" remote-service="false">

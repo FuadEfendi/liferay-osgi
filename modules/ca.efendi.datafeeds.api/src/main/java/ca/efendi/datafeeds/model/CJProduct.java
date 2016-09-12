@@ -53,4 +53,14 @@ public interface CJProduct extends CJProductModel, PersistedModel {
 				return CJProduct.class;
 			}
 		};
+
+	public long getEntryId();
+
+	public java.lang.String getCoverImageURL(
+		com.liferay.portal.kernel.theme.ThemeDisplay themeDisplay)
+		throws com.liferay.portal.kernel.exception.PortalException;
+
+	public java.lang.String getSmallImageURL(
+		com.liferay.portal.kernel.theme.ThemeDisplay themeDisplay)
+		throws com.liferay.portal.kernel.exception.PortalException;
 }

@@ -12,21 +12,48 @@
 		<field name="modifiedDate" type="Date" />
 		<field name="programName" type="String" />
 		<field name="catalogName" type="String" />
-		<field name="sku" type="String" />
+		<field name="sku" type="String">
+			<hint name="max-length">77</hint>
+		</field>
 		<field name="programUrl" type="String" />
 		<field name="lastUpdated" type="String" />
-		<field name="name" type="String" />
-		<field name="keywords" type="String" />
-		<field name="description" type="String" />
+		<field name="name" type="String">
+			<hint name="max-length">1024</hint>
+		</field>
+		<field name="keywords" type="String">
+			<hint name="max-length">1024</hint>
+		</field>
+		<field name="description" type="String">
+			<hint name="max-length">2048</hint>
+		</field>
 		<field name="manufacturer" type="String" />
 		<field name="manufacturerId" type="String" />
 		<field name="currency" type="String" />
 		<field name="price" type="String" />
-		<field name="buyUrl" type="String" />
+		<field name="buyUrl" type="String">
+			<hint name="max-length">1024</hint>
+		</field>
 		<field name="impressionUrl" type="String" />
-		<field name="imageUrl" type="String" />
+		<field name="imageUrl" type="String">
+			<hint name="max-length">1024</hint>
+		</field>
 		<field name="inStock" type="String" />
 		<field name="viewCount" type="int" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="subtitle" type="String" />
+		<field name="urlTitle" type="String" />
+		<field name="content" type="String" />
+		<field name="displayDate" type="Date" />
+		<field name="coverImageCaption" type="String" />
+		<field name="coverImageFileEntryId" type="long" />
+		<field name="coverImageURL" type="String" />
+		<field name="smallImage" type="boolean" />
+		<field name="smallImageFileEntryId" type="long" />
+		<field name="smallImageId" type="long" />
+		<field name="smallImageURL" type="String" />
 	</model>
 	<model name="ca.efendi.datafeeds.model.FtpSubscription">
 		<field name="ftpSubscriptionId" type="long" />
