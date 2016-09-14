@@ -15,3 +15,4 @@ Include-Resource:\
   lib/commons-lang3-3.4.jar=lib/commons-lang3-3.4.jar
 
 
+Web-ContextPath: /datafeeds-web

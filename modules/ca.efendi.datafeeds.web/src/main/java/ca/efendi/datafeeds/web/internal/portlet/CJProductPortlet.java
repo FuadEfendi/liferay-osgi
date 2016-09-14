@@ -52,17 +52,11 @@ import javax.portlet.Portlet;
                 "javax.portlet.supported-public-render-parameter=categoryId",
                 "javax.portlet.supported-public-render-parameter=resetCur",
                 "javax.portlet.supported-public-render-parameter=tag",
+                "javax.portlet.init-param.view-template=/datafeeds_admin/view.jsp",
                 "javax.portlet.supports.mime-type=text/html"
         },
         service = Portlet.class
 )
 public class CJProductPortlet extends MVCPortlet {
-
-    @Reference(
-            target = "(&(release.bundle.symbolic.name=ca.efendi.datafeeds.web)(release.schema.version=1.0.0))",
-            unbind = "-"
-    )
-    protected void setRelease(Release release) {
-    }
 
 }

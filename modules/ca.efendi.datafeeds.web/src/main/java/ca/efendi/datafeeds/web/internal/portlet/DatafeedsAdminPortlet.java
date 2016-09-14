@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package ca.efendi.datafeeds.web.portlet;
+package ca.efendi.datafeeds.web.internal.portlet;
 
 import ca.efendi.datafeeds.constants.DatafeedsPortletKeys;
 import ca.efendi.datafeeds.exception.NoSuchFtpSubscriptionException;

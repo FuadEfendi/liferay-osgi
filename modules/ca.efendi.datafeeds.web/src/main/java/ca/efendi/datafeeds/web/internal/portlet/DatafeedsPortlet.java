@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package ca.efendi.datafeeds.web.portlet;
+package ca.efendi.datafeeds.web.internal.portlet;
 
 import com.liferay.message.boards.kernel.model.MBMessage;
 import com.liferay.message.boards.kernel.service.MBMessageServiceUtil;
@@ -34,7 +34,7 @@ import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
 import javax.portlet.RenderRequest;
 
-public class SearchPortlet extends MVCPortlet {
+public class DatafeedsPortlet extends MVCPortlet {
 
     /*
      * @Override public void serveResource( final ResourceRequest

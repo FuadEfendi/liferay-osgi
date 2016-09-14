@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package ca.efendi.datafeeds.web.portlet;
+package ca.efendi.datafeeds.web.internal.portlet;
 
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 import org.osgi.service.component.annotations.Component;
