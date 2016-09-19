@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package ca.efendi.datafeeds.constants;
+package ca.efendi.datafeeds.web.constants;
 
 public class DatafeedsPortletKeys {
 
-    public static final String DATAFEEDS_ADMIN = "ca_efendi_datafeeds_web_portlet_DatafeedsAdminPortlet";
+    public static final String DATAFEEDS_PORTLET = "ca_efendi_datafeeds_web_portlet_DatafeedsPortlet";
     public static final String FTP_SUBSCRIPTION_ENTRY = "FTP_SUBSCRIPTION_ENTRY";
 
 }

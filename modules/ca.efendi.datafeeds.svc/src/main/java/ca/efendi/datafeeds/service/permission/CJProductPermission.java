@@ -35,7 +35,7 @@ import org.osgi.service.component.annotations.Reference;
         property = {"model.class.name=ca.efendi.datafeeds.model.CJProduct"},
         service = BaseModelPermissionChecker.class
 )
-public class CJProductEntryPermission implements BaseModelPermissionChecker {
+public class CJProductPermission implements BaseModelPermissionChecker {
 
     public static void check(
             PermissionChecker permissionChecker, CJProduct entry,

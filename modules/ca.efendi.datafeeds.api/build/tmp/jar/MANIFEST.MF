@@ -21,14 +21,15 @@ Export-Package: ca.efendi.datafeeds.configuration;uses:="aQute.bnd.ann
  n="1.0.1",ca.efendi.datafeeds.service;uses:="ca.efendi.datafeeds.exce
  ption,ca.efendi.datafeeds.model,com.liferay.exportimport.kernel.lar,c
  om.liferay.portal.kernel.dao.orm,com.liferay.portal.kernel.exception,
- com.liferay.portal.kernel.model,com.liferay.portal.kernel.search,com.
- liferay.portal.kernel.service,com.liferay.portal.kernel.systemevent,c
- om.liferay.portal.kernel.transaction,com.liferay.portal.kernel.util";
- version="1.0.1",ca.efendi.datafeeds.service.persistence;uses:="ca.efe
- ndi.datafeeds.exception,ca.efendi.datafeeds.model,com.liferay.portal.
- kernel.dao.orm,com.liferay.portal.kernel.service,com.liferay.portal.k
- ernel.service.persistence,com.liferay.portal.kernel.util";version="1.
- 0.1"
+ com.liferay.portal.kernel.jsonwebservice,com.liferay.portal.kernel.mo
+ del,com.liferay.portal.kernel.search,com.liferay.portal.kernel.securi
+ ty.access.control,com.liferay.portal.kernel.service,com.liferay.porta
+ l.kernel.spring.osgi,com.liferay.portal.kernel.systemevent,com.lifera
+ y.portal.kernel.transaction,com.liferay.portal.kernel.util";version="
+ 1.0.1",ca.efendi.datafeeds.service.persistence;uses:="ca.efendi.dataf
+ eeds.exception,ca.efendi.datafeeds.model,com.liferay.portal.kernel.da
+ o.orm,com.liferay.portal.kernel.service,com.liferay.portal.kernel.ser
+ vice.persistence,com.liferay.portal.kernel.util";version="1.0.1"
 Import-Package: aQute.bnd.annotation.metatype;version="[1.45,2)",ca.ef
  endi.datafeeds.configuration,ca.efendi.datafeeds.configuration.defini
  tion,ca.efendi.datafeeds.exception,ca.efendi.datafeeds.model,com.life
@@ -38,15 +39,18 @@ Import-Package: aQute.bnd.annotation.metatype;version="[1.45,2)",ca.ef
  ",com.liferay.portal.kernel.annotation;version="[6.3,7)",com.liferay.
  portal.kernel.bean;version="[7.0,8)",com.liferay.portal.kernel.dao.or
  m;version="[7.0,8)",com.liferay.portal.kernel.exception;version="[7.0
- ,8)",com.liferay.portal.kernel.model;version="[1.0,1.1)",com.liferay.
- portal.kernel.search;version="[7.2,8)",com.liferay.portal.kernel.serv
- ice;version="[1.3,2)",com.liferay.portal.kernel.service.persistence;v
- ersion="[1.1,2)",com.liferay.portal.kernel.settings;version="[1.0,2)"
- ,com.liferay.portal.kernel.settings.definition;version="[1.0,2)",com.
- liferay.portal.kernel.systemevent;version="[6.2,7)",com.liferay.porta
- l.kernel.theme;version="[1.0,2)",com.liferay.portal.kernel.transactio
- n;version="[7.0,8)",com.liferay.portal.kernel.util;version="[7.3,8)",
- org.osgi.util.tracker;version="[1.5,2)"
+ ,8)",com.liferay.portal.kernel.jsonwebservice;version="[7.0,8)",com.l
+ iferay.portal.kernel.model;version="[1.0,1.1)",com.liferay.portal.ker
+ nel.search;version="[7.2,8)",com.liferay.portal.kernel.security.acces
+ s.control;version="[1.0,2)",com.liferay.portal.kernel.service;version
+ ="[1.3,2)",com.liferay.portal.kernel.service.persistence;version="[1.
+ 1,2)",com.liferay.portal.kernel.settings;version="[1.0,2)",com.lifera
+ y.portal.kernel.settings.definition;version="[1.0,2)",com.liferay.por
+ tal.kernel.spring.osgi;version="[1.0,2)",com.liferay.portal.kernel.sy
+ stemevent;version="[6.2,7)",com.liferay.portal.kernel.theme;version="
+ [1.0,2)",com.liferay.portal.kernel.transaction;version="[7.0,8)",com.
+ liferay.portal.kernel.util;version="[7.3,8)",org.osgi.util.tracker;ve
+ rsion="[1.5,2)"
 Javac-Debug: on
 Javac-Deprecation: off
 Javac-Encoding: UTF-8

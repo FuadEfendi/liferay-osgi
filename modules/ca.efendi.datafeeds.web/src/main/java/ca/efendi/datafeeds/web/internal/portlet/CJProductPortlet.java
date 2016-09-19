@@ -52,7 +52,6 @@ import javax.portlet.Portlet;
                 "javax.portlet.supported-public-render-parameter=categoryId",
                 "javax.portlet.supported-public-render-parameter=resetCur",
                 "javax.portlet.supported-public-render-parameter=tag",
-                "javax.portlet.init-param.view-template=/datafeeds_admin/view.jsp",
                 "javax.portlet.supports.mime-type=text/html"
         },
         service = Portlet.class

@@ -40,7 +40,11 @@ import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPConnectionClosedException;
 import org.apache.commons.net.ftp.FTPReply;
-import org.osgi.service.component.annotations.*;
+import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Deactivate;
+import org.osgi.service.component.annotations.Modified;
+import org.osgi.service.component.annotations.Reference;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
@@ -72,11 +76,13 @@ public class FtpSubscriptionMessageListener
                 TriggerFactoryUtil.createTrigger(
                         getEventListenerClass(), getEventListenerClass(),
                         //_ftpSubscriptionConfiguration.entryCheckInterval(),
-                        1000,
+                        1,
                         TimeUnit.MINUTE));
 
         _schedulerEngineHelper.register(
                 this, schedulerEntryImpl, DestinationNames.SCHEDULER_DISPATCH);
+
+        // deactivate();
     }
 
     @Deactivate
@@ -84,15 +90,18 @@ public class FtpSubscriptionMessageListener
         _schedulerEngineHelper.unregister(this);
     }
 
-    boolean processed = false;
+    // TODO: set to 'false' to enable processing
+    boolean processed = true;
+
 
     @Override
     protected void doReceive(Message message) throws Exception {
         if (processed) return;
 
-       // _cjProductLocalService.deleteCJProduct(1);
-      //  _cjProductLocalService.deleteCJProduct(2);
-       // _cjProductLocalService.deleteCJProduct(3);
+
+        // _cjProductLocalService.deleteCJProduct(1);
+        //  _cjProductLocalService.deleteCJProduct(2);
+        // _cjProductLocalService.deleteCJProduct(3);
 
         //_cjProductLocalService.deleteEntries(20166);
 
@@ -101,7 +110,7 @@ public class FtpSubscriptionMessageListener
         List<CJProduct> entries = null;
         entries = _cjProductLocalService.findByGroupId(groupId, 0, 1000);
 
-        while (entries != null && entries.size()>0) {
+        while (entries != null && entries.size() > 0) {
 
             for (CJProduct entry : entries) {
                 // TODO: why not calling directly "deleteEntry"? Analyze Liferay if this is consistent pattern. Perhaps because "Indexable" annotation?

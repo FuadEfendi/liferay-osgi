@@ -15,37 +15,38 @@ Export-Package: ca.efendi.datafeeds.search;uses:="ca.efendi.datafeeds.
 Import-Package: ca.efendi.datafeeds.configuration;version="[1.0,2)",ca
  .efendi.datafeeds.exception;version="[1.0,2)",ca.efendi.datafeeds.mod
  el;version="[1.0,1.1)",ca.efendi.datafeeds.service;version="[1.0,1.1)
- ",ca.efendi.datafeeds.service.persistence;version="[1.0,1.1)",com.lif
- eray.asset.kernel.model,com.liferay.asset.kernel.service,com.liferay.
- asset.kernel.service.persistence,com.liferay.blogs.kernel.service,com
- .liferay.blogs.kernel.service.persistence,com.liferay.counter.kernel.
- service,com.liferay.document.library.kernel.util,com.liferay.expando.
- kernel.model,com.liferay.expando.kernel.service,com.liferay.expando.k
- ernel.service.persistence,com.liferay.expando.kernel.util,com.liferay
- .exportimport.kernel.lar,com.liferay.exportimport.kernel.staging.perm
- ission,com.liferay.portal.configuration.metatype.bnd.util,com.liferay
- .portal.kernel.bean,com.liferay.portal.kernel.configuration,com.lifer
- ay.portal.kernel.dao.db,com.liferay.portal.kernel.dao.jdbc,com.lifera
- y.portal.kernel.dao.orm,com.liferay.portal.kernel.exception,com.lifer
- ay.portal.kernel.log,com.liferay.portal.kernel.messaging,com.liferay.
- portal.kernel.model,com.liferay.portal.kernel.model.impl,com.liferay.
- portal.kernel.module.framework,com.liferay.portal.kernel.module.frame
- work.service,com.liferay.portal.kernel.portlet,com.liferay.portal.ker
- nel.portletfilerepository,com.liferay.portal.kernel.repository.model,
- com.liferay.portal.kernel.scheduler,com.liferay.portal.kernel.search,
- com.liferay.portal.kernel.security.auth,com.liferay.portal.kernel.sec
- urity.permission,com.liferay.portal.kernel.service,com.liferay.portal
- .kernel.service.persistence,com.liferay.portal.kernel.service.persist
- ence.impl,com.liferay.portal.kernel.spring.osgi,com.liferay.portal.ke
- rnel.systemevent,com.liferay.portal.kernel.theme,com.liferay.portal.k
- ernel.util,com.liferay.portal.kernel.uuid,com.liferay.portal.kernel.w
- ebserver,com.liferay.portal.kernel.workflow.permission,com.liferay.po
- rtal.spring.extender.service;version="[1.0,2)",com.liferay.ratings.ke
- rnel.service,com.liferay.ratings.kernel.service.persistence,com.lifer
- ay.trash.kernel.model,com.liferay.trash.kernel.service,com.liferay.tr
- ash.kernel.service.persistence,javax.crypto,javax.crypto.spec,javax.n
- et,javax.net.ssl,javax.portlet;version="[2.0,3)",javax.sql,javax.xml.
- stream
+ ",ca.efendi.datafeeds.service.permission,ca.efendi.datafeeds.service.
+ persistence;version="[1.0,1.1)",com.liferay.asset.kernel.model,com.li
+ feray.asset.kernel.service,com.liferay.asset.kernel.service.persisten
+ ce,com.liferay.blogs.kernel.service,com.liferay.blogs.kernel.service.
+ persistence,com.liferay.counter.kernel.service,com.liferay.document.l
+ ibrary.kernel.util,com.liferay.expando.kernel.model,com.liferay.expan
+ do.kernel.service,com.liferay.expando.kernel.service.persistence,com.
+ liferay.expando.kernel.util,com.liferay.exportimport.kernel.lar,com.l
+ iferay.exportimport.kernel.staging.permission,com.liferay.portal.conf
+ iguration.metatype.bnd.util,com.liferay.portal.kernel.bean,com.lifera
+ y.portal.kernel.configuration,com.liferay.portal.kernel.dao.db,com.li
+ feray.portal.kernel.dao.jdbc,com.liferay.portal.kernel.dao.orm,com.li
+ feray.portal.kernel.exception,com.liferay.portal.kernel.json,com.life
+ ray.portal.kernel.log,com.liferay.portal.kernel.messaging,com.liferay
+ .portal.kernel.model,com.liferay.portal.kernel.model.impl,com.liferay
+ .portal.kernel.module.framework,com.liferay.portal.kernel.module.fram
+ ework.service,com.liferay.portal.kernel.portlet,com.liferay.portal.ke
+ rnel.portletfilerepository,com.liferay.portal.kernel.repository.model
+ ,com.liferay.portal.kernel.scheduler,com.liferay.portal.kernel.search
+ ,com.liferay.portal.kernel.security.auth,com.liferay.portal.kernel.se
+ curity.permission,com.liferay.portal.kernel.service,com.liferay.porta
+ l.kernel.service.http,com.liferay.portal.kernel.service.persistence,c
+ om.liferay.portal.kernel.service.persistence.impl,com.liferay.portal.
+ kernel.spring.osgi,com.liferay.portal.kernel.systemevent,com.liferay.
+ portal.kernel.theme,com.liferay.portal.kernel.util,com.liferay.portal
+ .kernel.uuid,com.liferay.portal.kernel.webserver,com.liferay.portal.k
+ ernel.workflow.permission,com.liferay.portal.spring.extender.service;
+ version="[1.0,2)",com.liferay.ratings.kernel.service,com.liferay.rati
+ ngs.kernel.service.persistence,com.liferay.trash.kernel.model,com.lif
+ eray.trash.kernel.service,com.liferay.trash.kernel.service.persistenc
+ e,javax.crypto,javax.crypto.spec,javax.net,javax.net.ssl,javax.portle
+ t;version="[2.0,3)",javax.sql,javax.xml.stream
 Include-Resource: lib/commons-lang3-3.4.jar=lib/commons-lang3-3.4.jar,
  lib/commons-net-3.5.jar=lib/commons-net-3.5.jar
 Javac-Debug: on
@@ -56,22 +57,22 @@ Liferay-Service: true
 Liferay-Spring-Context: META-INF/spring
 Private-Package: ca.efendi.datafeeds.asset,ca.efendi.datafeeds.messagi
  ng,ca.efendi.datafeeds.model.impl,ca.efendi.datafeeds.service.base,ca
- .efendi.datafeeds.service.impl,ca.efendi.datafeeds.service.persistenc
- e.impl,ca.efendi.datafeeds.service.util,lib,org.apache.commons.lang3,
- org.apache.commons.lang3.builder,org.apache.commons.lang3.concurrent,
- org.apache.commons.lang3.event,org.apache.commons.lang3.exception,org
- .apache.commons.lang3.math,org.apache.commons.lang3.mutable,org.apach
- e.commons.lang3.reflect,org.apache.commons.lang3.text,org.apache.comm
- ons.lang3.text.translate,org.apache.commons.lang3.time,org.apache.com
- mons.lang3.tuple,org.apache.commons.net,org.apache.commons.net.bsd,or
- g.apache.commons.net.chargen,org.apache.commons.net.daytime,org.apach
- e.commons.net.discard,org.apache.commons.net.echo,org.apache.commons.
- net.finger,org.apache.commons.net.ftp,org.apache.commons.net.ftp.pars
- er,org.apache.commons.net.imap,org.apache.commons.net.io,org.apache.c
- ommons.net.nntp,org.apache.commons.net.ntp,org.apache.commons.net.pop
- 3,org.apache.commons.net.smtp,org.apache.commons.net.telnet,org.apach
- e.commons.net.tftp,org.apache.commons.net.time,org.apache.commons.net
- .util,org.apache.commons.net.whois
+ .efendi.datafeeds.service.http,ca.efendi.datafeeds.service.impl,ca.ef
+ endi.datafeeds.service.persistence.impl,ca.efendi.datafeeds.service.u
+ til,lib,org.apache.commons.lang3,org.apache.commons.lang3.builder,org
+ .apache.commons.lang3.concurrent,org.apache.commons.lang3.event,org.a
+ pache.commons.lang3.exception,org.apache.commons.lang3.math,org.apach
+ e.commons.lang3.mutable,org.apache.commons.lang3.reflect,org.apache.c
+ ommons.lang3.text,org.apache.commons.lang3.text.translate,org.apache.
+ commons.lang3.time,org.apache.commons.lang3.tuple,org.apache.commons.
+ net,org.apache.commons.net.bsd,org.apache.commons.net.chargen,org.apa
+ che.commons.net.daytime,org.apache.commons.net.discard,org.apache.com
+ mons.net.echo,org.apache.commons.net.finger,org.apache.commons.net.ft
+ p,org.apache.commons.net.ftp.parser,org.apache.commons.net.imap,org.a
+ pache.commons.net.io,org.apache.commons.net.nntp,org.apache.commons.n
+ et.ntp,org.apache.commons.net.pop3,org.apache.commons.net.smtp,org.ap
+ ache.commons.net.telnet,org.apache.commons.net.tftp,org.apache.common
+ s.net.time,org.apache.commons.net.util,org.apache.commons.net.whois
 Provide-Capability: osgi.service;objectClass:List<String>="ca.efendi.d
  atafeeds.messaging.FtpSubscriptionMessageListener",osgi.service;objec
  tClass:List<String>="com.liferay.portal.kernel.search.Indexer",osgi.s
@@ -92,6 +93,6 @@ Require-Capability: osgi.service;filter:="(objectClass=ca.efendi.dataf
 Service-Component: OSGI-INF/ca.efendi.datafeeds.messaging.FtpSubscript
  ionMessageListener.xml,OSGI-INF/ca.efendi.datafeeds.search.CJProductI
  ndexer.xml,OSGI-INF/ca.efendi.datafeeds.search.CJProductOpenSearchImp
- l.xml,OSGI-INF/ca.efendi.datafeeds.service.permission.CJProductEntryP
- ermission.xml
+ l.xml,OSGI-INF/ca.efendi.datafeeds.service.permission.CJProductPermis
+ sion.xml
 Tool: Bnd-3.2.0.201605172007

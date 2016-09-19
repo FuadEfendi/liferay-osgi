@@ -18,7 +18,7 @@ package ca.efendi.datafeeds.web.asset;
 
 import ca.efendi.datafeeds.model.CJProduct;
 import ca.efendi.datafeeds.service.CJProductLocalService;
-import ca.efendi.datafeeds.service.permission.CJProductEntryPermission;
+import ca.efendi.datafeeds.service.permission.CJProductPermission;
 import ca.efendi.datafeeds.service.permission.DatafeedsRootPermission;
 import ca.efendi.datafeeds.web.constants.CJProductPortletKeys;
 import com.liferay.asset.kernel.model.AssetRenderer;
@@ -131,7 +131,7 @@ public class CJProductAssetRendererFactory
             PermissionChecker permissionChecker, long classPK, String actionId)
             throws Exception {
 
-        return CJProductEntryPermission.contains(
+        return CJProductPermission.contains(
                 permissionChecker, classPK, actionId);
     }
 

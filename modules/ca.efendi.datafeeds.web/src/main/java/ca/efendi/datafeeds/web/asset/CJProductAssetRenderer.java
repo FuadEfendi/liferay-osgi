@@ -18,7 +18,7 @@ package ca.efendi.datafeeds.web.asset;
 
 import ca.efendi.datafeeds.configuration.PropsValues;
 import ca.efendi.datafeeds.model.CJProduct;
-import ca.efendi.datafeeds.service.permission.CJProductEntryPermission;
+import ca.efendi.datafeeds.service.permission.CJProductPermission;
 import ca.efendi.datafeeds.web.constants.CJProductPortletKeys;
 import ca.efendi.datafeeds.web.constants.CJProductWebKeys;
 import com.liferay.asset.kernel.model.AssetRendererFactory;
@@ -151,11 +151,13 @@ public class CJProductAssetRenderer extends BaseJSPAssetRenderer<CJProduct> impl
                 liferayPortletRequest, group, CJProductPortletKeys.CJPRODUCT, 0, 0,
                 PortletRequest.RENDER_PHASE);
 
-        portletURL.setParameter("mvcRenderCommandName", "/cjproduct/edit_entry");
-        portletURL.setParameter("entryId", String.valueOf(_entry.getProductId()));
+        portletURL.setParameter("mvcRenderCommandName", "/cjproduct/edit");
+        portletURL.setParameter("productId", String.valueOf(_entry.getProductId()));
 
         return portletURL;
     }
+
+
 
 
 
@@ -177,7 +179,7 @@ public class CJProductAssetRenderer extends BaseJSPAssetRenderer<CJProduct> impl
                 liferayPortletResponse, windowState);
 
         portletURL.setParameter("mvcRenderCommandName", "/cjproduct/view_entry");
-        portletURL.setParameter("entryId", String.valueOf(_entry.getProductId()));
+        portletURL.setParameter("productId", String.valueOf(_entry.getProductId()));
         portletURL.setWindowState(windowState);
 
         return portletURL.toString();
@@ -190,8 +192,8 @@ public class CJProductAssetRenderer extends BaseJSPAssetRenderer<CJProduct> impl
             final LiferayPortletResponse liferayPortletResponse,
             final String noSuchEntryRedirect) {
         return getURLViewInContext(
-                liferayPortletRequest, noSuchEntryRedirect, "/cjproduct/find_entry",
-                "entryId", _entry.getProductId());
+                liferayPortletRequest, null, "/cjproduct/find_entry",
+                "productId", _entry.getProductId());
     }
 
     @Override
@@ -211,19 +213,19 @@ public class CJProductAssetRenderer extends BaseJSPAssetRenderer<CJProduct> impl
 
 
     public boolean hasDeletePermission(PermissionChecker permissionChecker) {
-        return CJProductEntryPermission.contains(
+        return CJProductPermission.contains(
                 permissionChecker, _entry, ActionKeys.DELETE);
     }
 
     @Override
     public boolean hasEditPermission(PermissionChecker permissionChecker) {
-        return CJProductEntryPermission.contains(
+        return CJProductPermission.contains(
                 permissionChecker, _entry, ActionKeys.UPDATE);
     }
 
     @Override
     public boolean hasViewPermission(PermissionChecker permissionChecker) {
-        return CJProductEntryPermission.contains(
+        return CJProductPermission.contains(
                 permissionChecker, _entry, ActionKeys.VIEW);
     }
 

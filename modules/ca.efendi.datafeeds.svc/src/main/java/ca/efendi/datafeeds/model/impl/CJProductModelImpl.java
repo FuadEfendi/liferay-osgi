@@ -18,6 +18,7 @@ import aQute.bnd.annotation.ProviderType;
 
 import ca.efendi.datafeeds.model.CJProduct;
 import ca.efendi.datafeeds.model.CJProductModel;
+import ca.efendi.datafeeds.model.CJProductSoap;
 
 import com.liferay.expando.kernel.model.ExpandoBridge;
 import com.liferay.expando.kernel.util.ExpandoBridgeFactoryUtil;
@@ -26,6 +27,7 @@ import com.liferay.exportimport.kernel.lar.StagedModelType;
 
 import com.liferay.portal.kernel.bean.AutoEscapeBeanHandler;
 import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.json.JSON;
 import com.liferay.portal.kernel.model.CacheModel;
 import com.liferay.portal.kernel.model.User;
 import com.liferay.portal.kernel.model.impl.BaseModelImpl;
@@ -42,8 +44,10 @@ import java.io.Serializable;
 
 import java.sql.Types;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -59,6 +63,7 @@ import java.util.Map;
  * @see CJProductModel
  * @generated
  */
+@JSON(strict = true)
 @ProviderType
 public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 	implements CJProductModel {
@@ -179,6 +184,84 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 	public static final long SKU_COLUMN_BITMASK = 32L;
 	public static final long UUID_COLUMN_BITMASK = 64L;
 	public static final long NAME_COLUMN_BITMASK = 128L;
+
+	/**
+	 * Converts the soap model instance into a normal model instance.
+	 *
+	 * @param soapModel the soap model instance to convert
+	 * @return the normal model instance
+	 */
+	public static CJProduct toModel(CJProductSoap soapModel) {
+		if (soapModel == null) {
+			return null;
+		}
+
+		CJProduct model = new CJProductImpl();
+
+		model.setUuid(soapModel.getUuid());
+		model.setProductId(soapModel.getProductId());
+		model.setGroupId(soapModel.getGroupId());
+		model.setCompanyId(soapModel.getCompanyId());
+		model.setUserId(soapModel.getUserId());
+		model.setUserName(soapModel.getUserName());
+		model.setCreateDate(soapModel.getCreateDate());
+		model.setModifiedDate(soapModel.getModifiedDate());
+		model.setProgramName(soapModel.getProgramName());
+		model.setCatalogName(soapModel.getCatalogName());
+		model.setSku(soapModel.getSku());
+		model.setProgramUrl(soapModel.getProgramUrl());
+		model.setLastUpdated(soapModel.getLastUpdated());
+		model.setName(soapModel.getName());
+		model.setKeywords(soapModel.getKeywords());
+		model.setDescription(soapModel.getDescription());
+		model.setManufacturer(soapModel.getManufacturer());
+		model.setManufacturerId(soapModel.getManufacturerId());
+		model.setCurrency(soapModel.getCurrency());
+		model.setPrice(soapModel.getPrice());
+		model.setBuyUrl(soapModel.getBuyUrl());
+		model.setImpressionUrl(soapModel.getImpressionUrl());
+		model.setImageUrl(soapModel.getImageUrl());
+		model.setInStock(soapModel.getInStock());
+		model.setViewCount(soapModel.getViewCount());
+		model.setStatus(soapModel.getStatus());
+		model.setStatusByUserId(soapModel.getStatusByUserId());
+		model.setStatusByUserName(soapModel.getStatusByUserName());
+		model.setStatusDate(soapModel.getStatusDate());
+		model.setSubtitle(soapModel.getSubtitle());
+		model.setUrlTitle(soapModel.getUrlTitle());
+		model.setContent(soapModel.getContent());
+		model.setDisplayDate(soapModel.getDisplayDate());
+		model.setCoverImageCaption(soapModel.getCoverImageCaption());
+		model.setCoverImageFileEntryId(soapModel.getCoverImageFileEntryId());
+		model.setCoverImageURL(soapModel.getCoverImageURL());
+		model.setSmallImage(soapModel.getSmallImage());
+		model.setSmallImageFileEntryId(soapModel.getSmallImageFileEntryId());
+		model.setSmallImageId(soapModel.getSmallImageId());
+		model.setSmallImageURL(soapModel.getSmallImageURL());
+
+		return model;
+	}
+
+	/**
+	 * Converts the soap model instances into normal model instances.
+	 *
+	 * @param soapModels the soap model instances to convert
+	 * @return the normal model instances
+	 */
+	public static List<CJProduct> toModels(CJProductSoap[] soapModels) {
+		if (soapModels == null) {
+			return null;
+		}
+
+		List<CJProduct> models = new ArrayList<CJProduct>(soapModels.length);
+
+		for (CJProductSoap soapModel : soapModels) {
+			models.add(toModel(soapModel));
+		}
+
+		return models;
+	}
+
 	public static final long LOCK_EXPIRATION_TIME = GetterUtil.getLong(ca.efendi.datafeeds.service.util.PropsUtil.get(
 				"lock.expiration.time.ca.efendi.datafeeds.model.CJProduct"));
 
@@ -511,6 +594,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		}
 	}
 
+	@JSON
 	@Override
 	public String getUuid() {
 		if (_uuid == null) {
@@ -534,6 +618,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		return GetterUtil.getString(_originalUuid);
 	}
 
+	@JSON
 	@Override
 	public long getProductId() {
 		return _productId;
@@ -544,6 +629,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_productId = productId;
 	}
 
+	@JSON
 	@Override
 	public long getGroupId() {
 		return _groupId;
@@ -566,6 +652,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		return _originalGroupId;
 	}
 
+	@JSON
 	@Override
 	public long getCompanyId() {
 		return _companyId;
@@ -588,6 +675,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		return _originalCompanyId;
 	}
 
+	@JSON
 	@Override
 	public long getUserId() {
 		return _userId;
@@ -614,6 +702,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 	public void setUserUuid(String userUuid) {
 	}
 
+	@JSON
 	@Override
 	public String getUserName() {
 		if (_userName == null) {
@@ -629,6 +718,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_userName = userName;
 	}
 
+	@JSON
 	@Override
 	public Date getCreateDate() {
 		return _createDate;
@@ -639,6 +729,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_createDate = createDate;
 	}
 
+	@JSON
 	@Override
 	public Date getModifiedDate() {
 		return _modifiedDate;
@@ -655,6 +746,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_modifiedDate = modifiedDate;
 	}
 
+	@JSON
 	@Override
 	public String getProgramName() {
 		if (_programName == null) {
@@ -680,6 +772,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		return GetterUtil.getString(_originalProgramName);
 	}
 
+	@JSON
 	@Override
 	public String getCatalogName() {
 		if (_catalogName == null) {
@@ -705,6 +798,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		return GetterUtil.getString(_originalCatalogName);
 	}
 
+	@JSON
 	@Override
 	public String getSku() {
 		if (_sku == null) {
@@ -730,6 +824,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		return GetterUtil.getString(_originalSku);
 	}
 
+	@JSON
 	@Override
 	public String getProgramUrl() {
 		if (_programUrl == null) {
@@ -745,6 +840,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_programUrl = programUrl;
 	}
 
+	@JSON
 	@Override
 	public String getLastUpdated() {
 		if (_lastUpdated == null) {
@@ -760,6 +856,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_lastUpdated = lastUpdated;
 	}
 
+	@JSON
 	@Override
 	public String getName() {
 		if (_name == null) {
@@ -777,6 +874,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_name = name;
 	}
 
+	@JSON
 	@Override
 	public String getKeywords() {
 		if (_keywords == null) {
@@ -792,6 +890,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_keywords = keywords;
 	}
 
+	@JSON
 	@Override
 	public String getDescription() {
 		if (_description == null) {
@@ -807,6 +906,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_description = description;
 	}
 
+	@JSON
 	@Override
 	public String getManufacturer() {
 		if (_manufacturer == null) {
@@ -832,6 +932,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		return GetterUtil.getString(_originalManufacturer);
 	}
 
+	@JSON
 	@Override
 	public String getManufacturerId() {
 		if (_manufacturerId == null) {
@@ -847,6 +948,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_manufacturerId = manufacturerId;
 	}
 
+	@JSON
 	@Override
 	public String getCurrency() {
 		if (_currency == null) {
@@ -862,6 +964,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_currency = currency;
 	}
 
+	@JSON
 	@Override
 	public String getPrice() {
 		if (_price == null) {
@@ -877,6 +980,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_price = price;
 	}
 
+	@JSON
 	@Override
 	public String getBuyUrl() {
 		if (_buyUrl == null) {
@@ -892,6 +996,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_buyUrl = buyUrl;
 	}
 
+	@JSON
 	@Override
 	public String getImpressionUrl() {
 		if (_impressionUrl == null) {
@@ -907,6 +1012,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_impressionUrl = impressionUrl;
 	}
 
+	@JSON
 	@Override
 	public String getImageUrl() {
 		if (_imageUrl == null) {
@@ -922,6 +1028,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_imageUrl = imageUrl;
 	}
 
+	@JSON
 	@Override
 	public String getInStock() {
 		if (_inStock == null) {
@@ -937,6 +1044,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_inStock = inStock;
 	}
 
+	@JSON
 	@Override
 	public int getViewCount() {
 		return _viewCount;
@@ -947,6 +1055,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_viewCount = viewCount;
 	}
 
+	@JSON
 	@Override
 	public int getStatus() {
 		return _status;
@@ -957,6 +1066,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_status = status;
 	}
 
+	@JSON
 	@Override
 	public long getStatusByUserId() {
 		return _statusByUserId;
@@ -983,6 +1093,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 	public void setStatusByUserUuid(String statusByUserUuid) {
 	}
 
+	@JSON
 	@Override
 	public String getStatusByUserName() {
 		if (_statusByUserName == null) {
@@ -998,6 +1109,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_statusByUserName = statusByUserName;
 	}
 
+	@JSON
 	@Override
 	public Date getStatusDate() {
 		return _statusDate;
@@ -1008,6 +1120,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_statusDate = statusDate;
 	}
 
+	@JSON
 	@Override
 	public String getSubtitle() {
 		if (_subtitle == null) {
@@ -1023,6 +1136,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_subtitle = subtitle;
 	}
 
+	@JSON
 	@Override
 	public String getUrlTitle() {
 		if (_urlTitle == null) {
@@ -1038,6 +1152,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_urlTitle = urlTitle;
 	}
 
+	@JSON
 	@Override
 	public String getContent() {
 		if (_content == null) {
@@ -1053,6 +1168,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_content = content;
 	}
 
+	@JSON
 	@Override
 	public Date getDisplayDate() {
 		return _displayDate;
@@ -1063,6 +1179,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_displayDate = displayDate;
 	}
 
+	@JSON
 	@Override
 	public String getCoverImageCaption() {
 		if (_coverImageCaption == null) {
@@ -1078,6 +1195,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_coverImageCaption = coverImageCaption;
 	}
 
+	@JSON
 	@Override
 	public long getCoverImageFileEntryId() {
 		return _coverImageFileEntryId;
@@ -1088,6 +1206,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_coverImageFileEntryId = coverImageFileEntryId;
 	}
 
+	@JSON
 	@Override
 	public String getCoverImageURL() {
 		if (_coverImageURL == null) {
@@ -1103,11 +1222,13 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_coverImageURL = coverImageURL;
 	}
 
+	@JSON
 	@Override
 	public boolean getSmallImage() {
 		return _smallImage;
 	}
 
+	@JSON
 	@Override
 	public boolean isSmallImage() {
 		return _smallImage;
@@ -1118,6 +1239,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_smallImage = smallImage;
 	}
 
+	@JSON
 	@Override
 	public long getSmallImageFileEntryId() {
 		return _smallImageFileEntryId;
@@ -1128,6 +1250,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_smallImageFileEntryId = smallImageFileEntryId;
 	}
 
+	@JSON
 	@Override
 	public long getSmallImageId() {
 		return _smallImageId;
@@ -1138,6 +1261,7 @@ public class CJProductModelImpl extends BaseModelImpl<CJProduct>
 		_smallImageId = smallImageId;
 	}
 
+	@JSON
 	@Override
 	public String getSmallImageURL() {
 		if (_smallImageURL == null) {

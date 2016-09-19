@@ -16,10 +16,11 @@
 
 package ca.efendi.datafeeds.web.internal.portlet;
 
-import ca.efendi.datafeeds.constants.DatafeedsPortletKeys;
 import ca.efendi.datafeeds.exception.NoSuchFtpSubscriptionException;
 import ca.efendi.datafeeds.model.FtpSubscription;
 import ca.efendi.datafeeds.service.FtpSubscriptionLocalService;
+import ca.efendi.datafeeds.web.constants.CJProductPortletKeys;
+import ca.efendi.datafeeds.web.constants.DatafeedsPortletKeys;
 import ca.efendi.datafeeds.web.util.FtpSubscriptionValidator;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
@@ -55,11 +56,12 @@ import static com.liferay.portal.kernel.util.WebKeys.THEME_DISPLAY;
                 "com.liferay.portlet.add-default-resource=true",
                 "com.liferay.portlet.display-category=category.datafeeds",
                 "com.liferay.portlet.instanceable=true",
-                "javax.portlet.display-name=Datafeeds Admin Portlet",
+                "javax.portlet.display-name=Datafeeds Portlet",
                 "javax.portlet.init-param.template-path=/",
                 "javax.portlet.init-param.view-template=/datafeeds_admin/view.jsp",
                 "javax.portlet.resource-bundle=content.Language",
-                "javax.portlet.security-role-ref=administrator,power-user,user"
+                "javax.portlet.security-role-ref=administrator,power-user,user",
+                "javax.portlet.name=" + DatafeedsPortletKeys.DATAFEEDS_PORTLET
         },
         service = Portlet.class
 )

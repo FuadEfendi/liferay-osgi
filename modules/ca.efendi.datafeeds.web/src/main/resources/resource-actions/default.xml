@@ -3,7 +3,7 @@
 <resource-action-mapping>
 
     <portlet-resource>
-        <portlet-name>ca_efendi_datafeeds_web_portlet_DatafeedsAdminPortlet</portlet-name>
+        <portlet-name>ca_efendi_datafeeds_web_portlet_DatafeedsPortlet</portlet-name>
         <permissions>
             <supports>
                 <action-key>ADD_TO_PAGE</action-key>
@@ -28,7 +28,7 @@
         <portlet-ref>
             <portlet-name>ca_efendi_datafeeds_web_portlet_CJProductAdminPortlet</portlet-name>
             <portlet-name>ca_efendi_datafeeds_web_portlet_CJProductPortlet</portlet-name>
-            <portlet-name>ca_efendi_datafeeds_web_portlet_DatafeedsAdminPortlet</portlet-name>
+            <portlet-name>ca_efendi_datafeeds_web_portlet_DatafeedsPortlet</portlet-name>
         </portlet-ref>
         <root>true</root>
         <weight>2</weight>
@@ -53,7 +53,7 @@
     <model-resource>
         <model-name>ca.efendi.datafeeds.model.CJProduct</model-name>
         <portlet-ref>
-            <portlet-name>ca_efendi_datafeeds_web_portlet_DatafeedsAdminPortlet</portlet-name>
+            <portlet-name>ca_efendi_datafeeds_web_portlet_DatafeedsPortlet</portlet-name>
         </portlet-ref>
         <weight>3</weight>
         <permissions>

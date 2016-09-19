@@ -4,7 +4,7 @@
 <routes>
 	<route>
 		<pattern></pattern>
-		<implicit-parameter name="mvcRenderCommandName">/blogs/view</implicit-parameter>
+		<implicit-parameter name="mvcRenderCommandName">/cjproduct/view</implicit-parameter>
 		<implicit-parameter name="p_p_lifecycle">0</implicit-parameter>
 		<implicit-parameter name="p_p_state">normal</implicit-parameter>
 	</route>
@@ -15,12 +15,10 @@
 		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
 	</route>
 	<route>
-		<pattern>/{entryId:\d+}</pattern>
-		<implicit-parameter name="categoryId"></implicit-parameter>
-		<implicit-parameter name="mvcRenderCommandName">/blogs/view_entry</implicit-parameter>
+		<pattern>/{productId:\d+}</pattern>
+		<implicit-parameter name="mvcRenderCommandName">/cjproduct/view_entry</implicit-parameter>
 		<implicit-parameter name="p_p_lifecycle">0</implicit-parameter>
 		<implicit-parameter name="p_p_state">normal</implicit-parameter>
-		<implicit-parameter name="tag"></implicit-parameter>
 	</route>
 	<route>
 		<pattern>/{urlTitle}</pattern>
