@@ -1,0 +1,7 @@
+Bundle-SymbolicName: ca.efendi.socialcomments.web
+Bundle-Version: 1.0.1
+
+Export-Package:\
+	ca.efendi.socialcomments.web.asset,\
+	ca.efendi.socialcomments.web.constants
+
