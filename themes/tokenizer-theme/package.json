@@ -1,0 +1,24 @@
+{
+	"author": "Fuad Efendi <fuad@efendi.ca> (https://github.com/FuadEfendi)",
+	"bugs": {
+		"url": "https://github.com/FuadEfendi/liferay-osgi/issues"
+	},
+	"dependencies": {
+		"gulp": "^3.8.10",
+		"liferay-theme-deps-7.0": "*",
+		"liferay-theme-tasks": "*"
+	},
+	"keywords": [
+		"liferay-theme"
+	],
+	"license": "LGPL",
+	"liferayTheme": {
+		"baseTheme": "styled",
+		"rubySass": false,
+		"version": "7.0"
+	},
+	"main": "package.json",
+	"name": "tokenizer-theme",
+	"repository": "FuadEfendi/liferay-osgi",
+	"version": "1.0.0"
+}
